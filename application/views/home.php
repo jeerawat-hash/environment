@@ -49,7 +49,7 @@
 			<!-- End Logo Header -->
 
 			<!-- Navbar Header -->
-			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
+			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="dark">
 				
 				<div class="container-fluid">
 					<div class="collapse" id="search-nav">
