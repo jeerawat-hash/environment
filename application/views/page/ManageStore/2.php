@@ -17,7 +17,7 @@
 									<h4 class="card-title">กลุ่มผู้ปฏิบัติงานขณะนี้</h4>
 									<p class="card-category">
 									  
-								    	<button class="btn btn-warning"   > Creates</button>      
+								    	<button class="btn btn-warning"  id="btncreate" > Creates</button>      
 								</p>
 									 
 								</div>
@@ -86,4 +86,8 @@
 
 
             });
+			$("#btncreate").click(function(){
+                 alert("The paragraph was clicked.");
+              });
+ 
         </script>
