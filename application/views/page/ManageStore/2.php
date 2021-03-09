@@ -17,7 +17,7 @@
 									<h4 class="card-title">กลุ่มผู้ปฏิบัติงานขณะนี้</h4>
 									<p class="card-category">
 									แสดงผลข้อมูลบุคคลากรภายในรถเก็บขยะแต่ละคัน
-								     	<button class="btn btn-warning" style="text-align:right" > Creates</button>   
+								     <center>	<button class="btn btn-warning"   > Creates</button>      </center>
 								</p>
 									 
 								</div>
