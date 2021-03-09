@@ -15,9 +15,10 @@ class Dashboard extends CI_Controller {
         $header['page_name'] = 'ภาพรวมการปฏิบัติงาน';
         $header['page_focus'] = 'Dashboard';
         $header['page_menu'] = 0;
+		$data['page_name'] = $header['page_name'];
 
 		$this->load->view('template/header.php',$header);
-		$this->load->view('page/Dashboard/0.php');
+		$this->load->view('page/Dashboard/0.php',$data);
 		$this->load->view('template/footer.php');
 
 	}

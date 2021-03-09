@@ -1,8 +1,11 @@
  
 		<div class="main-panel">
-			<div class="content">  
-				<div class="page-inner mt--5">
-					<div class="row mt--2">
+			<div class="content"> 
+				<div class="page-inner">
+                <div class="page-header">
+						<h4 class="page-title"><?php echo $page_name; ?></h4> 
+					</div>
+					<div class="row">
 						<div class="col-md-6">
 							<div class="card full-height">
 								<div class="card-body">
