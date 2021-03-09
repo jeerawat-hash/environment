@@ -17,7 +17,7 @@ class ManageStore extends CI_Controller {
         $header['page_menu'] = 0;
 
 		$this->load->view('template/header.php',$header);
-		#$this->load->view('page/home.php');
+		$this->load->view('page/ManageStore/0.php');
 		$this->load->view('template/footer.php');
 
 	}
@@ -28,7 +28,7 @@ class ManageStore extends CI_Controller {
         $header['page_menu'] = 1;
 
 		$this->load->view('template/header.php',$header);
-		#$this->load->view('page/home.php');
+		$this->load->view('page/ManageStore/0.php');
 		$this->load->view('template/footer.php');
 
 	}
@@ -39,7 +39,7 @@ class ManageStore extends CI_Controller {
         $header['page_menu'] = 2;
 
 		$this->load->view('template/header.php',$header);
-		#$this->load->view('page/home.php');
+		$this->load->view('page/ManageStore/0.php');
 		$this->load->view('template/footer.php');
 
 	}
