@@ -260,7 +260,7 @@
 									</li>
 									<li class="<?php echo $ManageSystem[1][1]; ?>">
 										<a href="https://environment.webclient.me/index.php/ManageSystem/vehicle">
-											<span class="sub-item">ข้อมูลรถขยะ</span>
+											<span class="sub-item">ข้อมูลรถเก็บขยะ</span>
 										</a>
 									</li>
                                     <li class="<?php echo $ManageSystem[1][2]; ?>">

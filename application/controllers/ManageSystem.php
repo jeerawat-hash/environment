@@ -16,9 +16,10 @@ class ManageSystem extends CI_Controller {
         $header['page_name'] = 'ผู้ใช้งานระบบ&ผู้ปฏิบัติงาน';
         $header['page_focus'] = 'ManageSystem';
         $header['page_menu'] = 0;
+		$data['page_name'] = $header['page_name'];
 
-		$this->load->view('template/header.php',$header);
-		#$this->load->view('page/home.php');
+		$this->load->view('template/header.php',$header); 
+		$this->load->view('page/ManageSystem/0.php',$data);
 		$this->load->view('template/footer.php');
 
 	}
@@ -27,9 +28,10 @@ class ManageSystem extends CI_Controller {
         $header['page_name'] = 'ข้อมูลรถขยะ';
         $header['page_focus'] = 'ManageSystem';
         $header['page_menu'] = 1;
+		$data['page_name'] = $header['page_name'];
 
-		$this->load->view('template/header.php',$header);
-		#$this->load->view('page/home.php');
+		$this->load->view('template/header.php',$header); 
+		$this->load->view('page/ManageSystem/0.php',$data);
 		$this->load->view('template/footer.php');
 
 	}
@@ -38,9 +40,10 @@ class ManageSystem extends CI_Controller {
         $header['page_name'] = 'ข้อมูลถังขยะ';
         $header['page_focus'] = 'ManageSystem';
         $header['page_menu'] = 2;
+		$data['page_name'] = $header['page_name'];
 
-		$this->load->view('template/header.php',$header);
-		#$this->load->view('page/home.php');
+		$this->load->view('template/header.php',$header); 
+		$this->load->view('page/ManageSystem/0.php',$data);
 		$this->load->view('template/footer.php');
 
 	}
