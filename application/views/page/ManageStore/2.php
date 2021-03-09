@@ -10,16 +10,15 @@
 
 
                      
- 
- 
+  
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-                                    <h4 class="card-title">จัดการกลุ่มผู้ปฏิบัติงาน</h4> 
-                                        </div>
-                                        <p class="card-category">
-                                        แสดงผลข้อมูลบุคคลากรภายในรถเก็บขยะแต่ละคัน</p>
+									<h4 class="card-title">กลุ่มผู้ปฏิบัติงานขณะนี้</h4>
+									<p class="card-category">
+									แสดงผลข้อมูลบุคคลากรภายในรถเก็บขยะแต่ละคัน</p>
 								</div>
+								
 								<div class="card-body">
 									<div class="table-responsive">
 										<table id="basic-datatables" class="display table table-striped table-hover" >
