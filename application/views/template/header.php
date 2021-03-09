@@ -193,17 +193,17 @@
 											<span class="sub-item">ภาพรวมการปฏิบัติงาน</span>
 										</a>
 									</li>
-									<li class="<?php echo $Dashboard[1][1]; ?>">
+									<li hidden class="<?php echo $Dashboard[1][1]; ?>">
 										<a href="https://environment.webclient.me/index.php/Dashboard/collection">
 											<span class="sub-item">ผลรวมการจัดเก็บขยะ</span>
 										</a>
 									</li>
-                                    <li class="<?php echo $Dashboard[1][2]; ?>">
+                                    <li hidden class="<?php echo $Dashboard[1][2]; ?>">
 										<a href="https://environment.webclient.me/index.php/Dashboard/garbage">
 											<span class="sub-item">จำนวนถังขยะ</span>
 										</a>
 									</li>
-                                    <li class="<?php echo $Dashboard[1][3]; ?>">
+                                    <li  hidden class="<?php echo $Dashboard[1][3]; ?>">
 										<a href="https://environment.webclient.me/index.php/Dashboard/vehicle">
 											<span class="sub-item">จำนวนรถเก็บขยะ</span>
 										</a>
