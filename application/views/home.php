@@ -29,7 +29,7 @@
 	<div class="wrapper">
 		<div class="main-header">
 			<!-- Logo Header -->
-			<div class="logo-header" data-background-color="blue">
+			<div class="logo-header" data-background-color="dark">
 				
 				<a href="index.html" class="logo">
 					<img src="../assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
@@ -326,7 +326,7 @@
 							</div>
 						</div>
 					</div>
-					<ul class="nav nav-primary">
+					<ul class="nav nav-success">
 						<li class="nav-item active">
 							<a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
 								<i class="fas fa-home"></i>
