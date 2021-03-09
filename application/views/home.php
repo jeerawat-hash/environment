@@ -82,64 +82,110 @@
 
 							<div class="collapse in" id="collapseExample">
 								<ul class="nav">
-									<li>
-										<a href="#profile">
-											<span class="link-collapse">My Profile</span>
-										</a>
-									</li>
+									
 									<li>
 										<a href="#edit">
-											<span class="link-collapse">Edit Profile</span>
+											<span class="link-collapse">แก้ไขข้อมูลส่วนตัว</span>
 										</a>
 									</li>
 									<li>
 										<a href="#settings">
-											<span class="link-collapse">Settings</span>
+											<span class="link-collapse">ตั้งค่า</span>
 										</a>
 									</li>
+
 								</ul>
 							</div>
 						</div>
 					</div>
 					<ul class="nav nav-success">
-                        
+
 						<li class="nav-item active">
 							<a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
 								<i class="fas fa-home"></i>
-								<p>Dashboard</p>
+								<p>ผลการดำเนินงาน</p>
 								<span class="caret"></span>
 							</a>
 							<div class="collapse" id="dashboard">
 								<ul class="nav nav-collapse">
 									<li>
-										<a href="../demo1/index.html">
-											<span class="sub-item">Dashboard 1</span>
+										<a href="#">
+											<span class="sub-item">ภาพรวมการทำงาน</span>
 										</a>
 									</li>
 									<li>
-										<a href="../demo2/index.html">
-											<span class="sub-item">Dashboard 2</span>
+										<a href="#">
+											<span class="sub-item">ผลรวมการจัดเก็บขยะ</span>
+										</a>
+									</li>
+                                    <li>
+										<a href="#">
+											<span class="sub-item">จำนวนถังขยะในระบบ</span>
+										</a>
+									</li>
+                                    <li>
+										<a href="#">
+											<span class="sub-item">จำนวนรถเก็บขยะ</span>
+										</a>
+									</li>
+                                    <li>
+										<a href="#">
+											<span class="sub-item">ผลการส่งซ่อมบำรุง</span>
+										</a>
+									</li>
+                                    
+								</ul>
+							</div>
+						</li>
+
+                        <li class="nav-item">
+							<a data-toggle="collapse" href="#ManageStore" class="collapsed" aria-expanded="false">
+								<i class="fas fa-home"></i>
+								<p>บริหารการจัดเก็บ</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="ManageStore">
+								<ul class="nav nav-collapse">
+                                    <li>
+										<a href="#">
+											<span class="sub-item">แผนผังการจัดเก็บขยะ</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="sub-item">รายละเอียดการปฏิบัติงาน</span>
+										</a>
+									</li>
+                                    <li>
+										<a href="#">
+											<span class="sub-item">จัดการกลุ่มผู้ปฏิบัติงาน</span>
 										</a>
 									</li>
 								</ul>
 							</div>
 						</li>
+
                         <li class="nav-item">
-							<a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
+							<a data-toggle="collapse" href="#ManageSystem" class="collapsed" aria-expanded="false">
 								<i class="fas fa-home"></i>
-								<p>Dashboard</p>
+								<p>จัดการข้อมูล</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse" id="dashboard">
+							<div class="collapse" id="ManageSystem">
 								<ul class="nav nav-collapse">
-									<li>
-										<a href="../demo1/index.html">
-											<span class="sub-item">Dashboard 1</span>
+                                    <li>
+										<a href="#">
+											<span class="sub-item">ผู้ใช้งานระบบ&ผู้ปฏิบัติงาน</span>
 										</a>
 									</li>
 									<li>
-										<a href="../demo2/index.html">
-											<span class="sub-item">Dashboard 2</span>
+										<a href="#">
+											<span class="sub-item">ข้อมูลรถขยะ</span>
+										</a>
+									</li>
+                                    <li>
+										<a href="#">
+											<span class="sub-item">ข้อมูลถังขยะ</span>
 										</a>
 									</li>
 								</ul>
@@ -152,6 +198,13 @@
 		</div>
 		<!-- End Sidebar -->
 
+
+
+
+
+
+
+        
 
 		<div class="main-panel">
 			<div class="content">
