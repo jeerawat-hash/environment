@@ -102,7 +102,7 @@
 
 						<li class="nav-item active">
 							<a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
-								<i class="fas fa-home"></i>
+								<i class="fas fa-grip-horizontal"></i>
 								<p>ผลการดำเนินงาน</p>
 								<span class="caret"></span>
 							</a>
@@ -140,7 +140,7 @@
 
                         <li class="nav-item">
 							<a data-toggle="collapse" href="#ManageStore" class="collapsed" aria-expanded="false">
-								<i class="fas fa-home"></i>
+								<i class="fas fa-hockey-puck"></i>
 								<p>บริหารการจัดเก็บ</p>
 								<span class="caret"></span>
 							</a>
@@ -167,7 +167,7 @@
 
                         <li class="nav-item">
 							<a data-toggle="collapse" href="#ManageSystem" class="collapsed" aria-expanded="false">
-								<i class="fas fa-home"></i>
+								<i class="fas fa-database"></i>
 								<p>จัดการข้อมูล</p>
 								<span class="caret"></span>
 							</a>
@@ -815,7 +815,7 @@
 
 
 
-        
+
 
 
 
