@@ -1,27 +1,30 @@
 <?php 
 
-		$Dashboard = array("", array("","","","","","","","","","") );
-		$ManageStore = array("", array("","","","","","","","","","") ); 
-		$ManageSystem = array("", array("","","","","","","","","","") ); 
+		$Dashboard = array("", array("","","","","","","","","",""),"" );
+		$ManageStore = array("", array("","","","","","","","","",""),"" ); 
+		$ManageSystem = array("", array("","","","","","","","","",""),"" ); 
 
 		switch ($page_focus) {
 			case 'Dashboard':
 				
-				$Dashboard[0] = "active submenu";
+				$Dashboard[0] = "active";
+				$Dashboard[2] = "show";
 				$Dashboard[1][$page_menu] = "active";
 
 				break;
 			
 			case 'ManageStore':
 				
-				$ManageStore[0] = "active submenu";
+				$ManageStore[0] = "active";
+				$ManageStore[2] = "show";
 				$ManageStore[1][$page_menu] = "active";
 
 				break;
 
 			case 'ManageSystem':
 				
-				$ManageSystem[0] = "active submenu";
+				$ManageSystem[0] = "active";
+				$ManageSystem[2] = "show";
 				$ManageSystem[1][$page_menu] = "active";
 
 				break;
@@ -139,7 +142,7 @@
 								<p>ผลการดำเนินงาน</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse" id="Dashboard">
+							<div class="collapse <?php echo $Dashboard[2]; ?>" id="Dashboard">
 								<ul class="nav nav-collapse">
 									<li class="<?php echo $Dashboard[1][0]; ?>">
 										<a href="https://environment.webclient.me/index.php/Dashboard">
@@ -172,7 +175,7 @@
 						</li>
 
                         <li class="nav-item <?php echo $ManageStore[0]; ?>">
-							<a data-toggle="collapse" href="#ManageStore" class="collapsed" aria-expanded="false">
+							<a data-toggle="collapse <?php echo $ManageStore[2]; ?>" href="#ManageStore" class="collapsed" aria-expanded="false">
 								<i class="fas fa-hockey-puck"></i>
 								<p>บริหารการจัดเก็บ</p>
 								<span class="caret"></span>
@@ -199,7 +202,7 @@
 						</li>
 
                         <li class="nav-item <?php echo $ManageSystem[0]; ?>">
-							<a data-toggle="collapse" href="#ManageSystem" class="collapsed" aria-expanded="false">
+							<a data-toggle="collapse <?php echo $ManageSystem[2]; ?>" href="#ManageSystem" class="collapsed" aria-expanded="false">
 								<i class="fas fa-database"></i>
 								<p>จัดการข้อมูล</p>
 								<span class="caret"></span>
