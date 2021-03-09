@@ -102,6 +102,7 @@
 						</div>
 					</div>
 					<ul class="nav nav-success">
+                        
 						<li class="nav-item active">
 							<a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
 								<i class="fas fa-home"></i>
@@ -123,15 +124,34 @@
 								</ul>
 							</div>
 						</li>
+                        <li class="nav-item">
+							<a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
+								<i class="fas fa-home"></i>
+								<p>Dashboard</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="dashboard">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="../demo1/index.html">
+											<span class="sub-item">Dashboard 1</span>
+										</a>
+									</li>
+									<li>
+										<a href="../demo2/index.html">
+											<span class="sub-item">Dashboard 2</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
 						   
-						 
-
-                        
 					</ul>
 				</div>
 			</div>
 		</div>
 		<!-- End Sidebar -->
+
 
 		<div class="main-panel">
 			<div class="content">
