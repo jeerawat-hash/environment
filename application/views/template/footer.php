@@ -53,9 +53,9 @@
 		var mytotalIncomeChart = new Chart(totalIncomeChart, {
 			type: 'bar',
 			data: {
-				labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
+				labels: ["จ", "อ", "พ", "พ", "ศ", "ส", "อ"],
 				datasets : [{
-					label: "Total Income",
+					label: "ทั้งหมด",
 					backgroundColor: '#ff9e27',
 					borderColor: 'rgb(23, 125, 255)',
 					data: [6, 4, 9, 5, 4, 6, 4, 3, 8, 10],

@@ -9,20 +9,20 @@
 						<div class="col-md-6">
 							<div class="card full-height">
 								<div class="card-body">
-									<div class="card-title">Overall statistics</div>
-									<div class="card-category">Daily information about statistics in system</div>
+									<div class="card-title">สถิติ</div>
+									<div class="card-category">แสดงข้อมูลสรุปผล</div>
 									<div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
 										<div class="px-2 pb-2 pb-md-0 text-center">
 											<div id="circles-1"></div>
-											<h6 class="fw-bold mt-3 mb-0">New Users</h6>
+											<h6 class="fw-bold mt-3 mb-0">-</h6>
 										</div>
 										<div class="px-2 pb-2 pb-md-0 text-center">
 											<div id="circles-2"></div>
-											<h6 class="fw-bold mt-3 mb-0">Sales</h6>
+											<h6 class="fw-bold mt-3 mb-0">-</h6>
 										</div>
 										<div class="px-2 pb-2 pb-md-0 text-center">
 											<div id="circles-3"></div>
-											<h6 class="fw-bold mt-3 mb-0">Subscribers</h6>
+											<h6 class="fw-bold mt-3 mb-0">-</h6>
 										</div>
 									</div>
 								</div>
@@ -31,16 +31,16 @@
 						<div class="col-md-6">
 							<div class="card full-height">
 								<div class="card-body">
-									<div class="card-title">Total income & spend statistics</div>
+									<div class="card-title">สถิติการจัดเก็บประจำสัปดาห์</div>
 									<div class="row py-3">
 										<div class="col-md-4 d-flex flex-column justify-content-around">
 											<div>
-												<h6 class="fw-bold text-uppercase text-success op-8">Total Income</h6>
-												<h3 class="fw-bold">$9.782</h3>
+												<h6 class="fw-bold text-uppercase text-success op-8">จัดเก็บ</h6>
+												<h3 class="fw-bold">00 กก.</h3>
 											</div>
 											<div>
-												<h6 class="fw-bold text-uppercase text-danger op-8">Total Spend</h6>
-												<h3 class="fw-bold">$1,248</h3>
+												<h6 class="fw-bold text-uppercase text-danger op-8">ทำลาย</h6>
+												<h3 class="fw-bold">00 กก.</h3>
 											</div>
 										</div>
 										<div class="col-md-8">
@@ -58,7 +58,7 @@
 							<div class="card">
 								<div class="card-header">
 									<div class="card-head-row">
-										<div class="card-title">User Statistics</div> 
+										<div class="card-title">สถิติการปฏิบัติงานรวม</div> 
 									</div>
 								</div>
 								<div class="card-body">
@@ -68,7 +68,7 @@
                                         <div class="card-body pb-0">
                                             <div class="h1 fw-bold float-right text-warning">+7%</div>
                                             <h2 class="mb-2">213</h2>
-                                            <p class="text-muted">Transactions</p>
+                                            <p class="text-muted">รายการ</p>
                                             <div class="pull-in sparkline-fix">
                                                 <div id="lineChart"></div>
                                             </div>
