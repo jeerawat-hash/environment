@@ -41,7 +41,8 @@
 
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
 	<script src="https://environment.webclient.me/assets/js/setting-demo.js"></script>
-	<script src="https://environment.webclient.me/assets/js/demo.js"></script>
+	<script src="https://environment.webclient.me/assets/js/demo.js"></script>  
+
 	<script>
 		Circles.create({
 			id:'circles-1',
