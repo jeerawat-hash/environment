@@ -1274,3 +1274,17 @@
 				</div>
 			</footer>
 		</div>
+
+
+
+
+
+
+        <script>
+            $(function(){
+
+                $('#basic-datatables').DataTable({});
+
+
+            });
+        </script>

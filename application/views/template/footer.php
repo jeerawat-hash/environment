@@ -13,6 +13,8 @@
 	<!-- jQuery Scrollbar -->
 	<script src="https://environment.webclient.me/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
+	<!-- Datatables -->
+	<script src="https://environment.webclient.me/assets/js/plugin/datatables/datatables.min.js"></script>
 
 	<!-- Chart JS -->
 	<script src="https://environment.webclient.me/assets/js/plugin/chart.js/chart.min.js"></script>
