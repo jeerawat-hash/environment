@@ -9,7 +9,7 @@ class ManageSystem extends CI_Controller {
 	{ 
         $header['page_name'] = 'ManageSystem';
         $header['page_focus'] = 'ManageSystem';
-        $header['page_menu'] = 1;
+        $header['page_menu'] = 0;
 
 		$this->load->view('template/header.php',$header);
 		#$this->load->view('page/home.php');
