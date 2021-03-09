@@ -7,9 +7,36 @@ class ManageStore extends CI_Controller {
 
 	public function index()
 	{ 
-        $header['page_name'] = 'ManageStore';
+ 
+
+	}
+	public function maps()
+	{ 
+        $header['page_name'] = 'แผนผังการจัดเก็บขยะ';
         $header['page_focus'] = 'ManageStore';
         $header['page_menu'] = 0;
+
+		$this->load->view('template/header.php',$header);
+		#$this->load->view('page/home.php');
+		$this->load->view('template/footer.php');
+
+	}
+	public function detail()
+	{ 
+        $header['page_name'] = 'รายละเอียดการปฏิบัติงาน';
+        $header['page_focus'] = 'ManageStore';
+        $header['page_menu'] = 1;
+
+		$this->load->view('template/header.php',$header);
+		#$this->load->view('page/home.php');
+		$this->load->view('template/footer.php');
+
+	}
+	public function teams()
+	{ 
+        $header['page_name'] = 'จัดการกลุ่มผู้ปฏิบัติงาน';
+        $header['page_focus'] = 'ManageStore';
+        $header['page_menu'] = 2;
 
 		$this->load->view('template/header.php',$header);
 		#$this->load->view('page/home.php');

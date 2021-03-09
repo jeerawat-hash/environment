@@ -142,27 +142,27 @@
 							<div class="collapse" id="Dashboard">
 								<ul class="nav nav-collapse">
 									<li class="<?php echo $Dashboard[1][0]; ?>">
-										<a href="https://environment.webclient.me/index.php/Dashboard">
-											<span class="sub-item">ภาพรวมการทำงาน</span>
+										<a href="https://environment.webclient.me/index.php/Dashboard/summary">
+											<span class="sub-item">ภาพรวมการปฏิบัติงาน</span>
 										</a>
 									</li>
 									<li class="<?php echo $Dashboard[1][1]; ?>">
-										<a href="#">
+										<a href="https://environment.webclient.me/index.php/Dashboard/collection">
 											<span class="sub-item">ผลรวมการจัดเก็บขยะ</span>
 										</a>
 									</li>
                                     <li class="<?php echo $Dashboard[1][2]; ?>">
-										<a href="#">
-											<span class="sub-item">จำนวนถังขยะในระบบ</span>
+										<a href="https://environment.webclient.me/index.php/Dashboard/garbage">
+											<span class="sub-item">จำนวนถังขยะ</span>
 										</a>
 									</li>
                                     <li class="<?php echo $Dashboard[1][3]; ?>">
-										<a href="#">
+										<a href="https://environment.webclient.me/index.php/Dashboard/vehicle">
 											<span class="sub-item">จำนวนรถเก็บขยะ</span>
 										</a>
 									</li>
                                     <li class="<?php echo $Dashboard[1][4]; ?>">
-										<a href="#">
+										<a href="https://environment.webclient.me/index.php/Dashboard/maintain">
 											<span class="sub-item">ผลการส่งซ่อมบำรุง</span>
 										</a>
 									</li>
@@ -180,17 +180,17 @@
 							<div class="collapse" id="ManageStore">
 								<ul class="nav nav-collapse">
                                     <li class="<?php echo $ManageStore[1][0]; ?>">
-										<a href="https://environment.webclient.me/index.php/ManageStore">
+										<a href="https://environment.webclient.me/index.php/ManageStore/maps">
 											<span class="sub-item">แผนผังการจัดเก็บขยะ</span>
 										</a>
 									</li>
 									<li class="<?php echo $ManageStore[1][1]; ?>">
-										<a href="#">
+										<a href="https://environment.webclient.me/index.php/ManageStore/detail">
 											<span class="sub-item">รายละเอียดการปฏิบัติงาน</span>
 										</a>
 									</li>
                                     <li class="<?php echo $ManageStore[1][2]; ?>">
-										<a href="#">
+										<a href="https://environment.webclient.me/index.php/ManageStore/teams">
 											<span class="sub-item">จัดการกลุ่มผู้ปฏิบัติงาน</span>
 										</a>
 									</li>
@@ -207,17 +207,17 @@
 							<div class="collapse" id="ManageSystem">
 								<ul class="nav nav-collapse">
                                     <li class="<?php echo $ManageSystem[1][0]; ?>">
-										<a href="https://environment.webclient.me/index.php/ManageSystem">
+										<a href="https://environment.webclient.me/index.php/ManageSystem/employee">
 											<span class="sub-item">ผู้ใช้งานระบบ&ผู้ปฏิบัติงาน</span>
 										</a>
 									</li>
 									<li class="<?php echo $ManageSystem[1][1]; ?>">
-										<a href="#">
+										<a href="https://environment.webclient.me/index.php/ManageSystem/vehicle">
 											<span class="sub-item">ข้อมูลรถขยะ</span>
 										</a>
 									</li>
                                     <li class="<?php echo $ManageSystem[1][2]; ?>">
-										<a href="#">
+										<a href="https://environment.webclient.me/index.php/ManageSystem/garbage">
 											<span class="sub-item">ข้อมูลถังขยะ</span>
 										</a>
 									</li>
