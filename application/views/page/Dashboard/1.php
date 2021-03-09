@@ -14,9 +14,9 @@
 								<div class="card-body pb-0">
 									<div class="h1 fw-bold float-right">+5%</div>
 									<h2 class="mb-2">17</h2>
-									<p>Users online</p>
+									<p>-</p>
 									<div class="pull-in sparkline-fix chart-as-background">
-										<div id="lineChart"><canvas width="327" height="70" style="display: inline-block; width: 327px; height: 70px; vertical-align: top;"></canvas></div>
+										<div ><canvas width="327" height="70" style="display: inline-block; width: 327px; height: 70px; vertical-align: top;"></canvas></div>
 									</div>
 								</div>
 							</div>
@@ -26,9 +26,9 @@
 								<div class="card-body pb-0">
 									<div class="h1 fw-bold float-right">-3%</div>
 									<h2 class="mb-2">27</h2>
-									<p>New Users</p>
+									<p>-</p>
 									<div class="pull-in sparkline-fix chart-as-background">
-										<div id="lineChart2"><canvas width="327" height="70" style="display: inline-block; width: 327px; height: 70px; vertical-align: top;"></canvas></div>
+										<div ><canvas width="327" height="70" style="display: inline-block; width: 327px; height: 70px; vertical-align: top;"></canvas></div>
 									</div>
 								</div>
 							</div>
@@ -38,15 +38,15 @@
 								<div class="card-body pb-0">
 									<div class="h1 fw-bold float-right">+7%</div>
 									<h2 class="mb-2">213</h2>
-									<p>Transactions</p>
+									<p>-</p>
 									<div class="pull-in sparkline-fix chart-as-background">
-										<div id="lineChart3"><canvas width="327" height="70" style="display: inline-block; width: 327px; height: 70px; vertical-align: top;"></canvas></div>
+										<div ><canvas width="327" height="70" style="display: inline-block; width: 327px; height: 70px; vertical-align: top;"></canvas></div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					
+
 					<div class="row">
 						<div class="col-md-6">
 							<div class="card full-height">
@@ -95,33 +95,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="card">
-								<div class="card-header">
-									<div class="card-head-row">
-										<div class="card-title">สถิติการปฏิบัติงานรวม</div> 
-									</div>
-								</div>
-								<div class="card-body">
-								
-										  
-                                    <div class="card">
-                                        <div class="card-body pb-0">
-                                            <div class="h1 fw-bold float-right text-warning">+7%</div>
-                                            <h2 class="mb-2">213</h2>
-                                            <p class="text-muted">รายการ</p>
-                                            <div class="pull-in sparkline-fix">
-                                                <div id="lineChart"></div>
-                                            </div>
-                                        </div>
-                                    </div>
- 
-
-								</div>
-							</div>
-						</div> 
-					</div>
+				
 					 
 					 
 					 
