@@ -35,7 +35,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Atlantis Lite - Bootstrap 4 Admin Dashboard</title>
+	<title>Environment Management System</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="https://iconarchive.com/download/i99875/graphicloads/folded/open-folded.ico" type="image/x-icon"/>
 
@@ -65,7 +65,7 @@
 			<div class="logo-header" data-background-color="dark">
 				
 				<a href="#" class="logo"> 
-                    <h2 style="color: white;" class="navbar-brand">EnvironmentSystem</h2>
+                    <h2 style="color: white;" class="navbar-brand">Environment Mangement System</h2>
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
