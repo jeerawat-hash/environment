@@ -7,21 +7,21 @@
 		switch ($page_focus) {
 			case 'Dashboard':
 				
-				$Dashboard[0] = "active";
+				$Dashboard[0] = "active submenu";
 				$Dashboard[1][$page_menu] = "active";
 
 				break;
 			
 			case 'ManageStore':
 				
-				$ManageStore[0] = "active";
+				$ManageStore[0] = "active submenu";
 				$ManageStore[1][$page_menu] = "active";
 
 				break;
 
 			case 'ManageSystem':
 				
-				$ManageSystem[0] = "active";
+				$ManageSystem[0] = "active submenu";
 				$ManageSystem[1][$page_menu] = "active";
 
 				break;
