@@ -108,27 +108,27 @@
 							</a>
 							<div class="collapse" id="dashboard">
 								<ul class="nav nav-collapse">
-									<li class="active">
+									<li class="">
 										<a href="#">
 											<span class="sub-item">ภาพรวมการทำงาน</span>
 										</a>
 									</li>
-									<li>
+									<li class="">
 										<a href="#">
 											<span class="sub-item">ผลรวมการจัดเก็บขยะ</span>
 										</a>
 									</li>
-                                    <li>
+                                    <li class="">
 										<a href="#">
 											<span class="sub-item">จำนวนถังขยะในระบบ</span>
 										</a>
 									</li>
-                                    <li>
+                                    <li class="">
 										<a href="#">
 											<span class="sub-item">จำนวนรถเก็บขยะ</span>
 										</a>
 									</li>
-                                    <li>
+                                    <li class="">
 										<a href="#">
 											<span class="sub-item">ผลการส่งซ่อมบำรุง</span>
 										</a>
@@ -146,17 +146,17 @@
 							</a>
 							<div class="collapse" id="ManageStore">
 								<ul class="nav nav-collapse">
-                                    <li>
+                                    <li class="">
 										<a href="#">
 											<span class="sub-item">แผนผังการจัดเก็บขยะ</span>
 										</a>
 									</li>
-									<li>
+									<li class="">
 										<a href="#">
 											<span class="sub-item">รายละเอียดการปฏิบัติงาน</span>
 										</a>
 									</li>
-                                    <li>
+                                    <li class="">
 										<a href="#">
 											<span class="sub-item">จัดการกลุ่มผู้ปฏิบัติงาน</span>
 										</a>
@@ -173,17 +173,17 @@
 							</a>
 							<div class="collapse" id="ManageSystem">
 								<ul class="nav nav-collapse">
-                                    <li>
+                                    <li class="">
 										<a href="#">
 											<span class="sub-item">ผู้ใช้งานระบบ&ผู้ปฏิบัติงาน</span>
 										</a>
 									</li>
-									<li>
+									<li class="">
 										<a href="#">
 											<span class="sub-item">ข้อมูลรถขยะ</span>
 										</a>
 									</li>
-                                    <li>
+                                    <li class="">
 										<a href="#">
 											<span class="sub-item">ข้อมูลถังขยะ</span>
 										</a>
