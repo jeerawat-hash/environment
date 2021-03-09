@@ -37,7 +37,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>Atlantis Lite - Bootstrap 4 Admin Dashboard</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="https://environment.webclient.me/assets/img/icon.ico" type="image/x-icon"/>
+	<link rel="icon" href="https://iconarchive.com/download/i99875/graphicloads/folded/open-folded.ico" type="image/x-icon"/>
 
 	<!-- Fonts and icons -->
 	<script src="https://environment.webclient.me/assets/js/plugin/webfont/webfont.min.js"></script>
