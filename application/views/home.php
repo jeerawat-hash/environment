@@ -108,7 +108,7 @@
 							</a>
 							<div class="collapse" id="dashboard">
 								<ul class="nav nav-collapse">
-									<li>
+									<li class="active">
 										<a href="#">
 											<span class="sub-item">ภาพรวมการทำงาน</span>
 										</a>
