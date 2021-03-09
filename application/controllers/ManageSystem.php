@@ -1,14 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class ManageSystem extends CI_Controller {
 
 
 
 	public function index()
 	{ 
-        $header['page_name'] = 'Home';
-        $header['page_focus'] = 'Dashboard';
+        $header['page_name'] = 'ManageSystem';
+        $header['page_focus'] = 'ManageSystem';
         $header['page_menu'] = 1;
 
 		$this->load->view('template/header.php',$header);

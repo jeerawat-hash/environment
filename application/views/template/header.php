@@ -142,7 +142,7 @@
 							<div class="collapse" id="Dashboard">
 								<ul class="nav nav-collapse">
 									<li class="<?php echo $Dashboard[1][0]; ?>">
-										<a href="#">
+										<a href="https://environment.webclient.me/index.php/Dashboard">
 											<span class="sub-item">ภาพรวมการทำงาน</span>
 										</a>
 									</li>
@@ -180,7 +180,7 @@
 							<div class="collapse" id="ManageStore">
 								<ul class="nav nav-collapse">
                                     <li class="<?php echo $ManageStore[1][0]; ?>">
-										<a href="#">
+										<a href="https://environment.webclient.me/index.php/ManageStore">
 											<span class="sub-item">แผนผังการจัดเก็บขยะ</span>
 										</a>
 									</li>
@@ -207,7 +207,7 @@
 							<div class="collapse" id="ManageSystem">
 								<ul class="nav nav-collapse">
                                     <li class="<?php echo $ManageSystem[1][0]; ?>">
-										<a href="#">
+										<a href="https://environment.webclient.me/index.php/ManageSystem">
 											<span class="sub-item">ผู้ใช้งานระบบ&ผู้ปฏิบัติงาน</span>
 										</a>
 									</li>
