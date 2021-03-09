@@ -17,7 +17,7 @@ class Dashboard extends CI_Controller {
         $header['page_menu'] = 0;
 
 		$this->load->view('template/header.php',$header);
-		$this->load->view('page/home.php');
+		$this->load->view('page/Dashboard/0.php');
 		$this->load->view('template/footer.php');
 
 	}
