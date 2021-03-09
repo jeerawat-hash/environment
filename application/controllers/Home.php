@@ -7,7 +7,12 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('template/header.php');
+ 
+        $header['page_name'] = 'Dashboard';
+        $header['page_focus'] = 'Dashboard';
+        $header['page_menu'] = 1;
+
+		$this->load->view('template/header.php',$header);
 		$this->load->view('page/home.php');
 		$this->load->view('template/footer.php');
 	}

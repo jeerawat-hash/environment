@@ -1,3 +1,36 @@
+<?php 
+
+		$Dashboard = array("", array("","","","","","","","","","") );
+		$ManageStore = array("", array("","","","","","","","","","") ); 
+		$ManageSystem = array("", array("","","","","","","","","","") ); 
+
+		switch ($page_focus) {
+			case 'Dashboard':
+				
+				$Dashboard[0] = "active";
+				$Dashboard[1][$page_menu] = "active";
+
+				break;
+			
+			case 'ManageStore':
+				
+				$ManageStore[0] = "active";
+				$ManageStore[1][$page_menu] = "active";
+
+				break;
+
+			case 'ManageSystem':
+				
+				$ManageSystem[0] = "active";
+				$ManageSystem[1][$page_menu] = "active";
+
+				break;
+ 
+		}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,35 +133,35 @@
 					</div>
 					<ul class="nav nav-success">
 
-						<li class="nav-item active">
-							<a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
+						<li class="nav-item <?php echo $Dashboard[0]; ?>">
+							<a data-toggle="collapse" href="#Dashboard" class="collapsed" aria-expanded="false">
 								<i class="fas fa-grip-horizontal"></i>
 								<p>ผลการดำเนินงาน</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse" id="dashboard">
+							<div class="collapse" id="Dashboard">
 								<ul class="nav nav-collapse">
-									<li class="">
+									<li class="<?php echo $Dashboard[1][0]; ?>">
 										<a href="#">
 											<span class="sub-item">ภาพรวมการทำงาน</span>
 										</a>
 									</li>
-									<li class="">
+									<li class="<?php echo $Dashboard[1][1]; ?>">
 										<a href="#">
 											<span class="sub-item">ผลรวมการจัดเก็บขยะ</span>
 										</a>
 									</li>
-                                    <li class="">
+                                    <li class="<?php echo $Dashboard[1][2]; ?>">
 										<a href="#">
 											<span class="sub-item">จำนวนถังขยะในระบบ</span>
 										</a>
 									</li>
-                                    <li class="">
+                                    <li class="<?php echo $Dashboard[1][3]; ?>">
 										<a href="#">
 											<span class="sub-item">จำนวนรถเก็บขยะ</span>
 										</a>
 									</li>
-                                    <li class="">
+                                    <li class="<?php echo $Dashboard[1][4]; ?>">
 										<a href="#">
 											<span class="sub-item">ผลการส่งซ่อมบำรุง</span>
 										</a>
@@ -138,7 +171,7 @@
 							</div>
 						</li>
 
-                        <li class="nav-item">
+                        <li class="nav-item <?php echo $ManageStore[0]; ?>">
 							<a data-toggle="collapse" href="#ManageStore" class="collapsed" aria-expanded="false">
 								<i class="fas fa-hockey-puck"></i>
 								<p>บริหารการจัดเก็บ</p>
@@ -146,17 +179,17 @@
 							</a>
 							<div class="collapse" id="ManageStore">
 								<ul class="nav nav-collapse">
-                                    <li class="">
+                                    <li class="<?php echo $ManageStore[1][0]; ?>">
 										<a href="#">
 											<span class="sub-item">แผนผังการจัดเก็บขยะ</span>
 										</a>
 									</li>
-									<li class="">
+									<li class="<?php echo $ManageStore[1][1]; ?>">
 										<a href="#">
 											<span class="sub-item">รายละเอียดการปฏิบัติงาน</span>
 										</a>
 									</li>
-                                    <li class="">
+                                    <li class="<?php echo $ManageStore[1][2]; ?>">
 										<a href="#">
 											<span class="sub-item">จัดการกลุ่มผู้ปฏิบัติงาน</span>
 										</a>
@@ -165,7 +198,7 @@
 							</div>
 						</li>
 
-                        <li class="nav-item">
+                        <li class="nav-item <?php echo $ManageSystem[0]; ?>">
 							<a data-toggle="collapse" href="#ManageSystem" class="collapsed" aria-expanded="false">
 								<i class="fas fa-database"></i>
 								<p>จัดการข้อมูล</p>
@@ -173,17 +206,17 @@
 							</a>
 							<div class="collapse" id="ManageSystem">
 								<ul class="nav nav-collapse">
-                                    <li class="">
+                                    <li class="<?php echo $ManageSystem[1][0]; ?>">
 										<a href="#">
 											<span class="sub-item">ผู้ใช้งานระบบ&ผู้ปฏิบัติงาน</span>
 										</a>
 									</li>
-									<li class="">
+									<li class="<?php echo $ManageSystem[1][1]; ?>">
 										<a href="#">
 											<span class="sub-item">ข้อมูลรถขยะ</span>
 										</a>
 									</li>
-                                    <li class="">
+                                    <li class="<?php echo $ManageSystem[1][2]; ?>">
 										<a href="#">
 											<span class="sub-item">ข้อมูลถังขยะ</span>
 										</a>
