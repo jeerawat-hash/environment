@@ -52,7 +52,8 @@
 	</script>
 
 	<!-- CSS Files -->
-	<link rel="stylesheet" href="https://environment.webclient.me/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="https://environment.webclient.me/assets/css/bootstrap.min.css">-->
 	<link rel="stylesheet" href="https://environment.webclient.me/assets/css/atlantis.min.css">
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->
@@ -68,8 +69,8 @@
 
 
 	<script src="https://environment.webclient.me/assets/js/core/popper.min.js"></script>
-	<script src="https://environment.webclient.me/assets/js/core/bootstrap.min.js"></script>
-
+	<!--<script src="https://environment.webclient.me/assets/js/core/bootstrap.min.js"></script>-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<!-- jQuery UI -->
 	<script src="https://environment.webclient.me/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 	<script src="https://environment.webclient.me/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
