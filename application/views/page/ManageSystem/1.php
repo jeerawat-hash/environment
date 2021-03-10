@@ -23,22 +23,16 @@
 										<table id="basic-datatables" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
-													<th>Name</th>
-													<th>Position</th>
-													<th>Office</th>
-													<th>Age</th>
-													<th>Start date</th>
-													<th>Salary</th>
+													<th>ลำดับ</th>
+													<th>ป้ายทะเบียน</th>
+													<th>สี</th> 
 												</tr>
 											</thead> 
 											<tbody> 
 												<tr>
 													<td>Donna Snider</td>
 													<td>Customer Support</td>
-													<td>New York</td>
-													<td>27</td>
-													<td>2011/01/25</td>
-													<td>$112,000</td>
+													<td>New York</td> 
 												</tr>
 											</tbody>
 										</table>
@@ -77,45 +71,26 @@
 													</div>
 													<div class="card-body">
 														<div class="row">
+															 
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
-																	<label for="email2">รหัสพนักงาน</label>
-																	<input type="email" class="form-control" id="email2" placeholder="รหัสพนักงาน"> 
-																</div>
-															</div>
-															<div class="col-md-6 col-lg-6">
-																<div class="form-group">
-																	<label for="email2">ชื่อพนักงาน</label>
-																	<input type="email" class="form-control" id="email2" placeholder="ชื่อพนักงาน">
+																	<label for="email2">ป้ายทะเบียน</label>
+																	<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกป้ายทะเบียน">
 																
 																</div>
 															</div>
-															
-														</div>
-														<div class="row">
+
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
-																	<label for="email2">แผนก</label>
-																	<input type="email" class="form-control" id="email2" placeholder="แผนก">
+																	<label for="email2">สี</label>
+																	<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกสี">
 																	
 																</div>
 															</div>
-															<div class="col-md-6 col-lg-6">
-																<div class="form-group">
-																	<label for="smallSelect">ประเภทการจัดเก็บ</label>
-																
-																	<select class="form-control form-control-sm" id="smallSelect">
-																		<option>1</option>
-																		<option>2</option>
-																		<option>3</option>
-																		<option>4</option>
-																		<option>5</option>
-																	</select>
+														 
 															
-																	
-																</div>
-															</div>
 														</div>
+													 
 													</div>
 
 												</div>

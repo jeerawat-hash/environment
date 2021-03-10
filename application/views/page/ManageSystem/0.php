@@ -22,22 +22,14 @@
 										<table id="basic-datatables" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
-													<th>Name</th>
-													<th>Position</th>
-													<th>Office</th>
-													<th>Age</th>
-													<th>Start date</th>
-													<th>Salary</th>
+												<th>ชื่อ</th>
+													<th>เบอร์โทร</th>
 												</tr>
 											</thead> 
 											<tbody> 
 												<tr>
 													<td>Donna Snider</td>
-													<td>Customer Support</td>
-													<td>New York</td>
-													<td>27</td>
-													<td>2011/01/25</td>
-													<td>$112,000</td>
+													<td>Customer Support</td> 
 												</tr>
 											</tbody>
 										</table>
@@ -63,22 +55,14 @@
 										<table id="basic-datatables" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
-													<th>Name</th>
-													<th>Position</th>
-													<th>Office</th>
-													<th>Age</th>
-													<th>Start date</th>
-													<th>Salary</th>
+													<th>ชื่อ</th>
+													<th>เบอร์โทร</th> 
 												</tr>
 											</thead> 
 											<tbody> 
 												<tr>
 													<td>Donna Snider</td>
-													<td>Customer Support</td>
-													<td>New York</td>
-													<td>27</td>
-													<td>2011/01/25</td>
-													<td>$112,000</td>
+													<td>Customer Support</td> 
 												</tr>
 											</tbody>
 										</table>
