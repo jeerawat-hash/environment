@@ -39,8 +39,25 @@
 												<?php  
 												
 												foreach($trash as $valuetash){
-													echo $valuetash->Capacity;
 
+													?>
+													
+
+
+												<tr>
+													<td><?php echo $valuetash->ID; ?></td>
+													<td><?php echo $valuetash->Capacity; ?></td>
+													<td><?php echo $valuetash->Color; ?></td>
+													<td><?php echo $valuetash->Remark; ?></td>
+													<td><button  id="btncon1"  class="btn btn-danger"> เรียกดู QR Code  </button> </td>
+													 
+												</tr>
+
+
+
+
+
+												<?
 
 												}
 												
@@ -49,14 +66,6 @@
 												
 												?>
 
-												<tr>
-													<td>Donna Snider</td>
-													<td>Customer Support</td>
-													<td>New York</td>
-													<td>27</td>
-													<td><button  id="btncon1"  class="btn btn-danger"> เรียกดู QR Code  </button> </td>
-													 
-												</tr>
 
 
 
