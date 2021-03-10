@@ -5,9 +5,17 @@ class ManageStore extends CI_Controller {
 
 
 
+	function __construct()
+	{
+		parent::__construct(); 
+		$this->load->model("Env_Model");
+
+	} 
+
 	public function index()
 	{ 
- 
+		
+		echo $this->Env_Model->testsql();
 
 	}
 	public function maps()
