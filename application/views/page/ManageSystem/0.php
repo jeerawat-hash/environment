@@ -23,13 +23,15 @@
 											<thead>
 												<tr>
 												<th>ชื่อ</th>
-													<th>เบอร์โทร</th>
+												<th>เบอร์โทร</th>
+												<th></th>
 												</tr>
 											</thead> 
 											<tbody> 
 												<tr>
 													<td>Donna Snider</td>
 													<td>Customer Support</td> 
+													<td><button  id="btncon1"   class="btn btn-danger"> ยืนยันตัวตน  </button></td> 
 												</tr>
 											</tbody>
 										</table>
@@ -57,12 +59,14 @@
 												<tr>
 													<th>ชื่อ</th>
 													<th>เบอร์โทร</th> 
+													<th></th>
 												</tr>
 											</thead> 
 											<tbody> 
 												<tr>
 													<td>Donna Snider</td>
-													<td>Customer Support</td> 
+													<td>Customer Support</td>
+													<button  id="btncon2"  class="btn btn-danger"> ยืนยันตัวตน  </button> 
 												</tr>
 											</tbody>
 										</table>
@@ -310,7 +314,44 @@
 							}
 						}
 					});
-              });		   
+              });	
+			  
+			  $("#btncon2").click(function(){
+				  				  				  
+				  swal({
+						  title: "ยืนยันตัวตนเรียบร้อย",
+						  text: " ",
+						  icon: "success",
+						  buttons: {
+							  confirm: {
+								  text: "ตกลง",
+								  value: true,
+								  visible: true,
+								  className: "btn btn-success",
+								  closeModal: true
+							  }
+						  }
+					  });
+			});
+			  
+			$("#btncon1").click(function(){
+				  				  				  
+		 		  swal({
+		 				  title: "ยืนยันตัวตนเรียบร้อย",
+		 				  text: " ",
+		 				  icon: "success",
+		 				  buttons: {
+		 					  confirm: {
+		 						  text: "ตกลง",
+		 						  value: true,
+		 						  visible: true,
+		 						  className: "btn btn-success",
+		 						  closeModal: true
+		 					  }
+		 				  }
+		 			  });
+		 	});
+		 
         </script>
 
  
