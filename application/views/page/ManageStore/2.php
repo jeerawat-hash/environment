@@ -81,12 +81,21 @@
 													</div>
 													<div class="card-body">
 														<div class="row">
-															<div class="col-md-6 col-lg-6">
-																<div class="form-group">
-																	<label for="email2">ป้ายทะเบียน</label>
-																	<input type="email" class="form-control" id="data1" placeholder="กรุณากรอกป้ายทะเบียน"> 
-																</div>
+														<div class="col-md-6 col-lg-6">
+															<div class="form-group">
+																<label for="smallSelect">ประเภทการจัดเก็บ</label>
+															
+																<select class="form-control form-control-sm" id="smallSelect">
+																	<option>1</option>
+																	<option>2</option>
+																	<option>3</option>
+																	<option>4</option>
+																	<option>5</option>
+																</select>
+														
+																
 															</div>
+														</div>
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
 																	<label for="email2">ชื่อผู้ปฏิบัติงาน</label>
@@ -158,10 +167,10 @@
               });
  
 			  $("#btncreatedata").click(function(){
-				  var data1 = $("#data1").val();
+				  var smallSelect = $("#smallSelect").val();
 				  var data2 = $("#data2").val(); 
 				  var data3 = $("#data3").val(); 
-				  if( data1 == ""){
+				  if( smallSelect == ""){
 					swal("กรุณากรอกป้ายทะเบียน", {
 						buttons: {        			
 							confirm: {
