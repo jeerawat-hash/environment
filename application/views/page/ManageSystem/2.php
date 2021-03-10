@@ -246,20 +246,42 @@
 					  $( "#data3" ).focus();
 					  return false;
 				  }
-				swal({
-						title: "บันทึกเรียบร้อย",
-						text: " ",
-						icon: "success",
-						buttons: {
-							confirm: {
-								text: "ตกลง",
-								value: true,
-								visible: true,
-								className: "btn btn-success",
-								closeModal: true
-							}
-						}
-					});
+
+
+
+				  $.post("https://environment.webclient.me/index.php/ManageSystem/InsertDataTrash"
+                                  ,
+                                   {
+									Capacity :  data2, 
+									Color    :  data1,
+									Remark    :  data3 
+                                     
+                                     }
+                                  ,
+                                    function(data,status,response){  
+                                      console.log(data);
+                                   if (status == "success") 
+                                      { 
+											
+					                    	swal({
+					                       	title: "บันทึกเรียบร้อย",
+					                       	text: " ",
+					                       	icon: "success",
+					                       	buttons: {
+					                       		confirm: {
+					                       			text: "ตกลง",
+					                       			value: true,
+					                       			visible: true,
+					                       			className: "btn btn-success",
+					                       			closeModal: true
+					                       		}
+					                       	}
+					                       });
+                                      }
+                                     });
+				  
+				   
+				 
               });
 			   
 			   

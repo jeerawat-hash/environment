@@ -24,6 +24,22 @@ class Env_Model extends CI_Model
         
         return 1;
     }
+    public function GetDataTrash()
+    {   
+        $this->envdb = $this->load->database("envdb",true);
+
+        return $this->envdb->query(" select * from  jeerawatme_env.Trash ")->result();
+         
+    }
+    public function InsertDataVehicle($LicensePlate,$Color)
+    {   
+        $this->envdb = $this->load->database("envdb",true);
+
+        $this->envdb->query(" INSERT INTO jeerawatme_env.`Vehicle` (`ID`, `LicensePlate`, `Color`) VALUES (NULL, '".$LicensePlate."', '".$Color."') ");
+        
+        return 1;
+    }
+    
     public function InsertDataMemberManage($Name,$Telephone)
     {   
         $this->envdb = $this->load->database("envdb",true);
@@ -40,14 +56,16 @@ class Env_Model extends CI_Model
         
         return 1;
     }
-    public function CreateGroup($VehicleID,$MemberID,$Remark)
-    {   
-        $this->envdb = $this->load->database("envdb",true);
 
-        $this->envdb->query(" INSERT INTO jeerawatme_env.WorkGroup (ID, VehicleID, MemberID, Remark) VALUES (NULL, '".$VehicleID."', '".$MemberID."', '".$Remark."') ");
-        
+    public function UpdateAuthentication($LineID,$ID)
+    {
+
+        $this->envdb = $this->load->database("envdb",true);
+        $this->envdb->query(" UPDATE jeerawatme_env.`Member` SET `LineID` = '".$LineID."' WHERE `ID` = ".$ID." ");
         return 1;
+
     }
+   
     public function GetDataMemberWorkGroup()
     {   
         $this->envdb = $this->load->database("envdb",true);
@@ -64,6 +82,22 @@ class Env_Model extends CI_Model
         $this->envdb = $this->load->database("envdb",true);
         return $this->envdb->query(" SELECT * FROM jeerawatme_env.Member WHERE ID not in ( select MemberID from jeerawatme_env.WorkGroupDetail ) and PositionID = 0 ")->result();
  
+    }
+    public function CreateGroup($VehicleID,$MemberID,$Remark)
+    {   
+        $this->envdb = $this->load->database("envdb",true);
+
+        $this->envdb->query(" INSERT INTO jeerawatme_env.WorkGroup (ID, VehicleID, MemberID, Remark) VALUES (NULL, '".$VehicleID."', '".$MemberID."', '".$Remark."') ");
+        
+        return 1;
+    }
+    public function InsertGroupDetail($WorkGroupID,$MemberID)
+    {   
+        $this->envdb = $this->load->database("envdb",true);
+
+        $this->envdb->query(" INSERT INTO jeerawatme_env.`WorkGroupDetail` (`WorkGroupID`, `MemberID`) VALUES ('".$WorkGroupID."', '".$MemberID."') ");
+        
+        return 1;
     }
     public function DeleteMemberInGroup($WorkGroupID,$MemberID)
     {

@@ -47,15 +47,27 @@ class ManageSystem extends CI_Controller {
         $header['page_focus'] = 'ManageSystem';
         $header['page_menu'] = 2;
 		$data['page_name'] = $header['page_name'];
-
+        
 		$this->load->view('template/header.php',$header); 
 		$this->load->view('page/ManageSystem/2.php',$data);
 		$this->load->view('template/footer.php');
 
 	}
 
+	public function InsertDataTrash()
+	{   
+	   if ( !isset($_POST["Capacity"])) {
+		  echo "Paramiter Invalid";
+		 exit();
+	   }
 
-
+		  $Capacity  =   trim($_POST["Capacity"]) ;  
+		  $Color  =   trim($_POST["Color"]) ;  
+		  $Remark  =   trim($_POST["Remark"]) ;  
+		  $result =   $this->Env_Model->InsertDataTrash($Capacity,$Color,$Remark); 
+		  return 1; 
+	}
+	 
 
 	
 
