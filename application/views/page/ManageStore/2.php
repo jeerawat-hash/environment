@@ -16,7 +16,7 @@
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-									<h4 class="">กลุ่มผู้ปฏิบัติงานขณะนี้  <p align="right" >  <button class="btn btn-warning"  id="btncreate" > สร้าง</button>  </p> </h4>  
+									<h4 class="">กลุ่มผู้ปฏิบัติงานขณะนี้  <p align="right" >  <button class="btn btn-warning"  id="btncreate" > สร้างรายการ</button>  </p> </h4>  
 									<p class="card-category">
 									  
 									       
