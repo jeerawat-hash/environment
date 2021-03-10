@@ -14,8 +14,64 @@ class Env_Model extends CI_Model
           return 0;
         }
  
+    }
+    
+    public function InsertDataTrash($Capacity,$Color,$Remark)
+    {   
+        $this->envdb = $this->load->database("envdb",true);
 
-    }  
+        $this->envdb->query(" INSERT INTO jeerawatme_env.Trash (ID, Capacity, Color, Remark) VALUES (NULL, '".$Capacity."', '".$Color."', '".$Remark."') ");
+        
+        return 1;
+    }
+    public function InsertDataMemberManage($Name,$Telephone)
+    {   
+        $this->envdb = $this->load->database("envdb",true);
+
+        $this->envdb->query(" INSERT INTO jeerawatme_env.Member (ID, Name, PositionID, Telephone) VALUES (NULL, '".$Name."', '1', '".$Telephone."') ");
+        
+        return 1;
+    }
+    public function InsertDataMemberWork($Name,$Telephone)
+    {   
+        $this->envdb = $this->load->database("envdb",true);
+
+        $this->envdb->query(" INSERT INTO jeerawatme_env.Member (ID, Name, PositionID, Telephone) VALUES (NULL, '".$Name."', '0', '".$Telephone."') ");
+        
+        return 1;
+    }
+    public function CreateGroup($VehicleID,$MemberID,$Remark)
+    {   
+        $this->envdb = $this->load->database("envdb",true);
+
+        $this->envdb->query(" INSERT INTO jeerawatme_env.WorkGroup (ID, VehicleID, MemberID, Remark) VALUES (NULL, '".$VehicleID."', '".$MemberID."', '".$Remark."') ");
+        
+        return 1;
+    }
+    public function GetDataMemberWorkGroup()
+    {   
+        $this->envdb = $this->load->database("envdb",true);
+
+        return $this->envdb->query(" SELECT b.LicensePlate,d.Name,d.Telephone FROM jeerawatme_env.WorkGroup a
+        join jeerawatme_env.Vehicle b on a.VehicleID = b.ID
+        join jeerawatme_env.WorkGroupDetail c on a.ID = c.WorkGroupID
+        join jeerawatme_env.Member d on c.MemberID = d.ID ")->result();
+
+    }
+    public function GetDataMemberNonGroup()
+    {
+
+        $this->envdb = $this->load->database("envdb",true);
+        return $this->envdb->query(" SELECT * FROM jeerawatme_env.Member WHERE ID not in ( select MemberID from jeerawatme_env.WorkGroupDetail ) and PositionID = 0 ")->result();
+ 
+    }
+    public function DeleteMemberInGroup($WorkGroupID,$MemberID)
+    {
+
+        $this->envdb = $this->load->database("envdb",true);
+        return $this->envdb->query(" DELETE FROM jeerawatme_env.`WorkGroupDetail` WHERE WorkGroupID = ".$WorkGroupID." and MemberID = ".$MemberID." ");
+  
+    }
 
 
 
