@@ -7,21 +7,21 @@
 		switch ($page_focus) {
 			case 'Dashboard':
 				
-				$Dashboard[0] = "submenu";
+				$Dashboard[0] = "active";
 				$Dashboard[1][$page_menu] = "active";
 
 				break;
 			
 			case 'ManageStore':
 				
-				$ManageStore[0] = "submenu";
+				$ManageStore[0] = "active";
 				$ManageStore[1][$page_menu] = "active";
 
 				break;
 
 			case 'ManageSystem':
 				
-				$ManageSystem[0] = "submenu";
+				$ManageSystem[0] = "active";
 				$ManageSystem[1][$page_menu] = "active";
 
 				break;
@@ -188,7 +188,7 @@
 					<ul class="nav nav-success">
 
 						<li class="nav-item <?php echo $Dashboard[0]; ?>">
-							<a data-toggle="collapse" href="#Dashboard" class="collapsed" aria-expanded="true">
+							<a data-toggle="collapse" href="#Dashboard"   aria-expanded="true">
 								<i class="fas fa-grip-horizontal"></i>
 								<p>ผลการดำเนินงาน</p>
 								<span class="caret"></span>
