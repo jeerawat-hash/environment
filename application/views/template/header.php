@@ -193,7 +193,7 @@
 								<p>ผลการดำเนินงาน</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse" id="Dashboard">
+							<div class="collapse show" id="Dashboard">
 								<ul class="nav nav-collapse">
 									<li class="<?php echo $Dashboard[1][0]; ?>">
 										<a href="https://environment.webclient.me/index.php/Dashboard/summary">
