@@ -73,7 +73,7 @@
       <div class="modal-content">
         <div class="modal-header">
           
-          <h4 >Modal Header</h4>
+          <h4 >ลงทะเบียนผู้ปฏิบัติงาน</h4>
 
 		  <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
@@ -83,22 +83,21 @@
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-									<div class="card-title">Form Elements</div>
+									<div class="card-title">สร้างลงทะเบียนผู้ปฏิบัติงาน</div>
 								</div>
 								<div class="card-body">
 									<div class="row">
 										<div class="col-md-6 col-lg-6">
 											<div class="form-group">
-												<label for="email2">Email Address</label>
-												<input type="email" class="form-control" id="email2" placeholder="Enter Email">
-												<small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone else.</small>
+												<label for="email2">รหัสพนักงาน</label>
+												<input type="email" class="form-control" id="email2" placeholder="Enter Email"> 
 											</div>
 										</div>
 										<div class="col-md-6 col-lg-6">
 											<div class="form-group">
-												<label for="email2">Email Address</label>
+												<label for="email2">ชื่อพนักงาน</label>
 												<input type="email" class="form-control" id="email2" placeholder="Enter Email">
-												<small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone else.</small>
+											 
 											</div>
 										</div>
 										 
@@ -106,9 +105,24 @@
 									<div class="row">
 										<div class="col-md-6 col-lg-4">
 											<div class="form-group">
-												<label for="email2">Email Address</label>
+												<label for="email2">แผนก</label>
 												<input type="email" class="form-control" id="email2" placeholder="Enter Email">
-												<small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone else.</small>
+												 
+											</div>
+										</div>
+										<div class="col-md-6 col-lg-4">
+											<div class="form-group">
+												<label for="smallSelect">กลุ่มผู้ปฏิบัติงานขณะนี้</label>
+											  
+												<select class="form-control form-control-sm" id="smallSelect">
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+												</select>
+										 
+												 
 											</div>
 										</div>
 									</div>
