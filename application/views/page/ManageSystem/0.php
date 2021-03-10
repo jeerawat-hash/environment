@@ -106,13 +106,13 @@
 													<div class="col-md-6 col-lg-6">
 														<div class="form-group">
 															<label for="email2">ชื่อ</label>
-															<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกชื่อ"> 
+															<input type="email" class="form-control" id="data1" placeholder="กรุณากรอกชื่อ"> 
 														</div>
 													</div>
 													<div class="col-md-6 col-lg-6">
 														<div class="form-group">
 															<label for="email2">เบอร์โทร</label>
-															<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกเบอร์โทร">
+															<input type="email" class="form-control" id="data2" placeholder="กรุณากรอกเบอร์โทร">
 														
 														</div>
 													</div>
@@ -164,13 +164,13 @@
 													<div class="col-md-6 col-lg-6">
 														<div class="form-group">
 															<label for="email2">ชื่อ</label>
-															<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกชื่อ"> 
+															<input type="email" class="form-control" id="data3" placeholder="กรุณากรอกชื่อ"> 
 														</div>
 													</div>
 													<div class="col-md-6 col-lg-6">
 														<div class="form-group">
 															<label for="email2">เบอร์โทร</label>
-															<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกเบอร์โทร">
+															<input type="email" class="form-control" id="data4" placeholder="กรุณากรอกเบอร์โทร">
 														
 														</div>
 													</div>
@@ -231,6 +231,30 @@
               });
  
 			  $("#btncreatedataone").click(function(){
+				  var data3 = $("#data3").val();
+				  var data4 = $("#data4").val(); 
+				  if( data3 == ""){ 
+					  swal("กรุณากรอกชื่อ", {
+						buttons: {        			
+							confirm: {
+								className : 'btn btn-danger'
+							}
+						},
+					});					  
+					  $( "#data3" ).focus();
+					  return false;
+				  }
+				  if( data4 == ""){
+					swal("กรุณากรอกเบอร์โทร", {
+						buttons: {        			
+							confirm: {
+								className : 'btn btn-danger'
+							}
+						},
+					});
+					  $( "#data4" ).focus();
+					  return false;
+				  }
 				swal({
 						title: "บันทึกเรียบร้อย",
 						text: " ",
@@ -248,6 +272,30 @@
               });
 			   
 			  $("#btncreatedatatwo").click(function(){
+			    	var data1 = $("#data1").val();
+				  var data2 = $("#data2").val(); 
+				  if( data1 == ""){ 
+					  swal("กรุณากรอกชื่อ", {
+						buttons: {        			
+							confirm: {
+								className : 'btn btn-danger'
+							}
+						},
+					});
+					  $( "#data1" ).focus();
+					  return false;
+				  }
+				  if( data2 == ""){
+					swal("กรุณากรอกเบอร์โทร", {
+						buttons: {        			
+							confirm: {
+								className : 'btn btn-danger'
+							}
+						},
+					});			 
+					  $( "#data2" ).focus();
+					  return false;
+				  }
 				swal({
 						title: "บันทึกเรียบร้อย",
 						text: " ",

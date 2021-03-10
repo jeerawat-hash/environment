@@ -75,7 +75,7 @@
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
 																	<label for="email2">ป้ายทะเบียน</label>
-																	<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกป้ายทะเบียน">
+																	<input type="email" class="form-control" id="data1" placeholder="กรุณากรอกป้ายทะเบียน">
 																
 																</div>
 															</div>
@@ -83,7 +83,7 @@
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
 																	<label for="email2">สี</label>
-																	<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกสี">
+																	<input type="email" class="form-control" id="data2" placeholder="กรุณากรอกสี">
 																	
 																</div>
 															</div>
@@ -147,6 +147,31 @@
               });
  
 			  $("#btncreatedata").click(function(){
+
+				  var data1 = $("#data1").val();
+				  var data2 = $("#data2").val(); 
+				  if( data1 == ""){
+					swal("กรุณากรอกป้ายทะเบียน", {
+						buttons: {        			
+							confirm: {
+								className : 'btn btn-danger'
+							}
+						},
+					});		 
+					  $( "#data1" ).focus();
+					  return false;
+				  }
+				  if( data2 == ""){
+					swal("กรุณากรอกความจุ", {
+						buttons: {        			
+							confirm: {
+								className : 'btn btn-danger'
+							}
+						},
+					});		 
+					  $( "#data2" ).focus();
+					  return false;
+				  } 
 				swal({
 						title: "บันทึกเรียบร้อย",
 						text: " ",

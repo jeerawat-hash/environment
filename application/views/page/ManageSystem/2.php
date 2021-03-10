@@ -75,33 +75,29 @@
 												</div>
 												<div class="card-body">
 													<div class="row">
+														 
 														<div class="col-md-6 col-lg-6">
 															<div class="form-group">
-																<label for="email2">หมายเลขถัง</label>
-																<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกหมายเลขถัง"> 
+																<label for="email2">สี</label>
+																<input type="email" class="form-control" id="data1" placeholder="กรุณากรอกสี">
+															
 															</div>
 														</div>
 														<div class="col-md-6 col-lg-6">
 															<div class="form-group">
-																<label for="email2">สี</label>
-																<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกสี">
-															
+																<label for="email2">ความจุ</label>
+																<input type="email" class="form-control" id="data2" placeholder="กรุณากรอกความจุ">
+																
 															</div>
 														</div>
 														
 													</div>
 													<div class="row">
-														<div class="col-md-6 col-lg-6">
-															<div class="form-group">
-																<label for="email2">ความจุ</label>
-																<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกความจุ">
-																
-															</div>
-														</div>
+														 
 														<div class="col-md-6 col-lg-6">
 															<div class="form-group">
 																<label for="email2">ตำเเหน่ง</label>
-																<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกตำเเหน่ง">
+																<input type="email" class="form-control" id="data3" placeholder="กรุณากรอกตำเเหน่ง">
 																
 															</div>
 														</div>
@@ -163,6 +159,42 @@
               });
  
 			  $("#btncreatedata").click(function(){
+				  var data1 = $("#data1").val();
+				  var data2 = $("#data2").val();
+				  var data3 = $("#data3").val();
+				  if( data1 == ""){ 
+					  swal("กรุณากรอกสี", {
+						buttons: {        			
+							confirm: {
+								className : 'btn btn-danger'
+							}
+						},
+					});						  
+					  $( "#data1" ).focus();
+					  return false;
+				  }
+				  if( data2 == ""){
+					swal("กรุณากรอกความจุ", {
+						buttons: {        			
+							confirm: {
+								className : 'btn btn-danger'
+							}
+						},
+					});		 
+					  $( "#data2" ).focus();
+					  return false;
+				  }
+				  if( data3 == ""){
+					swal("กรุณากรอกตำเเหน่ง", {
+						buttons: {        			
+							confirm: {
+								className : 'btn btn-danger'
+							}
+						},
+					});		 
+					  $( "#data3" ).focus();
+					  return false;
+				  }
 				swal({
 						title: "บันทึกเรียบร้อย",
 						text: " ",
