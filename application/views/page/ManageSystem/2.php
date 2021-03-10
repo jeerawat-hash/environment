@@ -34,6 +34,21 @@
 												</tr>
 											</thead> 
 											<tbody> 
+
+
+												<?php  
+												
+												foreach($trash as $valuetash){
+													echo $valuetash->Capacity;
+
+
+												}
+												
+												
+												
+												
+												?>
+
 												<tr>
 													<td>Donna Snider</td>
 													<td>Customer Support</td>
@@ -42,6 +57,14 @@
 													<td><button  id="btncon1"  class="btn btn-danger"> เรียกดู QR Code  </button> </td>
 													 
 												</tr>
+
+
+
+
+
+
+
+
 											</tbody>
 										</table>
 									</div>
