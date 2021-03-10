@@ -150,7 +150,7 @@
 						<div class="modal-content">
 							<div class="modal-header  bg-success ">
 							
-							<h4 style="color:white"  >ลงทะเบียนผู้ปฏิบัติงาน</h4>
+							<h4 style="color:white"  >ลงทะเบียนจัดกลุ่มผู้ปฏิบัติงาน</h4>
 
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
 							</div>
@@ -160,7 +160,7 @@
 											<div class="col-md-12">
 												<div class="card">
 													<div class="card-header">
-														<div class="card-title">สร้างลงทะเบียนผู้ปฏิบัติงาน</div>
+														<div class="card-title">ลงทะเบียนจัดกลุ่มผู้ปฏิบัติงาน</div>
 													</div>
 													<div class="card-body">
 														<div class="row">
@@ -181,7 +181,7 @@
 														</div>
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
-																	<label for="data2">ผู้ดูเเล</label>
+																	<label for="data2">ผู้ปฏิบัติงาน</label>
 																	<select class="form-control form-control-sm" id="data2">
 																	<option>1</option>
 																	<option>2</option>
