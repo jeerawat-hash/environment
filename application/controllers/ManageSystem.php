@@ -47,7 +47,8 @@ class ManageSystem extends CI_Controller {
         $header['page_focus'] = 'ManageSystem';
         $header['page_menu'] = 2;
 		$data['page_name'] = $header['page_name'];
-        
+        $data['trash'] = $this->Env_Model->GetDataTrash();
+
 		$this->load->view('template/header.php',$header); 
 		$this->load->view('page/ManageSystem/2.php',$data);
 		$this->load->view('template/footer.php');
@@ -80,8 +81,35 @@ class ManageSystem extends CI_Controller {
 		  $result =   $this->Env_Model->InsertDataVehicle($LicensePlate,$Color); 
 		  return 1; 
 	}
-	 
 
+	
+	public function InsertDataMemberManage()
+	{   
+	   if ( !isset($_POST["Name"])) {
+		  echo "Paramiter Invalid";
+		 exit();
+	   }
+  
+		  $Name  =   trim($_POST["Name"]) ;  
+		  $Telephone  =   trim($_POST["Telephone"]) ;  
+		  $result =   $this->Env_Model->InsertDataMemberManage($Name,$Telephone); 
+		  return 1; 
+	}
+
+
+	public function InsertDataMemberWork()
+	{   
+	   if ( !isset($_POST["Name"])) {
+		  echo "Paramiter Invalid";
+		 exit();
+	   }
+  
+		  $Name  =   trim($_POST["Name"]) ;  
+		  $Telephone  =   trim($_POST["Telephone"]) ;  
+		  $result =   $this->Env_Model->InsertDataMemberWork($Name,$Telephone); 
+		  return 1; 
+	}
+	 
 
 
 }

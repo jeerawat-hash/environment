@@ -349,20 +349,44 @@
 					  $("#data2").focus();
 					  return false;
 				  }
-				swal({
-						title: "บันทึกเรียบร้อย",
-						text: " ",
-						icon: "success",
-						buttons: {
-							confirm: {
-								text: "ตกลง",
-								value: true,
-								visible: true,
-								className: "btn btn-success",
-								closeModal: true
-							}
-						}
-					});
+
+
+
+                 ///// INSERT  DATA ////
+				 $.post("https://environment.webclient.me/index.php/ManageSystem/InsertDataMemberManage"
+                                  ,
+                                   {
+									Name :  data1, 
+									Telephone    :  data2 
+                                     
+                                     }
+                                  ,
+                                    function(data,status,response){  
+                                      console.log(data);
+                                   if (status == "success") 
+                                      { 
+											
+					                    	swal({
+					                       	title: "บันทึกเรียบร้อย",
+					                       	text: " ",
+					                       	icon: "success",
+					                       	buttons: {
+					                       		confirm: {
+					                       			text: "ตกลง",
+					                       			value: true,
+					                       			visible: true,
+					                       			className: "btn btn-success",
+					                       			closeModal: true
+					                       		}
+					                       	}
+					                       });
+
+										   $("#Modalone").modal("hide");
+                                      }
+                                     });
+				  
+			     ///// INSERT  DATA //// 
+
               });
 			   
 			  $("#btncreatedatatwo").click(function(){
@@ -390,20 +414,41 @@
 					  $("#data4").focus();
 					  return false;
 				  }
-				swal({
-						title: "บันทึกเรียบร้อย",
-						text: " ",
-						icon: "success",
-						buttons: {
-							confirm: {
-								text: "ตกลง",
-								value: true,
-								visible: true,
-								className: "btn btn-success",
-								closeModal: true
-							}
-						}
-					});
+ 
+                 ///// INSERT  DATA ////
+				 $.post("https://environment.webclient.me/index.php/ManageSystem/InsertDataMemberWork"
+                                  ,
+                                   {
+									Name :  data3, 
+									Telephone    :  data4 
+                                     
+                                     }
+                                  ,
+                                    function(data,status,response){  
+                                      console.log(data);
+                                   if (status == "success") 
+                                      { 
+											
+					                    	swal({
+					                       	title: "บันทึกเรียบร้อย",
+					                       	text: " ",
+					                       	icon: "success",
+					                       	buttons: {
+					                       		confirm: {
+					                       			text: "ตกลง",
+					                       			value: true,
+					                       			visible: true,
+					                       			className: "btn btn-success",
+					                       			closeModal: true
+					                       		}
+					                       	}
+					                       });
+
+										   $("#Modaltwo").modal("hide");
+                                      }
+                                     });
+				  
+			     ///// INSERT  DATA //// 
               });	
 			  
 			  $("#btncon2").click(function(){
