@@ -66,7 +66,7 @@
 												<tr>
 													<td>Donna Snider</td>
 													<td>Customer Support</td>
-													<button  id="btncon2"  class="btn btn-danger"> ยืนยันตัวตน  </button> 
+													<td><button  id="btncon2"  class="btn btn-danger"> ยืนยันตัวตน  </button> </td>
 												</tr>
 											</tbody>
 										</table>
