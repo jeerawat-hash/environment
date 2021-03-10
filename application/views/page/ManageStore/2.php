@@ -29,12 +29,11 @@
 										<table id="basic-datatables" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
-													<th>Name</th>
-													<th>Position</th>
-													<th>Office</th>
-													<th>Age</th>
-													<th>Start date</th>
-													<th>Salary</th>
+													<th>ป้ายทะเบียน</th>
+													<th>ชื่อผู้ปฏิบัติงาน</th>
+													<th>เบอร์โทร</th>
+													<th></th>
+													 
 												</tr>
 											</thead> 
 											<tbody> 
@@ -42,9 +41,7 @@
 													<td>Donna Snider</td>
 													<td>Customer Support</td>
 													<td>New York</td>
-													<td>27</td>
-													<td>2011/01/25</td>
-													<td>$112,000</td>
+													<td><button   class="btn btn-danger">  ลบออกจากกลุ่ม </button></td> 
 												</tr>
 											</tbody>
 										</table>
@@ -86,14 +83,14 @@
 														<div class="row">
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
-																	<label for="email2">รหัสพนักงาน</label>
-																	<input type="email" class="form-control" id="email2" placeholder="รหัสพนักงาน"> 
+																	<label for="email2">ป้ายทะเบียน</label>
+																	<input type="email" class="form-control" id="data1" placeholder="กรุณากรอกป้ายทะเบียน"> 
 																</div>
 															</div>
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
-																	<label for="email2">ชื่อพนักงาน</label>
-																	<input type="email" class="form-control" id="email2" placeholder="ชื่อพนักงาน">
+																	<label for="email2">ชื่อผู้ปฏิบัติงาน</label>
+																	<input type="email" class="form-control" id="data2" placeholder="กรุณากรอกชื่อผู้ปฏิบัติงาน">
 																
 																</div>
 															</div>
@@ -102,26 +99,12 @@
 														<div class="row">
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
-																	<label for="email2">แผนก</label>
-																	<input type="email" class="form-control" id="email2" placeholder="แผนก">
+																	<label for="email2">เบอร์โทร</label>
+																	<input type="email" class="form-control" id="data3" placeholder="กรุณากรอกเบอร์โทร">
 																	
 																</div>
 															</div>
-															<div class="col-md-6 col-lg-6">
-																<div class="form-group">
-																	<label for="smallSelect">กลุ่มผู้ปฏิบัติงานขณะนี้</label>
-																
-																	<select class="form-control form-control-sm" id="smallSelect">
-																		<option>1</option>
-																		<option>2</option>
-																		<option>3</option>
-																		<option>4</option>
-																		<option>5</option>
-																	</select>
-															
-																	
-																</div>
-															</div>
+															 
 														</div>
 													</div>
 
@@ -175,6 +158,42 @@
               });
  
 			  $("#btncreatedata").click(function(){
+				  var data1 = $("#data1").val();
+				  var data2 = $("#data2").val(); 
+				  var data3 = $("#data3").val(); 
+				  if( data1 == ""){
+					swal("กรุณากรอกป้ายทะเบียน", {
+						buttons: {        			
+							confirm: {
+								className : 'btn btn-danger'
+							}
+						},
+					});		 
+					  $( "#data1" ).focus();
+					  return false;
+				  }
+				  if( data2 == ""){
+					swal("กรุณากรอกชื่อผู้ปฏิบัติงาน", {
+						buttons: {        			
+							confirm: {
+								className : 'btn btn-danger'
+							}
+						},
+					});		 
+					  $( "#data2" ).focus();
+					  return false;
+				  } 
+				  if( data3 == ""){
+					swal("กรุณากรอกเบอร์โทร", {
+						buttons: {        			
+							confirm: {
+								className : 'btn btn-danger'
+							}
+						},
+					});		 
+					  $( "#data3" ).focus();
+					  return false;
+				  } 				  				  
 				swal({
 						title: "บันทึกเรียบร้อย",
 						text: " ",

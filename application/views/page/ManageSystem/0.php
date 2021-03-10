@@ -231,9 +231,9 @@
               });
  
 			  $("#btncreatedataone").click(function(){
-				  var data3 = $("#data3").val();
-				  var data4 = $("#data4").val(); 
-				  if( data3 == ""){ 
+				  var data1 = $("#data1").val();
+				  var data2 = $("#data2").val(); 
+				  if( data1 == ""){ 
 					  swal("กรุณากรอกชื่อ", {
 						buttons: {        			
 							confirm: {
@@ -241,10 +241,10 @@
 							}
 						},
 					});					  
-					  $( "#data3" ).focus();
+					  $("#data1").focus();
 					  return false;
 				  }
-				  if( data4 == ""){
+				  if( data2 == ""){
 					swal("กรุณากรอกเบอร์โทร", {
 						buttons: {        			
 							confirm: {
@@ -252,7 +252,7 @@
 							}
 						},
 					});
-					  $( "#data4" ).focus();
+					  $("#data2").focus();
 					  return false;
 				  }
 				swal({
@@ -272,9 +272,9 @@
               });
 			   
 			  $("#btncreatedatatwo").click(function(){
-			      var data1 = $("#data1").val();
-				  var data2 = $("#data2").val(); 
-				  if( data1 == ""){ 
+			      var data3 = $("#data3").val();
+				  var data4 = $("#data4").val(); 
+				  if( data3 == ""){ 
 					  swal("กรุณากรอกชื่อ", {
 						buttons: {        			
 							confirm: {
@@ -282,10 +282,10 @@
 							}
 						},
 					});
-					  $( "#data1" ).focus();
+					  $( "#data3" ).focus();
 					  return false;
 				  }
-				  if( data2 == ""){
+				  if(data4 == ""){
 					swal("กรุณากรอกเบอร์โทร", {
 						buttons: {        			
 							confirm: {
@@ -293,7 +293,7 @@
 							}
 						},
 					});			 
-					  $( "#data2" ).focus();
+					  $("#data4").focus();
 					  return false;
 				  }
 				swal({
