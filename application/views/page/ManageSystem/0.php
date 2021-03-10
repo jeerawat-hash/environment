@@ -149,8 +149,7 @@
 				
 				</div>
 			</div>
-			
-			</div>
+			 
 			<!-- END  Modal 1 -->
 
 
@@ -209,8 +208,7 @@
 				
 				</div>
 			</div>
-			
-			</div>
+			 
 			<!-- END  Modal -->
 
 			</div>
