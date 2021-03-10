@@ -19,7 +19,7 @@
 									<h4 class="card-title">กลุ่มผู้ปฏิบัติงานขณะนี้</h4>
 									<p class="card-category">
 									  
-								    	<button class="btn btn-warning"  id="btncreate" > Creates</button>      
+								    	<button class="btn btn-warning"  id="btncreate" > สร้าง</button>      
 								</p>
 									 
 								</div>
@@ -73,7 +73,7 @@
       <div class="modal-content">
         <div class="modal-header  bg-success ">
           
-          <h4 >ลงทะเบียนผู้ปฏิบัติงาน</h4>
+          <h4 style="color:white"  >ลงทะเบียนผู้ปฏิบัติงาน</h4>
 
 		  <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
