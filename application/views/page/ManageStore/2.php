@@ -71,7 +71,7 @@
     
       <!-- Modal content-->
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header bg-primary">
           
           <h4 >ลงทะเบียนผู้ปฏิบัติงาน</h4>
 
