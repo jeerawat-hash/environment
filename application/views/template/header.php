@@ -188,7 +188,7 @@
 					<ul class="nav nav-success">
 
 						<li class="nav-item <?php echo $Dashboard[0]; ?>">
-							<a data-toggle="collapse" href="#Dashboard" class="collapsed" aria-expanded="false">
+							<a data-toggle="collapse" href="#Dashboard" class="collapsed" aria-expanded="true">
 								<i class="fas fa-grip-horizontal"></i>
 								<p>ผลการดำเนินงาน</p>
 								<span class="caret"></span>
