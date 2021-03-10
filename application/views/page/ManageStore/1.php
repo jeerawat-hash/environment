@@ -15,7 +15,7 @@
 									<h4 class="card-title">รายละเอียดการจัดเก็บขณะนี้</h4>
 									<p class="card-category">
 									แสดงข้อมูลกลุ่มที่จัดเก็บขยะจำนวนและน้ำหนักรวมในวันนี้
-									 <p align="right" >  <button class="btn btn-warning"  id="btncreate" > สร้างรายการการจัดเก็บ</button>  </p>  </p>
+									<!-- <p align="right" >  <button class="btn btn-warning"  id="btncreate" > สร้างรายการการจัดเก็บ</button>  </p>-->  </p>
 								</div>
 								<div class="card-body">
 									<div class="table-responsive">
