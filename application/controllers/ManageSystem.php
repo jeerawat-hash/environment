@@ -31,7 +31,7 @@ class ManageSystem extends CI_Controller {
 		$data['page_name'] = $header['page_name'];
 
 		$this->load->view('template/header.php',$header); 
-		$this->load->view('page/ManageSystem/0.php',$data);
+		$this->load->view('page/ManageSystem/1.php',$data);
 		$this->load->view('template/footer.php');
 
 	}
@@ -43,7 +43,7 @@ class ManageSystem extends CI_Controller {
 		$data['page_name'] = $header['page_name'];
 
 		$this->load->view('template/header.php',$header); 
-		$this->load->view('page/ManageSystem/0.php',$data);
+		$this->load->view('page/ManageSystem/2.php',$data);
 		$this->load->view('template/footer.php');
 
 	}
