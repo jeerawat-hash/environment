@@ -16,10 +16,10 @@
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-									<h4 class="card-title">กลุ่มผู้ปฏิบัติงานขณะนี้</h4>
+									<h4 class="card-title">กลุ่มผู้ปฏิบัติงานขณะนี้  <p align="right" >  <button class="btn btn-warning"  id="btncreate" > สร้าง</button>  </p> </h4>  
 									<p class="card-category">
 									  
-								    	<button class="btn btn-warning"  id="btncreate" > สร้าง</button>      
+									       
 								</p>
 									 
 								</div>
@@ -135,7 +135,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" id="btncreatedata" class="btn btn-warning"  >สร้าง</button>
-          <button type="button" class="btn btn-danger11" data-dismiss="modal">ปิด</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
         </div>
       </div>
       
@@ -177,12 +177,12 @@
  
 			  $("#btncreatedata").click(function(){
 				swal({
-						title: "Good job!",
-						text: "You clicked the button!",
+						title: "บันทึกเรียบร้อย",
+						text: " ",
 						icon: "success",
 						buttons: {
 							confirm: {
-								text: "Confirm Me",
+								text: "ตกลง",
 								value: true,
 								visible: true,
 								className: "btn btn-success",
