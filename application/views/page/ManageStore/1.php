@@ -14,7 +14,8 @@
 								<div class="card-header">
 									<h4 class="card-title">รายละเอียดการจัดเก็บขณะนี้</h4>
 									<p class="card-category">
-									แสดงข้อมูลกลุ่มที่จัดเก็บขยะจำนวนและน้ำหนักรวมในวันนี้ <p align="right" >  <button class="btn btn-warning"  id="btncreate" > สร้างรายการ</button>  </p>  </p>
+									แสดงข้อมูลกลุ่มที่จัดเก็บขยะจำนวนและน้ำหนักรวมในวันนี้
+									 <p align="right" >  <button class="btn btn-warning"  id="btncreate" > สร้างรายการการจัดเก็บ</button>  </p>  </p>
 								</div>
 								<div class="card-body">
 									<div class="table-responsive">
@@ -64,7 +65,7 @@
       <div class="modal-content">
         <div class="modal-header  bg-success ">
           
-          <h4 style="color:white"  >ลงทะเบียนผู้ปฏิบัติงาน</h4>
+          <h4 style="color:white"  >รายละเอียดการจัดเก็บ</h4>
 
 		  <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
@@ -74,7 +75,7 @@
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-									<div class="card-title">สร้างลงทะเบียนผู้ปฏิบัติงาน</div>
+									<div class="card-title">สร้างรายละเอียดการจัดเก็บ</div>
 								</div>
 								<div class="card-body">
 									<div class="row">
@@ -103,7 +104,7 @@
 										</div>
 										<div class="col-md-6 col-lg-6">
 											<div class="form-group">
-												<label for="smallSelect">กลุ่มผู้ปฏิบัติงานขณะนี้</label>
+												<label for="smallSelect">ประเภทการจัดเก็บ</label>
 											  
 												<select class="form-control form-control-sm" id="smallSelect">
 													<option>1</option>
