@@ -30,8 +30,8 @@
 											<thead>
 												<tr>
 													<th>ป้ายทะเบียน</th>
-													<th>ชื่อผู้ปฏิบัติงาน</th>
-													<th>เบอร์โทร</th>
+													<th>ผู้ดูเเล</th>
+													<th>รายละเอียด</th>
 													<th></th>
 													 
 												</tr>
@@ -98,8 +98,14 @@
 														</div>
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
-																	<label for="email2">ชื่อผู้ปฏิบัติงาน</label>
-																	<input type="email" class="form-control" id="data2" placeholder="กรุณากรอกชื่อผู้ปฏิบัติงาน">
+																	<label for="data2">ผู้ดูเเล</label>
+																	<select class="form-control form-control-sm" id="data2">
+																	<option>1</option>
+																	<option>2</option>
+																	<option>3</option>
+																	<option>4</option>
+																	<option>5</option>
+																</select>
 																
 																</div>
 															</div>
@@ -108,7 +114,7 @@
 														<div class="row">
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
-																	<label for="email2">เบอร์โทร</label>
+																	<label for="email2">รายละเอียด</label>
 																	<input type="email" class="form-control" id="data3" placeholder="กรุณากรอกเบอร์โทร">
 																	
 																</div>
@@ -182,7 +188,7 @@
 					  return false;
 				  }
 				  if( data2 == ""){
-					swal("กรุณากรอกชื่อผู้ปฏิบัติงาน", {
+					swal("กรุณากรอกผู้ดูแล", {
 						buttons: {        			
 							confirm: {
 								className : 'btn btn-danger'
@@ -193,7 +199,7 @@
 					  return false;
 				  } 
 				  if( data3 == ""){
-					swal("กรุณากรอกเบอร์โทร", {
+					swal("กรุณากรอกรายละเอียด", {
 						buttons: {        			
 							confirm: {
 								className : 'btn btn-danger'
