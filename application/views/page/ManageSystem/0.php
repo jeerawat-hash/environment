@@ -198,6 +198,96 @@
 			</div>
 			 
 			<!-- END  Modal -->
+	
+				<!-- Modal -->
+				<div class="modal fade" id="ModalConfirm1" role="dialog">
+					<div class="modal-dialog modal-lg">
+					
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header  bg-success ">
+						
+						<h4 style="color:white"  >ยืนยันตัวตนผู้ใช้งาน</h4>
+
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
+					 
+						<div class="row">
+										<div class="col-md-12">
+											<div class="card">
+												<div class="card-header">
+													<div class="card-title">ยืนยันตัวตนผู้ใช้งาน</div>
+												</div>
+												<div class="card-body">
+													<div class="row">
+														 
+													 
+														 
+														
+													</div>
+													 
+												</div>
+
+											</div>
+										</div>
+						</div>
+						
+						</div>
+						<div class="modal-footer"> 
+						<button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
+						</div>
+					</div>
+					
+					</div>
+				</div>
+				 
+				<!-- END  Modal -->
+					
+				<!-- Modal -->
+				<div class="modal fade" id="ModalConfirm2" role="dialog">
+					<div class="modal-dialog modal-lg">
+					
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header  bg-success ">
+						
+						<h4 style="color:white"  >ยืนยันตัวตนผู้ใช้งาน</h4>
+
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
+					 
+						<div class="row">
+										<div class="col-md-12">
+											<div class="card">
+												<div class="card-header">
+													<div class="card-title">ยืนยันตัวตนผู้ใช้งาน</div>
+												</div>
+												<div class="card-body">
+													<div class="row">
+														 
+													 
+														 
+														
+													</div>
+													 
+												</div>
+
+											</div>
+										</div>
+						</div>
+						
+						</div>
+						<div class="modal-footer"> 
+						<button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
+						</div>
+					</div>
+					
+					</div>
+				</div>
+				 
+				<!-- END  Modal -->
 
 			</div>
 			</div>
@@ -317,39 +407,12 @@
               });	
 			  
 			  $("#btncon2").click(function(){
-				  				  				  
-				  swal({
-						  title: "ยืนยันตัวตนเรียบร้อย",
-						  text: " ",
-						  icon: "success",
-						  buttons: {
-							  confirm: {
-								  text: "ตกลง",
-								  value: true,
-								  visible: true,
-								  className: "btn btn-success",
-								  closeModal: true
-							  }
-						  }
-					  });
+				 $("#ModalConfirm2").modal("show");
 			});
 			  
 			$("#btncon1").click(function(){
 				  				  				  
-		 		  swal({
-		 				  title: "ยืนยันตัวตนเรียบร้อย",
-		 				  text: " ",
-		 				  icon: "success",
-		 				  buttons: {
-		 					  confirm: {
-		 						  text: "ตกลง",
-		 						  value: true,
-		 						  visible: true,
-		 						  className: "btn btn-success",
-		 						  closeModal: true
-		 					  }
-		 				  }
-		 			  });
+				$("#ModalConfirm1").modal("show");
 		 	});
 		 
         </script>
