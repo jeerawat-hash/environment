@@ -68,8 +68,19 @@ class ManageSystem extends CI_Controller {
 		  return 1; 
 	}
 	 
-
-	
+	public function InsertDataVehicle()
+	{   
+	   if ( !isset($_POST["LicensePlate"])) {
+		  echo "Paramiter Invalid";
+		 exit();
+	   }
+  
+		  $LicensePlate  =   trim($_POST["LicensePlate"]) ;  
+		  $Color  =   trim($_POST["Color"]) ;  
+		  $result =   $this->Env_Model->InsertDataVehicle($LicensePlate,$Color); 
+		  return 1; 
+	}
+	 
 
 
 

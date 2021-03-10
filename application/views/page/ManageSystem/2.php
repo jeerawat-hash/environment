@@ -248,7 +248,7 @@
 				  }
 
 
-
+                 ///// INSERT  DATA ////
 				  $.post("https://environment.webclient.me/index.php/ManageSystem/InsertDataTrash"
                                   ,
                                    {
@@ -280,7 +280,7 @@
                                       }
                                      });
 				  
-				   
+			     ///// INSERT  DATA ////	   
 				 
               });
 			   

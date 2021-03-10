@@ -172,20 +172,41 @@
 					  $( "#data2" ).focus();
 					  return false;
 				  } 
-				swal({
-						title: "บันทึกเรียบร้อย",
-						text: " ",
-						icon: "success",
-						buttons: {
-							confirm: {
-								text: "ตกลง",
-								value: true,
-								visible: true,
-								className: "btn btn-success",
-								closeModal: true
-							}
-						}
-					});
+
+
+
+                 ///// INSERT  DATA ////
+				 $.post("https://environment.webclient.me/index.php/ManageSystem/InsertDataVehicle"
+                                  ,
+                                   {
+									LicensePlate :  data1, 
+									Color    :  data2 
+                                     
+                                     }
+                                  ,
+                                    function(data,status,response){  
+                                      console.log(data);
+                                   if (status == "success") 
+                                      { 
+											
+					                    	swal({
+					                       	title: "บันทึกเรียบร้อย",
+					                       	text: " ",
+					                       	icon: "success",
+					                       	buttons: {
+					                       		confirm: {
+					                       			text: "ตกลง",
+					                       			value: true,
+					                       			visible: true,
+					                       			className: "btn btn-success",
+					                       			closeModal: true
+					                       		}
+					                       	}
+					                       });
+                                      }
+                                     });
+				  
+			     ///// INSERT  DATA ////
               });
 			   
 			   
