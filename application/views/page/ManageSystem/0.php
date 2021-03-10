@@ -92,11 +92,7 @@
 
 
 
-						 
-					</div>
-				</div>
-			</div>
-
+			 
 				
 			<!-- Modal 1-->
 			<div class="modal fade" id="Modalone" role="dialog">
@@ -214,6 +210,10 @@
 			</div>
 			<!-- END  Modal -->
 
+			 
+			</div>
+				</div>
+			</div>
 
 			<footer class="footer">
 				<div class="container-fluid">
