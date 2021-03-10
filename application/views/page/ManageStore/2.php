@@ -18,7 +18,7 @@
 								<div class="card-header">
 									<h4 class="">กลุ่มผู้ปฏิบัติงานขณะนี้  
 									 <p align="right" >  <button class="btn btn-warning"  id="btncreate" > สร้างกลุ่ม</button>
-									<p align="right" >  <button class="btn btn-warning"  id="btncreate1" > จัดกลุ่ม</button>  </p> </h4>  
+								 <button class="btn btn-warning"  id="btncreate1" > จัดกลุ่ม</button>  </p> </h4>  
 									<p class="card-category">
 									  
 									       
