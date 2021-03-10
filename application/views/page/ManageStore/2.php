@@ -41,7 +41,7 @@
 													<td>Donna Snider</td>
 													<td>Customer Support</td>
 													<td>New York</td>
-													<td><button   class="btn btn-danger">  ลบออกจากกลุ่ม </button></td> 
+													<td><button  id="btndelete"  class="btn btn-danger">  ลบออกจากกลุ่ม </button></td> 
 												</tr>
 											</tbody>
 										</table>
@@ -220,4 +220,23 @@
               });
 
 			   
+			  $("#btndelete").click(function(){
+				  				  				  
+				swal({
+						title: "ลบรายการเรียบร้อย",
+						text: " ",
+						icon: "success",
+						buttons: {
+							confirm: {
+								text: "ตกลง",
+								value: true,
+								visible: true,
+								className: "btn btn-success",
+								closeModal: true
+							}
+						}
+					});
+              });
+			   
+
         </script>
