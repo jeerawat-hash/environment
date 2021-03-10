@@ -71,7 +71,7 @@
     
       <!-- Modal content-->
       <div class="modal-content">
-        <div class="modal-header bg-primary">
+        <div class="modal-header  bg-success ">
           
           <h4 >ลงทะเบียนผู้ปฏิบัติงาน</h4>
 
@@ -103,14 +103,14 @@
 										 
 									</div>
 									<div class="row">
-										<div class="col-md-6 col-lg-4">
+										<div class="col-md-6 col-lg-6">
 											<div class="form-group">
 												<label for="email2">แผนก</label>
 												<input type="email" class="form-control" id="email2" placeholder="Enter Email">
 												 
 											</div>
 										</div>
-										<div class="col-md-6 col-lg-4">
+										<div class="col-md-6 col-lg-6">
 											<div class="form-group">
 												<label for="smallSelect">กลุ่มผู้ปฏิบัติงานขณะนี้</label>
 											  
@@ -131,10 +131,11 @@
 							</div>
 						</div>
 		</div>
-          <p>Some text in the modal.</p>
+          
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-warning"  >Submit</button>
+          <button type="button" class="btn btn-danger11" data-dismiss="modal">Close</button>
         </div>
       </div>
       
