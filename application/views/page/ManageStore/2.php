@@ -83,7 +83,7 @@
 														<div class="row">
 														<div class="col-md-6 col-lg-6">
 															<div class="form-group">
-																<label for="smallSelect">ประเภทการจัดเก็บ</label>
+																<label for="smallSelect">ป้ายทะเบียน</label>
 															
 																<select class="form-control form-control-sm" id="smallSelect">
 																	<option>1</option>
