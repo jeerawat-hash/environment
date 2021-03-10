@@ -28,6 +28,7 @@
 													<th>สี</th>
 													<th>ความจุ</th>
 													<th>ตำเเหน่ง</th>
+													<th>QR Code</th>
 												</tr>
 											</thead> 
 											<tbody> 
@@ -36,8 +37,8 @@
 													<td>Customer Support</td>
 													<td>New York</td>
 													<td>27</td>
-													<td>2011/01/25</td>
-													<td>$112,000</td>
+													<td><button  id="btncon1"  class="btn btn-danger"> เรียกดู QR Code  </button> </td>
+													 
 												</tr>
 											</tbody>
 										</table>
@@ -120,7 +121,54 @@
 				</div>
 				 
 				<!-- END  Modal -->
+
+					
+				<!-- Modal -->
+				<div class="modal fade" id="ModalQrCode" role="dialog">
+					<div class="modal-dialog modal-lg">
+					
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header  bg-success ">
+						
+						<h4 style="color:white"  >ข้อมูล QR Code</h4>
+
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
 					 
+						<div class="row">
+										<div class="col-md-12">
+											<div class="card">
+												<div class="card-header">
+													<div class="card-title">ข้อมูล QR Code</div>
+												</div>
+												<div class="card-body">
+													<div class="row">
+														 
+													 
+														 
+														
+													</div>
+													 
+												</div>
+
+											</div>
+										</div>
+						</div>
+						
+						</div>
+						<div class="modal-footer"> 
+						<button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
+						</div>
+					</div>
+					
+					</div>
+				</div>
+				 
+				<!-- END  Modal -->
+
+				 		 
 				</div>
 				</div>
 			</div>
@@ -157,7 +205,10 @@
 			  $("#btncreatesystem").click(function(){
 				$('#myModal').modal('show'); 
               });
- 
+			  $("#btncon1").click(function(){
+				$('#ModalQrCode').modal('show'); 
+              });
+			   
 			  $("#btncreatedata").click(function(){
 				  var data1 = $("#data1").val();
 				  var data2 = $("#data2").val();
