@@ -28,11 +28,25 @@
 												</tr>
 											</thead> 
 											<tbody> 
+
+											<?php  
+												
+												foreach($member as $valuemember){
+
+													?> 
 												<tr>
-													<td>Donna Snider</td>
-													<td>Customer Support</td> 
+													<td><?php echo $valuemember->Name; ?></td>
+													<td><?php echo $valuemember->Telephone; ?></td> 
 													<td><button  id="btncon1"   class="btn btn-danger"> ยืนยันตัวตน  </button></td> 
-												</tr>
+													 
+												</tr> 
+												<? 
+												} 
+												
+												?>
+
+
+												 
 											</tbody>
 										</table>
 									</div>
@@ -63,11 +77,26 @@
 												</tr>
 											</thead> 
 											<tbody> 
+
+											<?php  
+												
+												foreach($memberwork as $valuememberwork){
+
+													?>
+													
+
+
 												<tr>
-													<td>Donna Snider</td>
-													<td>Customer Support</td>
-													<td><button  id="btncon2"  class="btn btn-danger"> ยืนยันตัวตน  </button> </td>
-												</tr>
+												<td><?php echo $valuememberwork->Name; ?></td>
+													<td><?php echo $valuememberwork->Telephone; ?></td> 
+													<td><button  id="btncon2"   class="btn btn-danger"> ยืนยันตัวตน  </button></td> 
+													 
+												</tr> 
+												<? 
+												} 
+												
+												?>
+ 
 											</tbody>
 										</table>
 									</div>

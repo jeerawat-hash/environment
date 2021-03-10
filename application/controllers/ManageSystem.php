@@ -23,7 +23,8 @@ class ManageSystem extends CI_Controller {
         $header['page_focus'] = 'ManageSystem';
         $header['page_menu'] = 0;
 		$data['page_name'] = $header['page_name'];
-
+        $data['member'] = $this->Env_Model->GetDataMember();
+        $data['memberwork'] = $this->Env_Model->GetDataMemberWork();		
 		$this->load->view('template/header.php',$header); 
 		$this->load->view('page/ManageSystem/0.php',$data);
 		$this->load->view('template/footer.php');
@@ -35,7 +36,7 @@ class ManageSystem extends CI_Controller {
         $header['page_focus'] = 'ManageSystem';
         $header['page_menu'] = 1;
 		$data['page_name'] = $header['page_name'];
-
+        $data['vehicled'] = $this->Env_Model->GetDataVehicle();
 		$this->load->view('template/header.php',$header); 
 		$this->load->view('page/ManageSystem/1.php',$data);
 		$this->load->view('template/footer.php');

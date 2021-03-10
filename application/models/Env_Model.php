@@ -39,7 +39,13 @@ class Env_Model extends CI_Model
         
         return 1;
     }
-    
+    public function GetDataVehicle()
+    {   
+        $this->envdb = $this->load->database("envdb",true);
+
+        return $this->envdb->query(" select * from  jeerawatme_env.Vehicle ")->result();
+         
+    }
     public function InsertDataMemberManage($Name,$Telephone)
     {   
         $this->envdb = $this->load->database("envdb",true);
@@ -48,6 +54,14 @@ class Env_Model extends CI_Model
         
         return 1;
     }
+
+    public function GetDataMember()
+    {   
+        $this->envdb = $this->load->database("envdb",true);
+
+        return $this->envdb->query(" select * from  jeerawatme_env.Member   where PositionID = '1' ")->result();
+         
+    }  
     public function InsertDataMemberWork($Name,$Telephone)
     {   
         $this->envdb = $this->load->database("envdb",true);
@@ -56,7 +70,13 @@ class Env_Model extends CI_Model
         
         return 1;
     }
+    public function GetDataMemberWork()
+    {   
+        $this->envdb = $this->load->database("envdb",true);
 
+        return $this->envdb->query(" select * from  jeerawatme_env.Member    where PositionID = '0' ")->result();
+         
+    }  
     public function UpdateAuthentication($LineID,$ID)
     {
 

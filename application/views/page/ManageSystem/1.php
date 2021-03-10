@@ -29,11 +29,27 @@
 												</tr>
 											</thead> 
 											<tbody> 
+											 
+											<?php  
+												
+												foreach($vehicled as $valuevehicled){
+
+													?>
+													
+
+
 												<tr>
-													<td>Donna Snider</td>
-													<td>Customer Support</td>
-													<td>New York</td> 
-												</tr>
+													<td><?php echo $valuevehicled->ID; ?></td>
+													<td><?php echo $valuevehicled->LicensePlate; ?></td>
+													<td><?php echo $valuevehicled->Color; ?></td>  
+													 
+												</tr> 
+												<? 
+												} 
+												
+												?>
+
+
 											</tbody>
 										</table>
 									</div>
