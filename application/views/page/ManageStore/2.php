@@ -90,13 +90,13 @@
 										<div class="col-md-6 col-lg-6">
 											<div class="form-group">
 												<label for="email2">รหัสพนักงาน</label>
-												<input type="email" class="form-control" id="email2" placeholder="Enter Email"> 
+												<input type="email" class="form-control" id="email2" placeholder="รหัสพนักงาน"> 
 											</div>
 										</div>
 										<div class="col-md-6 col-lg-6">
 											<div class="form-group">
 												<label for="email2">ชื่อพนักงาน</label>
-												<input type="email" class="form-control" id="email2" placeholder="Enter Email">
+												<input type="email" class="form-control" id="email2" placeholder="ชื่อพนักงาน">
 											 
 											</div>
 										</div>
@@ -106,7 +106,7 @@
 										<div class="col-md-6 col-lg-6">
 											<div class="form-group">
 												<label for="email2">แผนก</label>
-												<input type="email" class="form-control" id="email2" placeholder="Enter Email">
+												<input type="email" class="form-control" id="email2" placeholder="แผนก">
 												 
 											</div>
 										</div>
@@ -134,8 +134,8 @@
           
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning"  >Submit</button>
-          <button type="button" class="btn btn-danger11" data-dismiss="modal">Close</button>
+          <button type="button" id="btncreatedata" class="btn btn-warning"  >สร้าง</button>
+          <button type="button" class="btn btn-danger11" data-dismiss="modal">ปิด</button>
         </div>
       </div>
       
@@ -175,4 +175,22 @@
 				$('#myModal').modal('show'); 
               });
  
+			  $("#btncreatedata").click(function(){
+				swal({
+						title: "Good job!",
+						text: "You clicked the button!",
+						icon: "success",
+						buttons: {
+							confirm: {
+								text: "Confirm Me",
+								value: true,
+								visible: true,
+								className: "btn btn-success",
+								closeModal: true
+							}
+						}
+					});
+              });
+
+			   
         </script>
