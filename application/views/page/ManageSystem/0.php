@@ -97,122 +97,122 @@
 				</div>
 			</div>
 
-	
-  <!-- Modal 1-->
-  <div class="modal fade" id="Modalone" role="dialog">
-    <div class="modal-dialog modal-lg">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header  bg-success ">
-          
-          <h4 style="color:white"  >สร้างรายการผู้ปฏิบัติงาน</h4>
+				
+			<!-- Modal 1-->
+			<div class="modal fade" id="Modalone" role="dialog">
+				<div class="modal-dialog modal-lg">
+				
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header  bg-success ">
+					
+					<h4 style="color:white"  >สร้างรายการผู้ปฏิบัติงาน</h4>
 
-		  <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
 
-		<div class="row">
-						<div class="col-md-12">
-							<div class="card">
-								<div class="card-header">
-									<div class="card-title">สร้างรายการผู้ปฏิบัติงาน</div>
-								</div>
-								<div class="card-body">
-								<div class="row">
-										<div class="col-md-6 col-lg-6">
-											<div class="form-group">
-												<label for="email2">ชื่อ</label>
-												<input type="email" class="form-control" id="email2" placeholder="รหัสพนักงาน"> 
+					<div class="row">
+									<div class="col-md-12">
+										<div class="card">
+											<div class="card-header">
+												<div class="card-title">สร้างรายการผู้ปฏิบัติงาน</div>
 											</div>
-										</div>
-										<div class="col-md-6 col-lg-6">
-											<div class="form-group">
-												<label for="email2">เบอร์โทร</label>
-												<input type="email" class="form-control" id="email2" placeholder="ชื่อพนักงาน">
-											 
+											<div class="card-body">
+											<div class="row">
+													<div class="col-md-6 col-lg-6">
+														<div class="form-group">
+															<label for="email2">ชื่อ</label>
+															<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกชื่อ"> 
+														</div>
+													</div>
+													<div class="col-md-6 col-lg-6">
+														<div class="form-group">
+															<label for="email2">เบอร์โทร</label>
+															<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกเบอร์โทร">
+														
+														</div>
+													</div>
+													
+												</div>
 											</div>
+
 										</div>
-										 
 									</div>
-								</div>
-
-							</div>
-						</div>
-		</div>
-          
-        </div>
-        <div class="modal-footer">
-          <button type="button" id="btncreatedataone" class="btn btn-warning"  >สร้าง</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-  <!-- END  Modal 1 -->
+					</div>
+					
+					</div>
+					<div class="modal-footer">
+					<button type="button" id="btncreatedataone" class="btn btn-warning"  >สร้าง</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
+					</div>
+				</div>
+				
+				</div>
+			</div>
+			
+			</div>
+			<!-- END  Modal 1 -->
 
 
 
-  
-  <!-- Modal 2-->
-  <div class="modal fade" id="Modaltwo" role="dialog">
-    <div class="modal-dialog modal-lg">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header  bg-success ">
-          
-          <h4 style="color:white"  >สร้างผู้ใช้งานระบบ</h4>
+			
+			<!-- Modal 2-->
+			<div class="modal fade" id="Modaltwo" role="dialog">
+				<div class="modal-dialog modal-lg">
+				
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header  bg-success ">
+					
+					<h4 style="color:white"  >สร้างผู้ใช้งานระบบ</h4>
 
-		  <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
 
-		<div class="row">
-						<div class="col-md-12">
-							<div class="card">
-								<div class="card-header">
-									<div class="card-title">สร้างผู้ใช้งานระบบ</div>
-								</div>
-								<div class="card-body">
-									<div class="row">
-										<div class="col-md-6 col-lg-6">
-											<div class="form-group">
-												<label for="email2">ชื่อ</label>
-												<input type="email" class="form-control" id="email2" placeholder="รหัสพนักงาน"> 
+					<div class="row">
+									<div class="col-md-12">
+										<div class="card">
+											<div class="card-header">
+												<div class="card-title">สร้างผู้ใช้งานระบบ</div>
 											</div>
-										</div>
-										<div class="col-md-6 col-lg-6">
-											<div class="form-group">
-												<label for="email2">เบอร์โทร</label>
-												<input type="email" class="form-control" id="email2" placeholder="ชื่อพนักงาน">
-											 
+											<div class="card-body">
+												<div class="row">
+													<div class="col-md-6 col-lg-6">
+														<div class="form-group">
+															<label for="email2">ชื่อ</label>
+															<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกชื่อ"> 
+														</div>
+													</div>
+													<div class="col-md-6 col-lg-6">
+														<div class="form-group">
+															<label for="email2">เบอร์โทร</label>
+															<input type="email" class="form-control" id="email2" placeholder="กรุณากรอกเบอร์โทร">
+														
+														</div>
+													</div>
+													
+												</div>
+												
 											</div>
+
 										</div>
-										 
 									</div>
-									 
-								</div>
-
-							</div>
-						</div>
-		</div>
-          
-        </div>
-        <div class="modal-footer">
-          <button type="button" id="btncreatedatatwo" class="btn btn-warning"  >สร้าง</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-  <!-- END  Modal -->
+					</div>
+					
+					</div>
+					<div class="modal-footer">
+					<button type="button" id="btncreatedatatwo" class="btn btn-warning"  >สร้าง</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
+					</div>
+				</div>
+				
+				</div>
+			</div>
+			
+			</div>
+			<!-- END  Modal -->
 
 
 			<footer class="footer">
