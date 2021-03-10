@@ -162,7 +162,7 @@
 					  return false;
 				  }
 				  if( data2 == ""){
-					swal("กรุณากรอกความจุ", {
+					swal("กรุณากรอกสี", {
 						buttons: {        			
 							confirm: {
 								className : 'btn btn-danger'

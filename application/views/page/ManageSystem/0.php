@@ -272,7 +272,7 @@
               });
 			   
 			  $("#btncreatedatatwo").click(function(){
-			    	var data1 = $("#data1").val();
+			      var data1 = $("#data1").val();
 				  var data2 = $("#data2").val(); 
 				  if( data1 == ""){ 
 					  swal("กรุณากรอกชื่อ", {
