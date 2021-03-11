@@ -29,7 +29,7 @@
     </script>
 
 
-
+<div id="map"></div>
 
 
 <div class="main-panel">
@@ -57,7 +57,7 @@
 
 
  	 
-								<div id="map"></div>
+								
 								
 
 								 	 
