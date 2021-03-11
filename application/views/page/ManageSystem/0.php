@@ -10,9 +10,12 @@
                         <div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-									<h4 class="card-title">ผู้ปฏิบัติงาน</h4>
+									<!--<h4 class="card-title">ผู้ปฏิบัติงาน</h4>
 									<p class="card-category">
-									แสดงผลข้อมูลผู้ปฏิบัติงาน 
+									แสดงผลข้อมูลผู้ปฏิบัติงาน  -->
+									<h4 class="card-title">ผู้ใช้งานระบบ</h4>
+									<p class="card-category">
+									แสดงผลข้อมูลบุคคลากร 
 									<p align="right" >  <button class="btn btn-warning"  id="btncreate" > เพิ่มรายการการผู้ปฏิบัติงาน</button>  </p>
 								</p>
 								</div>
@@ -59,9 +62,12 @@
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-									<h4 class="card-title">ผู้ใช้งานระบบ</h4>
+									<!--<h4 class="card-title">ผู้ใช้งานระบบ</h4>
 									<p class="card-category">
-									แสดงผลข้อมูลบุคคลากร
+									แสดงผลข้อมูลบุคคลากร -->
+									 <h4 class="card-title">ผู้ปฏิบัติงาน</h4>
+									<p class="card-category">
+									แสดงผลข้อมูลผู้ปฏิบัติงาน  
 									<p align="right" >  <button class="btn btn-warning"  id="btncreatesystem" > เพิ่มรายการผู้ใช้งานระบบ</button>  </p>
 								</p>
 								</div>
