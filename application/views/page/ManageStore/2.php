@@ -344,7 +344,7 @@
 						});		  
 						return false;
 					}
-					if( MemberID == "0"){
+					/*if( MemberID == "0"){
 						swal("กรุณากรอกผู้ดูแล", {
 							buttons: {        			
 								confirm: {
@@ -353,7 +353,7 @@
 							},
 						});		  
 						return false;
-					} 
+					} */
 					if( Remark == ""){
 						swal("กรุณากรอกรายละเอียด", {
 							buttons: {        			
