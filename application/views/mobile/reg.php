@@ -62,7 +62,8 @@ function runApp() {
 
         if(data == ""){
 
-            liff.closeWindow(); 
+            liff.closeWindow();
+            $("#btnsave").hide(); 
         }else{
 
             var obj = JSON.parse(data);
