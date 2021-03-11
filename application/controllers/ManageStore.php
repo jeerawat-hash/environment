@@ -57,8 +57,17 @@ class ManageStore extends CI_Controller {
 	public function GetDataTransaction()
 	{
 
-		echo json_encode($this->Env_Model->GetDataTransaction());
+		if($_POST["GroupID"] == 0){
 
+			echo json_encode($this->Env_Model->GetDataTransactionALL());
+
+		}else{
+
+			echo json_encode($this->Env_Model->GetDataTransactionOne($_POST["GroupID"]));
+
+		}
+		 
+		
 	}
 	public function GetDataTransactionSummary()
 	{

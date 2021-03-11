@@ -35,7 +35,7 @@
 							<div class="card">
 								<div class="card-header">
 									<h4 class="card-title">กลุ่มผู้ปฏิบัติงานขณะนี้</h4>
-									<p><button  class="btn btn-success" id="btnunfollow" > ดูทั้งหมด </button></p>
+									<p><button  class="btn btn-success" id="btnunfollow" > ยกเลิกการติดตาม </button></p>
 									
 								</div>
 								<div class="card-body">
