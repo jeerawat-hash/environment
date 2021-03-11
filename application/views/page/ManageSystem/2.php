@@ -165,9 +165,12 @@
 												<div class="card-body">
 													<div class="row">
 														 
-													 
-														 
-														
+													<div class="col-12">
+
+														<img id="QrAuth" src="" alt="">
+
+													</div> 
+														  
 													</div>
 													 
 												</div>
@@ -213,7 +216,7 @@
 			 $("#TableTrashDetail").on("click",".BtnTrashQR",function(){
 
 				var TrashID = $(this).attr("data-id");
- 
+				$("#ModalQrCode").find("#QrAuth").attr("src","https://api.qrserver.com/v1/create-qr-code/?size=250x250&data="+TrashID);
 				$('#ModalQrCode').modal('show'); 
 
 			}); 
