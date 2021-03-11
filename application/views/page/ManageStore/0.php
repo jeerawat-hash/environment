@@ -1,3 +1,34 @@
+
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+      let map;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: -34.397, lng: 150.644 },
+          zoom: 8,
+        });
+      }
+    </script>
+
+
+
+
+
 <div class="main-panel">
 			<div class="content">
 				<div class="page-inner">
@@ -23,7 +54,12 @@
 
 
  	 
-									 <div id="map"></div>
+								<div id="map"></div>
+								<script
+								src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3VNVg3bE8r4H1-42CdDnvoK-F1KvB8lM&callback=initMap&libraries=&v=weekly"
+								async
+								></script>
+
 								 	 
 
 
@@ -156,45 +192,7 @@
 				</div>
 			</footer>
 		</div>
-
-	<style>
-	/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-	#map {
-	height: 100%;
-	}
-
-	/* Optional: Makes the sample page fill the window. */
-	html,
-	body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	}
-</style>
-
- 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3VNVg3bE8r4H1-42CdDnvoK-F1KvB8lM&callback=initMap" async></script> 
-
-	<script>
-
-		let map;
-
-		function initMap() {
-		map = new google.maps.Map(document.getElementById("map"), {
-			center: { lat: -34.397, lng: 150.644 },
-			zoom: 8,
-		});
-		}
-
-
-
-    </script>
- 
-
-
-
-
+  
 
 
         <script>
