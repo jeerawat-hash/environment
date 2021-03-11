@@ -43,15 +43,15 @@
 														<tr>
 															<td>
 																<div class="flag">
-																	<img  width="20%" src="https://environment.webclient.me/assets/img/flags/br.png" class="SVGICON" alt="brazil">
+																	<img  width="10%" src="https://environment.webclient.me/assets/img/flags/br.png" class="SVGICON" alt="brazil">
 																</div>
 															</td>
-															<td>Brasil</td>
+															<td>ทะเบียน</td>
 															<td class="text-right">
-																640
+																จำนวนการจัดเก็บ
 															</td>
 															<td class="text-right">
-																11.63%
+																<button  id="btnfollow"  class="btn btn-warning"> ติดตาม </button>
 															</td>
 														</tr>
 
