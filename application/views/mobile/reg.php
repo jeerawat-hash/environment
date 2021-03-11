@@ -59,10 +59,19 @@ function runApp() {
        ID : EmpID
      },function(data){
 
-       var obj = JSON.parse(data);
-       console.log(obj);
-       $("#EmpName").text(obj[0].Name);
-       $("#btnsave").show(); 
+        if(data == ""){
+
+            liff.closeWindow(); 
+        }else{
+
+            var obj = JSON.parse(data);
+            console.log(obj);
+            $("#EmpName").text(obj[0].Name);
+            $("#btnsave").show(); 
+
+        }
+       
+
          
    }); 
 
