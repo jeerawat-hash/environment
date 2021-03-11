@@ -155,7 +155,7 @@ function initMap() {
 
  
     map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 16,
+      zoom: 14,
       center: { lat: 13.59934, lng: 100.59675 },
       mapTypeId: "terrain",
 	  styles: [
@@ -251,7 +251,7 @@ function initMap() {
     
 	
 	var GetFollowData = $("#GetFollowData").val(); 
-	
+
 	$.post("https://environment.webclient.me/index.php/ManageStore/GetDataTransaction",{GroupID : GetFollowData},function(data){
 
       var obj = JSON.parse(data);
@@ -330,8 +330,11 @@ function initMap() {
 			if(GetFollowData != 0){
 
 				clickroute(parseFloat(obj[index].Lat),parseFloat(obj[index].Lon));
-		  
-			} 
+				map.setZoom(20); 
+
+			}else{
+				map.setZoom(4); 
+			}
 			 
 				
 
