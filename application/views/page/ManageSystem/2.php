@@ -163,13 +163,13 @@
 													<div class="card-title">ข้อมูล QR Code</div>
 												</div>
 												<div class="card-body">
-													<div class="row">
-														 
-													<div class="col-12">
+													<div class="row text-center">
+															
+														<div class="col-12">
 
-														<img id="QrAuth" src="" alt="">
+															<img id="QrAuth" src="" alt="">
 
-													</div> 
+														</div> 
 														  
 													</div>
 													 
