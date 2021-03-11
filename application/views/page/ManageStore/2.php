@@ -105,11 +105,11 @@
 																<select class="form-control form-control-sm" id="smallSelect">
 																	<option value="0" selected disabled>กรุณาเลือก</option> 
  																	<?php
-															  
+															  	print_r($VehicleNotCreate);
 																	 foreach($VehicleNotCreate as $Vehicle){
 																	 ?>
 
-																			<option value="<?php echo $Vehicle->ID; ?>"><?php echo $Vehicle->LicensePlate; ?></option> 
+																		<option value="<?php echo $Vehicle->ID; ?>"><?php echo $Vehicle->LicensePlate; ?></option> 
 
 																	<?php 	
 																	 }
