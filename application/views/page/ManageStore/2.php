@@ -77,14 +77,14 @@
 
 								
 					<!-- Modal -->
-					<div class="modal fade" id="myModal" role="dialog">
+					<div class="modal fade" id="CreateGroup" role="dialog">
 						<div class="modal-dialog modal-lg">
 						
 						<!-- Modal content-->
 						<div class="modal-content">
 							<div class="modal-header  bg-success ">
 							
-							<h4 style="color:white"  >ลงทะเบียนผู้ปฏิบัติงาน</h4>
+							<h4 style="color:white"  >สร้างกลุ่มการปฏิบัติงาน</h4>
 
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
 							</div>
@@ -94,7 +94,7 @@
 											<div class="col-md-12">
 												<div class="card">
 													<div class="card-header">
-														<div class="card-title">สร้างลงทะเบียนผู้ปฏิบัติงาน</div>
+														<div class="card-title">สร้างกลุ่มการปฏิบัติงาน</div>
 													</div>
 													<div class="card-body">
 														<div class="row">
@@ -102,7 +102,7 @@
 															<div class="form-group">
 																<label for="smallSelect">ป้ายทะเบียน</label>
 															
-																<select class="form-control form-control-sm" id="smallSelect">
+																<select class="form-control form-control-sm" id="LicensePlate">
 																	<option value="0" selected disabled>กรุณาเลือก</option> 
  																	<?php 
 																	 foreach($VehicleNotCreate as $Vehicle){
@@ -124,7 +124,7 @@
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
 																	<label for="data2">ผู้ดูเเล</label>
-																	<select class="form-control form-control-sm" id="data2">
+																	<select class="form-control form-control-sm" id="MemberID">
 																	<option value="0" selected disabled>กรุณาเลือก</option> 
  																	<?php
 															  
@@ -175,14 +175,14 @@
  
 													
 					<!-- Modal -->
-					<div class="modal fade" id="myModal1" role="dialog">
+					<div class="modal fade" id="GroupMember" role="dialog">
 						<div class="modal-dialog modal-lg">
 						
 						<!-- Modal content-->
 						<div class="modal-content">
 							<div class="modal-header  bg-success ">
 							
-							<h4 style="color:white"  >ลงทะเบียนจัดกลุ่มผู้ปฏิบัติงาน</h4>
+							<h4 style="color:white"  >จัดกลุ่มผู้ปฏิบัติงาน</h4>
 
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
 							</div>
@@ -192,7 +192,7 @@
 											<div class="col-md-12">
 												<div class="card">
 													<div class="card-header">
-														<div class="card-title">ลงทะเบียนจัดกลุ่มผู้ปฏิบัติงาน</div>
+														<div class="card-title">จัดกลุ่มผู้ปฏิบัติงาน</div>
 													</div>
 													<div class="card-body">
 														<div class="row">
@@ -201,11 +201,18 @@
 																<label for="smallSelect">ป้ายทะเบียน</label>
 															
 																<select class="form-control form-control-sm" id="smallSelect">
-																	<option>1</option>
-																	<option>2</option>
-																	<option>3</option>
-																	<option>4</option>
-																	<option>5</option>
+																<option value="0" selected disabled>กรุณาเลือก</option> 
+ 																	<?php
+															  
+																	 foreach($GroupData as $Group){
+																	 ?>
+
+																			<option value="<?php echo $Group->ID; ?>"><?php echo $Group->LicensePlate." ".$Group->Remark; ?></option> 
+
+																	<?php 	
+																	 }
+																	  
+																	 ?>
 																</select>
 														
 																
@@ -214,12 +221,19 @@
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
 																	<label for="data2">ผู้ปฏิบัติงาน</label>
-																	<select class="form-control form-control-sm" id="data2">
-																	<option>1</option>
-																	<option>2</option>
-																	<option>3</option>
-																	<option>4</option>
-																	<option>5</option>
+																	<select class="form-control form-control-sm" id="MemberID">
+																	<option value="0" selected disabled>กรุณาเลือก</option> 
+ 																	<?php
+															  
+																	 foreach($MemberNotGroup as $Member){
+																	 ?>
+
+																			<option value="<?php echo $Member->ID; ?>"><?php echo $Member->Name; ?></option> 
+
+																	<?php 	
+																	 }
+																	  
+																	 ?>
 																</select>
 																
 																</div>
@@ -286,11 +300,11 @@
 
 
 				$("#btncreate").click(function(){
-					$('#myModal').modal('show'); 
+					$('#CreateGroup').modal('show'); 
 				});
 	
 				$("#btncreate1").click(function(){
-					$('#myModal1').modal('show'); 
+					$('#GroupMember').modal('show'); 
 				});
 
 				$("#btncreatedata").click(function(){

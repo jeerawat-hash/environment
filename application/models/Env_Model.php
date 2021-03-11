@@ -171,6 +171,15 @@ class Env_Model extends CI_Model
         return $this->envdb->query(" SELECT * FROM jeerawatme_env.Member WHERE ID not in ( select MemberID from jeerawatme_env.WorkGroupDetail ) and PositionID = 0 ")->result();
  
     }
+    public function GetDataGroup()
+    {
+
+        $this->envdb = $this->load->database("envdb",true);
+        return $this->envdb->query(" SELECT b.ID,b.LicensePlate,a.Remark FROM `WorkGroup` a JOIN Vehicle b on a.VehicleID = b.ID ")->result();
+ 
+    }
+
+    
 
 
 

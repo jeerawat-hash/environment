@@ -53,6 +53,9 @@ class ManageStore extends CI_Controller {
 		$data["VehicleNotCreate"] = $this->Env_Model->GetDataVehicleNotCreateGroup();
 		$data["MemberNotGroup"] = $this->Env_Model->GetDataMemberNonGroup();
 		$data["MemberGroup"] = $this->Env_Model->GetDataMemberWorkGroup();
+		$data["GroupData"] = $this->Env_Model->GetDataGroup();
+
+		
 		
 		$this->load->view('template/header.php',$header);
 		$this->load->view('page/ManageStore/2.php',$data);
