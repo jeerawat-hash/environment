@@ -92,7 +92,7 @@ class Env_Model extends CI_Model
         return $this->envdb->query(" SELECT a.ID as TransacID,a.Lat,a.Lon,c.ID as VehicleID,c.LicensePlate,c.Color,d.Remark FROM `Transaction` a
         JOIN WorkGroup b on a.WorkGroupID = b.ID
         JOIN Vehicle c on b.VehicleID = c.ID
-        JOIN Trash d on a.TrashID = d.ID ")->result(); 
+        JOIN Trash d on a.TrashID = d.ID WHERE CAST(a.StampDate as date) = CURRENT_DATE() ")->result(); 
     }
     public function GetDataTransactionOne($TeamID)
     {
@@ -101,7 +101,7 @@ class Env_Model extends CI_Model
         return $this->envdb->query(" SELECT a.ID as TransacID,a.Lat,a.Lon,c.ID as VehicleID,c.LicensePlate,c.Color,d.Remark FROM `Transaction` a
         JOIN WorkGroup b on a.WorkGroupID = b.ID
         JOIN Vehicle c on b.VehicleID = c.ID
-        JOIN Trash d on a.TrashID = d.ID WHERE c.ID = '".$TeamID."' ")->result();
+        JOIN Trash d on a.TrashID = d.ID WHERE c.ID = '".$TeamID."' and CAST(a.StampDate as date) = CURRENT_DATE() ")->result();
 
     }
     public function GetDataTransactionSummary()
