@@ -12,8 +12,8 @@
        <!-- Masthead Heading-->
        <h4 class="masthead-heading text-uppercase mb-0" id="EmpName">       </h4>
        <input  type="text"   id="tgetlo" name="tgetlo"      >
-       <input class="input100" type="text" readonly  id="longitude" name="longitude">
-       <input class="input100" type="text"  readonly   id="latitude" name="latitude">
+       <input class="input100" type="text" readonly hidden id="longitude" name="longitude">
+       <input class="input100" type="text"  readonly hidden  id="latitude" name="latitude">
        <br> 
        <!-- Icon Divider--> 
       
@@ -52,6 +52,7 @@ function runApp() {
     $("#ImgProfile").attr("src",profile.pictureUrl);
     $("#AuthImg").attr("src",profile.pictureUrl);
     
+    var EmpID = $("#EmpID").val();
 
 /*
    $.post("https://environment.webclient.me/index.php/Qrcontroller/GetDataTrashByID",
@@ -70,8 +71,7 @@ function runApp() {
         alert($vara);
 
        }
-       
-
+        
    });*/
 
  
@@ -79,7 +79,7 @@ function runApp() {
   $("#btnsave").hide();
   $("#btnsave").on("click",function(){   
 
-        
+
 
     
    });
