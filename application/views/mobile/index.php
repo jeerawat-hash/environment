@@ -162,7 +162,18 @@ liff.init({ liffId: "1655702904-El3x46Gk" }, () => {
 
 
 <script>
-var x = document.getElementById("tgetlo");
+ 
+</script>
+<script>
+
+ 
+setInterval(function(){ 
+
+
+
+
+
+  var x = document.getElementById("tgetlo");
 
 getLocation();
 
@@ -182,43 +193,43 @@ x.value = '{ "Latitude":"'+ position.coords.latitude +'", "Longitude":"'+positio
 
 }
 
-
-</script>
-<script>
-
  
-setInterval(function(){ 
-
 var locationall = $("#tgetlo").val();
-if(locationall != ""){
-   var objectLocation = JSON.parse(locationall);
-   //console.log(objectLocation);
-    $("#longitude").val(objectLocation.Longitude);
-    $("#latitude").val(objectLocation.Latitude);
+
+  
+
+    if(locationall != ""){
+      var objectLocation = JSON.parse(locationall);
+      //console.log(objectLocation);
+        $("#longitude").val(objectLocation.Longitude);
+        $("#latitude").val(objectLocation.Latitude);
+        
+      var BinID = $("#BinID").val();
+      
+
+      if (BinID == 0) {
+
+        swal({
+            title: "ผิดพลาด",
+            text: "กรุณาลองใหม่ภายหลัง",
+            icon: "error",
+            button: "ปิด",
+        }); 
+
+        $("#btnsave").hide();
+        liff.closeWindow();
+      }else{
+
+        $("#btnsave").show(); 
+        
+      }
+
+      console.log(objectLocation); 
+    } 
     
-   var BinID = $("#BinID").val();
-   
 
-   if (BinID == 0) {
 
-     swal({
-         title: "ผิดพลาด",
-         text: "กรุณาลองใหม่ภายหลัง",
-         icon: "error",
-         button: "ปิด",
-     }); 
 
-     $("#btnsave").hide();
-     liff.closeWindow();
-   }else{
-
-     $("#btnsave").show(); 
-     
-   }
-
-   console.log(objectLocation); 
-} 
-
-}, 1000); 
+}, 500); 
 
 </script>
