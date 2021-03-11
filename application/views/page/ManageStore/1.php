@@ -40,9 +40,9 @@
  
 												<tr>
 													<td><?php echo $Tvalue->LicensePlate;  ?></td>
-													<td><img src="https://environment.webclient.me/temp/pin-<?php echo $Tvalue->Color;  ?>.svg" alt=""></td>
-													<td><?php echo $Tvalue->SumCapacity;  ?></td>
-													<td><?php echo $Tvalue->CountCapacity;  ?></td>
+													<td><img width="20%" src="https://environment.webclient.me/temp/pin-<?php echo $Tvalue->Color;  ?>.svg" alt=""></td>
+													<td><?php echo $Tvalue->SumCapacity;  ?> ลิตร</td>
+													<td><?php echo $Tvalue->CountCapacity;  ?> ถัง</td>
 													<td><?php echo $Tvalue->StampDate ;  ?></td> 
 												</tr>
 
