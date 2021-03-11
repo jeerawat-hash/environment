@@ -250,7 +250,8 @@ function initMap() {
   setInterval(function(){ 
     
 	
-        
+	var GetFollowData = $("#GetFollowData").val(); 
+	
 	$.post("https://environment.webclient.me/index.php/ManageStore/GetDataTransaction",{GroupID : GetFollowData},function(data){
 
       var obj = JSON.parse(data);
@@ -324,13 +325,13 @@ function initMap() {
               });
             });
             */ 
-			var GetFollowData = $("#GetFollowData").val(); 
 			
-			//if(GetFollowData != 0){
+			
+			if(GetFollowData != 0){
 
 				clickroute(parseFloat(obj[index].Lat),parseFloat(obj[index].Lon));
 		  
-			//} 
+			} 
 			 
 				
 
