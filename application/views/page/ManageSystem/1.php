@@ -25,7 +25,7 @@
 												<tr>
 													<th>ลำดับ</th>
 													<th>ป้ายทะเบียน</th>
-													<th>สี</th> 
+													<th>สัญญลักษณ์</th> 
 												</tr>
 											</thead> 
 											<tbody> 
@@ -41,7 +41,7 @@
 												<tr>
 													<td><?php echo $valuevehicled->ID; ?></td>
 													<td><?php echo $valuevehicled->LicensePlate; ?></td>
-													<td><?php echo $valuevehicled->Color; ?></td>  
+													<td><img width="20%" src="https://environment.webclient.me/temp/pin-<?php echo $valuevehicled->Color; ?>.svg" alt=""></td>  
 													 
 												</tr> 
 												<? 
