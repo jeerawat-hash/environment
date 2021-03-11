@@ -140,6 +140,7 @@
 			$("#btnfollow1").on("click",function(){
 
 				 $("#GetFollowData").val("1"); 
+				 alert( $("#GetFollowData").val() );
 
 			});
 
