@@ -37,6 +37,8 @@ class ManageStore extends CI_Controller {
         $header['page_menu'] = 1;
 		$data["page_name"] = $header['page_name'];
 		
+		$data["Transaction"] = $this->Env_Model->GetDataTransactionLog();
+
 		$this->load->view('template/header.php',$header);
 		$this->load->view('page/ManageStore/1.php',$data);
 		$this->load->view('template/footer.php');
@@ -73,6 +75,13 @@ class ManageStore extends CI_Controller {
 	{
 
 		echo json_encode($this->Env_Model->GetDataTransactionSummary());
+
+
+	}
+	public function GetDataTransactionLog()
+	{
+
+		echo json_encode($this->Env_Model->GetDataTransactionLog());
 
 
 	}

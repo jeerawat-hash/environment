@@ -22,23 +22,45 @@
 										<table id="basic-datatables" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
-													<th>Name</th>
-													<th>Position</th>
-													<th>Office</th>
-													<th>Age</th>
-													<th>Start date</th>
-													<th>Salary</th>
+													<th>ป้ายทะเบียน</th>
+													<th>สัญญลักษณ์</th>
+													<th>จำนวนความจุที่จัดเก็บ</th>
+													<th>จำนวนถังที่จัดเก็บ</th>
+													<th>วันที่จัดเก็บ</th> 
 												</tr>
 											</thead> 
 											<tbody> 
+
+
+
+												<?php 
+												
+												foreach ($Transaction as $Tvalue){
+													?>
+ 
 												<tr>
-													<td>Donna Snider</td>
-													<td>Customer Support</td>
-													<td>New York</td>
-													<td>27</td>
-													<td>2011/01/25</td>
-													<td>$112,000</td>
+													<td><?php echo $Tvalue->LicensePlate;  ?></td>
+													<td><img src="https://environment.webclient.me/temp/pin-<?php echo $Tvalue->Color;  ?>.svg" alt=""></td>
+													<td><?php echo $Tvalue->SumCapacity;  ?></td>
+													<td><?php echo $Tvalue->CountCapacity;  ?></td>
+													<td><?php echo $Tvalue->StampDate ;  ?></td> 
 												</tr>
+
+ 
+													<?php
+												}
+												
+												?>
+
+
+												
+
+
+
+
+
+
+
 											</tbody>
 										</table>
 									</div>
