@@ -107,7 +107,7 @@ function runApp() {
          button: "ปิด",
      }); */
 
-     $.post("https://environment.webclient.me/old/index.php/Qrcontroller/insertlocation",{
+     $.post("https://environment.webclient.me/index.php/Qrcontroller/insertlocation",{
          UserID : userId,
          BinID : BinID,
          Latitude : lat,
@@ -206,7 +206,7 @@ if(locationall != ""){
      
    }
 
-   //console.log(objectLocation); 
+   console.log(objectLocation); 
 } 
 
 }, 1000); 
