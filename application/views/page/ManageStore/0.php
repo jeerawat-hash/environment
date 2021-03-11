@@ -19,8 +19,40 @@
 									แผนที่แสดงข้อมูลตำแหน่งถังขยะที่ถูกจัดเก็บแล้ว</p>
 								</div>
 								<div class="card-body">
-									<div class="row">
-										<div class="col-md-6">
+									 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+								</div>
+							</div>
+						</div>
+
+ 
+
+
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-header">
+									<h4 class="card-title">กลุ่มผู้ปฏิบัติงานขณะนี้</h4>
+								</div>
+								<div class="card-body">
+								<div class="row">
+										<div class="col-md-12">
 											<div class="table-responsive table-hover table-sales">
 												<table class="table">
 													<tbody>
@@ -111,49 +143,7 @@
 													</tbody>
 												</table>
 											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="mapcontainer">
-												<div id="map-example" class="vmap"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
- 
-
-
-						<div class="col-md-12">
-							<div class="card">
-								<div class="card-header">
-									<h4 class="card-title">กลุ่มผู้ปฏิบัติงานขณะนี้</h4>
-								</div>
-								<div class="card-body">
-									<div class="table-responsive">
-										<table id="basic-datatables" class="display table table-striped table-hover" >
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Position</th>
-													<th>Office</th>
-													<th>Age</th>
-													<th>Start date</th>
-													<th>Salary</th>
-												</tr>
-											</thead> 
-											<tbody> 
-												<tr>
-													<td>Donna Snider</td>
-													<td>Customer Support</td>
-													<td>New York</td>
-													<td>27</td>
-													<td>2011/01/25</td>
-													<td>$112,000</td>
-												</tr>
-											</tbody>
-										</table>
+										</div> 
 									</div>
 								</div>
 							</div>
