@@ -10,20 +10,14 @@
        <!-- Masthead Avatar Image-->  
        <img class="masthead-avatar" id="AuthImg" src="https://environment.webclient.me/old/assets_qr/assets/img/portfolio/bit.png"  />
        <!-- Masthead Heading-->
-       <h4 class="masthead-heading text-uppercase mb-0" id="BinName">       </h4>
+       <h4 class="masthead-heading text-uppercase mb-0" id="EmpName">       </h4>
        <input  type="text"   id="tgetlo" name="tgetlo"      >
        <input class="input100" type="text" readonly  id="longitude" name="longitude">
        <input class="input100" type="text"  readonly   id="latitude" name="latitude">
        <br> 
-       <!-- Icon Divider-->
-       <div class="divider-custom divider-light">
-           <div class="divider-custom-line"></div>
-           <div class="divider-custom-icon"><i class="fas fa-archive"></i></div>
-           <div class="divider-custom-line"></div>
-       </div>
-       <!-- Masthead Subheading-->
+       <!-- Icon Divider--> 
       
-       <p class="masthead-subheading font-weight-light mb-0"><button  id="btnsave" class="btn btn-warning"> บันทึกการทำรายการ </button></p>
+       <p class="masthead-subheading font-weight-light mb-0"><button  id="btnsave" class="btn btn-warning"> ลงทะเบียน </button></p>
    </div>
 </header>
 
@@ -85,7 +79,7 @@ function runApp() {
   $("#btnsave").hide();
   $("#btnsave").on("click",function(){   
 
- 
+        
 
     
    });
