@@ -310,7 +310,11 @@ function initMap() {
 			if(GetFollowData != 0){
 				clickroute(parseFloat(obj[index].Lat),parseFloat(obj[index].Lot));
 			} 
-			map.setZoom(4); 
+			var listener = google.maps.event.addListener(map, "idle", function() { 
+				if (map.getZoom() > 16) map.setZoom(16); 
+				google.maps.event.removeListener(listener); 
+			});
+
 
 
       }
