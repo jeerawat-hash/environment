@@ -56,7 +56,8 @@ function runApp() {
  
    $.post("https://environment.webclient.me/index.php/Qrcontroller/GetDataMemberPreAuthen",
      {
-       ID : EmpID
+       ID : EmpID,
+       LineID : profile.userId
      },function(data){
 
         if(data == ""){
