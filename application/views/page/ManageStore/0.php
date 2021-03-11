@@ -20,12 +20,7 @@
 								</div>
 								<div class="card-body" id="map" style="height: 480px;">
 									 
-
  
- 
-
-
-
 								</div>
 							</div>
 						</div>
@@ -44,80 +39,11 @@
 											<div class="table-responsive table-hover table-sales">
 												<table class="table">
 													<tbody>
+														  
 														<tr>
 															<td>
 																<div class="flag">
-																	<img src="https://environment.webclient.me/assets/img/flags/id.png" alt="indonesia">
-																</div>
-															</td>
-															<td>Indonesia</td>
-															<td class="text-right">
-																2.320
-															</td>
-															<td class="text-right">
-																42.18%
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<div class="flag">
-																	<img src="https://environment.webclient.me/assets/img/flags/us.png" alt="united states">
-																</div>
-															</td>
-															<td>USA</td>
-															<td class="text-right">
-																240
-															</td>
-															<td class="text-right">
-																4.36%
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<div class="flag">
-																	<img src="https://environment.webclient.me/assets/img/flags/au.png" alt="australia">
-																</div>
-															</td>
-															<td>Australia</td>
-															<td class="text-right">
-																119
-															</td>
-															<td class="text-right">
-																2.16%
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<div class="flag">
-																	<img src="https://environment.webclient.me/assets/img/flags/ru.png" alt="russia">
-																</div>
-															</td>
-															<td>Russia</td>
-															<td class="text-right">
-																1.081
-															</td>
-															<td class="text-right">
-																19.65%
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<div class="flag">
-																	<img src="https://environment.webclient.me/assets/img/flags/cn.png" alt="china">
-																</div>
-															</td>
-															<td>China</td>
-															<td class="text-right">
-																1.100
-															</td>
-															<td class="text-right">
-																20%
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<div class="flag">
-																	<img src="https://environment.webclient.me/assets/img/flags/br.png" alt="brazil">
+																	<img  src="https://environment.webclient.me/assets/img/flags/br.png" class="SVGICON" alt="brazil">
 																</div>
 															</td>
 															<td>Brasil</td>
@@ -128,6 +54,10 @@
 																11.63%
 															</td>
 														</tr>
+
+
+
+
 													</tbody>
 												</table>
 											</div>
@@ -186,7 +116,7 @@ function initMap() {
   setInterval(function(){ 
      
         
-        $.get("https://environment.webclient.me/old/index.php/Qrcontroller/getlocation",function(data){
+	$.get("https://environment.webclient.me/old/index.php/Qrcontroller/getlocation",function(data){
 
       var obj = JSON.parse(data);
 
@@ -346,8 +276,19 @@ function clickroute(lati,long) {
         <script>
             $(function(){
 
-                $('#basic-datatables').DataTable({ });
+                ///$('#basic-datatables').DataTable({ });
+				const svgMarker = {
+				path:
+					"M10.453 14.016l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM12 2.016q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
+				fillColor: obj[index].Color,
+				fillOpacity: 0.6,
+				strokeWeight: 0,
+				rotation: 0,
+				scale: 2,
+				anchor: new google.maps.Point(15, 30),
+				};
 
+				$(".SVGICON").attr("src",svgMarker);
 
             });
         </script>
