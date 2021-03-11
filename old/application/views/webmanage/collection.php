@@ -30,10 +30,10 @@
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-
+          <!--
 									 	<center> 	 
 										       <div id="map"></div>
-								 		</center>
+								 		</center> -->
 								</div>
 								<div class="card-body">
 									 
@@ -144,7 +144,7 @@
 
    
     <!-- Replace the value of the key parameter with your own API key. -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3VNVg3bE8r4H1-42CdDnvoK-F1KvB8lM&callback=initMap" async defer></script> 
+  <!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3VNVg3bE8r4H1-42CdDnvoK-F1KvB8lM&callback=initMap" async defer></script> --> 
     <script>
 
 var map;
