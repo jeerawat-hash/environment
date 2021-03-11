@@ -7,7 +7,7 @@
 					<div class="row">
 
 
-					<div id="mapA"></div>
+
 
                     	<div class="col-md-12">
 							<div class="card">
@@ -23,7 +23,7 @@
 
 
  	 
-									 
+									 <div id="map"></div>
 								 	 
 
 
@@ -159,14 +159,7 @@
 
 
 
-
-
-
-
-
-
-
-    <!-- Replace the value of the key parameter with your own API key. -->
+ 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3VNVg3bE8r4H1-42CdDnvoK-F1KvB8lM&callback=initMap" async defer></script> 
 
 	<script>
@@ -174,11 +167,13 @@
 	var map;
 	function initMap() {
 
-	
-		map = new google.maps.Map(document.getElementById("mapA"), {
+		
+		map = new google.maps.Map($("#map"), {
+
 			zoom: 20,
 			center: { lat: 13.59934, lng: 100.59675 },
 			mapTypeId: "terrain",
+
 		});
 	
 	
