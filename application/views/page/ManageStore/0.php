@@ -9,7 +9,7 @@
 
 
 
-                    	<div class="col-md-12">
+                    <div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
 									<div class="card-head-row card-tools-still-right">
@@ -20,8 +20,10 @@
 								</div>
 								<div class="card-body" id="map" style="height: 430px;">
 									 
+
  
-								 	 
+ 
+
 
 
 								</div>
@@ -165,10 +167,11 @@
 
     <!-- Replace the value of the key parameter with your own API key. -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3VNVg3bE8r4H1-42CdDnvoK-F1KvB8lM&callback=initMap" async defer></script> 
+	<script>
 
-<script>
 var map;
 function initMap() {
+
 
  
     map = new google.maps.Map(document.getElementById("map"), {
@@ -183,7 +186,7 @@ function initMap() {
   setInterval(function(){ 
      
         
-    $.get("https://environment.webclient.me/old/index.php/Qrcontroller/getlocation",function(data){
+        $.get("https://environment.webclient.me/old/index.php/Qrcontroller/getlocation",function(data){
 
       var obj = JSON.parse(data);
 
@@ -322,11 +325,11 @@ function initMap() {
 
 
 
-	function clickroute(lati,long) {
-		var latLng = new google.maps.LatLng(lati, long); //Makes a latlng
-		map.panTo(latLng); //Make map global
-		return false;
-	}
+function clickroute(lati,long) {
+      var latLng = new google.maps.LatLng(lati, long); //Makes a latlng
+      map.panTo(latLng); //Make map global
+      return false;
+  }
 
    
 }
@@ -341,12 +344,10 @@ function initMap() {
 
 
         <script>
-		/*
             $(function(){
 
                 $('#basic-datatables').DataTable({ });
 
 
             });
-			*/
         </script>
