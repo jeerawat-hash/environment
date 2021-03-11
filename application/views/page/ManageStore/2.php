@@ -200,7 +200,7 @@
 															<div class="form-group">
 																<label for="smallSelect">ป้ายทะเบียน</label>
 															
-																<select class="form-control form-control-sm" id="smallSelect">
+																<select class="form-control form-control-sm" id="LicensePlate">
 																<option value="0" selected disabled>กรุณาเลือก</option> 
  																	<?php
 															  
