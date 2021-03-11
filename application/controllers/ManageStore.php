@@ -64,10 +64,10 @@ class ManageStore extends CI_Controller {
 	}
 	public function DeleteMemberInGroup()
 	{
-		
+
 		$WorkGroupID = $_POST["WorkGroupID"];
 		$MemberID = $_POST["MemberID"];
-		echo $this->Env_Model->DeleteMemberInGroup($WorkGroupID,$MemberID)
+		echo $this->Env_Model->DeleteMemberInGroup($WorkGroupID,$MemberID);
 
 	}
 	public function CreateGroup()
