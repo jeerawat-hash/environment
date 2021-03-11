@@ -210,14 +210,13 @@
 
 
 
-			/*$("#TableTrashDetail").on("click",".BtnTrashQR",function(){
+			 $("#TableTrashDetail").on("click",".BtnTrashQR",function(){
 
-			var TrashID = $("#data-id").attr();
+				var TrashID = $(this).attr("data-id");
+ 
+				$('#ModalQrCode').modal('show'); 
 
-			alert();
-				//	$('#ModalQrCode').modal('show'); 
-
-			});*/
+			}); 
 
 
 
@@ -234,7 +233,7 @@
             $(function(){
 
 				$('#basic-datatables').DataTable({ });
-				
+
 				$("#btncreate").click(function(){
 					$('#myModal').modal('show'); 
 				});
