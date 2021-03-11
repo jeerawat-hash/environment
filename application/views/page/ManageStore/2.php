@@ -98,40 +98,40 @@
 													</div>
 													<div class="card-body">
 														<div class="row">
-														<div class="col-md-6 col-lg-6">
-															<div class="form-group">
-																<label for="smallSelect">ป้ายทะเบียน</label>
-															
-																<select class="form-control form-control-sm" id="LicensePlate">
-																	<option value="0" selected disabled>กรุณาเลือก</option> 
- 																	<?php 
-																	 foreach($VehicleNotCreate as $Vehicle){
-																	 ?>
-
-																		<option value="<?php echo $Vehicle->ID; ?>"><?php echo $Vehicle->LicensePlate; ?></option> 
-
-																	<?php 	
-																	 }
-																	 
-																	 
-																	 ?>
-
-																</select>
-														
-																
-															</div>
-														</div>
-															 
-														<div class="row">
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
-																	<label for="Remark">รายละเอียด</label>
-																	<input type="email" class="form-control" id="Remark" placeholder="กรุณากรอกรายละเอียด">
+																	<label for="smallSelect">ป้ายทะเบียน</label>
+																
+																	<select class="form-control form-control-sm" id="LicensePlate">
+																		<option value="0" selected disabled>กรุณาเลือก</option> 
+																		<?php 
+																		foreach($VehicleNotCreate as $Vehicle){
+																		?>
+
+																			<option value="<?php echo $Vehicle->ID; ?>"><?php echo $Vehicle->LicensePlate; ?></option> 
+
+																		<?php 	
+																		}
+																		
+																		
+																		?>
+
+																	</select>
+															
 																	
 																</div>
 															</div>
 															 
-														</div>
+														 
+															<div class="col-md-6 col-lg-6">
+																<div class="form-group">
+																	<label for="Remark">รายละเอียด</label>
+																	<input type="email" class="form-control" id="Remark" placeholder="กรุณากรอกรายละเอียด">						
+																</div>
+															</div>
+																
+													 
+													</div>
 													</div>
 
 												</div>
