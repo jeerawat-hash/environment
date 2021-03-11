@@ -216,7 +216,7 @@
 			 $("#TableTrashDetail").on("click",".BtnTrashQR",function(){
 
 				var TrashID = $(this).attr("data-id");
-				$("#ModalQrCode").find("#QrAuth").attr("src","https://api.qrserver.com/v1/create-qr-code/?size=250x250&data="+TrashID);
+				$("#ModalQrCode").find("#QrAuth").attr("src","https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://liff.line.me/1655702904-El3x46Gk?key="+TrashID);
 				$('#ModalQrCode').modal('show'); 
 
 			}); 
