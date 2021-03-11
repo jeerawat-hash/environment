@@ -35,6 +35,7 @@
 							<div class="card">
 								<div class="card-header">
 									<h4 class="card-title">กลุ่มผู้ปฏิบัติงานขณะนี้</h4>
+									<button  class="btn btn-success" id="btnunfollow" > ดูทั้งหมด </button>
 								</div>
 								<div class="card-body">
 								<div class="row">
@@ -97,9 +98,7 @@
 				  
 				//alert( $("#GetFollowData").val() );
 				var data = $("#GetFollowData").val();
- 
-					if(data == 0){
-
+  
 						$("#GetFollowData").val(dataId);
 						swal({
 							title: "กำลังติดตาม "+name,
@@ -114,18 +113,31 @@
 									closeModal: true
 								}
 							}
-						});
+						}); 
 
-						$(this).text("ยกเลิกการติดตาม");
-	
-					}else{
-
-						$("#GetFollowData").val(0);
-						location.reload();
-						 
-					} 
-					
 			});
+
+			$("#btnunfollow").on("click",function(){
+  
+					$("#GetFollowData").val(0);
+					swal({
+						title: "แสดงผลข้อมูลทั้งหมด",
+						text: " ",
+						icon: "success",
+						buttons: {
+							confirm: {
+								text: "ตกลง",
+								value: true,
+								visible: true,
+								className: "btn btn-success",
+								closeModal: true
+							}
+						}
+					}); 
+
+			});
+
+			
 
 		});
 	</script>
