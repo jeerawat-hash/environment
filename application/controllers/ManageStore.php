@@ -62,6 +62,22 @@ class ManageStore extends CI_Controller {
 		$this->load->view('template/footer.php');
 
 	}
+	public function CreateGroup()
+	{
+		$VehicleID = $_POST["VehicleID"];
+		$Remark = $_POST["Remark"];
+
+		echo $this->Env_Model->CreateGroup($VehicleID,$Remark);
+ 
+	}
+	public function InsertGroupDetail()
+	{
+
+		$WorkGroupID = $_POST["WorkGroupID"];
+		$MemberID = $_POST["MemberID"];
+		echo $this->Env_Model->InsertGroupDetail($WorkGroupID,$MemberID)
+ 
+	}
 	public function GetDataTransaction()
 	{
 

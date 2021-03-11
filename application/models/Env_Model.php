@@ -134,11 +134,11 @@ class Env_Model extends CI_Model
         join jeerawatme_env.Member d on c.MemberID = d.ID ")->result();
 
     } 
-    public function CreateGroup($VehicleID,$MemberID,$Remark)
+    public function CreateGroup($VehicleID,$Remark)
     {   
         $this->envdb = $this->load->database("envdb",true);
 
-        $this->envdb->query(" INSERT INTO jeerawatme_env.WorkGroup (ID, VehicleID, MemberID, Remark) VALUES (NULL, '".$VehicleID."', '".$MemberID."', '".$Remark."') ");
+        $this->envdb->query(" INSERT INTO jeerawatme_env.WorkGroup (ID, VehicleID, Remark) VALUES (NULL, '".$VehicleID."', '".$Remark."') ");
         
         return 1;
     }

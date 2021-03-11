@@ -121,35 +121,12 @@
 																
 															</div>
 														</div>
-															<div class="col-md-6 col-lg-6">
-																<div class="form-group">
-																	<label for="data2">ผู้ดูเเล</label>
-																	<select class="form-control form-control-sm" id="MemberID">
-																	<option value="0" selected disabled>กรุณาเลือก</option> 
- 																	<?php
-															  
-																	 foreach($MemberNotGroup as $Member){
-																	 ?>
-
-																			<option value="<?php echo $Member->ID; ?>"><?php echo $Member->Name; ?></option> 
-
-																	<?php 	
-																	 }
-																	  
-																	 ?>
-
-																</select>
-																</select>
-																
-																</div>
-															</div>
-															
-														</div>
+															 
 														<div class="row">
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
 																	<label for="email2">รายละเอียด</label>
-																	<input type="email" class="form-control" id="data3" placeholder="กรุณากรอกรายละเอียด">
+																	<input type="email" class="form-control" id="Remark" placeholder="กรุณากรอกรายละเอียด">
 																	
 																</div>
 															</div>
@@ -307,63 +284,98 @@
 					$('#GroupMember').modal('show'); 
 				});
 
-				$("#btncreatedata").click(function(){
-					var smallSelect = $("#smallSelect").val();
-					var data2 = $("#data2").val(); 
-					var data3 = $("#data3").val(); 
-					if( smallSelect == ""){
-						swal("กรุณากรอกป้ายทะเบียน", {
+				$("#CreateGroup").find("#btncreatedata").click(function(){
+					var LicensePlate = $("#LicensePlate").val();
+					var MemberID = $("#MemberID").val(); 
+					var Remark = $("#Remark").val();  
+					if( LicensePlate == "0"){
+						swal("กรุณาเลือกทะเบียน", {
 							buttons: {        			
 								confirm: {
 									className : 'btn btn-danger'
 								}
 							},
-						});		 
-						$( "#data1" ).focus();
+						});		  
 						return false;
 					}
-					if( data2 == ""){
+					if( MemberID == "0"){
 						swal("กรุณากรอกผู้ดูแล", {
 							buttons: {        			
 								confirm: {
 									className : 'btn btn-danger'
 								}
 							},
-						});		 
-						$( "#data2" ).focus();
+						});		  
 						return false;
 					} 
-					if( data3 == ""){
+					if( Remark == ""){
 						swal("กรุณากรอกรายละเอียด", {
 							buttons: {        			
 								confirm: {
 									className : 'btn btn-danger'
 								}
 							},
-						});		 
-						$( "#data3" ).focus();
+						});		  
 						return false;
-					} 				  				  
-					swal({
-							title: "บันทึกเรียบร้อย",
-							text: " ",
-							icon: "success",
-							buttons: {
-								confirm: {
-									text: "ตกลง",
-									value: true,
-									visible: true,
-									className: "btn btn-success",
-									closeModal: true
+					} 			
+					 
+					$.post("https://environment.webclient.me/index.php/ManageStore/CreateGroup",
+					{
+						VehicleID : LicensePlate,
+						Remark : Remark
+					},
+					function(data){
+
+						if(data == 1){
+		
+							swal({
+								title: "บันทึกเรียบร้อย",
+								text: " ",
+								icon: "success",
+								buttons: {
+									confirm: {
+										text: "ตกลง",
+										value: true,
+										visible: true,
+										className: "btn btn-success",
+										closeModal: true
+									}
 								}
-							}
-						});
+							});
+
+							location.reload();
+
+							
+						}else{
+
+							swal({
+								title: "ผิดพลาด",
+								text: " ",
+								icon: "error",
+								buttons: {
+									confirm: {
+										text: "ตกลง",
+										value: true,
+										visible: true,
+										className: "btn btn-success",
+										closeModal: true
+									}
+								}
+							});
+							return false;
+
+						}
+
+
+					});
+
+ 
 				});
 
 				$("#btncreatedata1").click(function(){
 					var smallSelect = $("#smallSelect").val();
 					var data2 = $("#data2").val(); 
-					var data3 = $("#data3").val(); 
+					var Remark = $("#Remark").val(); 
 					if( smallSelect == ""){
 						swal("กรุณากรอกป้ายทะเบียน", {
 							buttons: {        			
