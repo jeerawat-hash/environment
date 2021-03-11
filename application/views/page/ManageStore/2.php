@@ -104,8 +104,7 @@
 															
 																<select class="form-control form-control-sm" id="smallSelect">
 																	<option value="0" selected disabled>กรุณาเลือก</option> 
- 																	<?php
-															  	print_r($VehicleNotCreate);
+ 																	<?php 
 																	 foreach($VehicleNotCreate as $Vehicle){
 																	 ?>
 
@@ -132,7 +131,7 @@
 																	 foreach($MemberNotGroup as $Member){
 																	 ?>
 
-																			<option value="<?php echo $Member->ID; ?>"><?php echo $Vehicle->Name; ?></option> 
+																			<option value="<?php echo $Member->ID; ?>"><?php echo $Member->Name; ?></option> 
 
 																	<?php 	
 																	 }
