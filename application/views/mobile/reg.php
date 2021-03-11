@@ -56,20 +56,41 @@ function runApp() {
  
    $.post("https://environment.webclient.me/index.php/Qrcontroller/GetDataMemberPreAuthen",
      {
-       ID : EmpID,
-       LineID : profile.userId
+       ID : EmpID 
      },function(data){
 
         if(data == ""){
 
             liff.closeWindow();
             $("#btnsave").hide(); 
+
         }else{
 
             var obj = JSON.parse(data);
-            console.log(obj);
-            $("#EmpName").text(obj[0].Name);
-            $("#btnsave").show(); 
+            
+            $.post("https://environment.webclient.me/index.php/Qrcontroller/GetDataMemberPreAuthenCheck",
+            {
+                LineID : profile.userId
+            }
+            ,function(data){
+
+
+                if(data == 0){
+                    
+                    console.log(obj);
+                    $("#EmpName").text(obj[0].Name);
+                    $("#btnsave").show(); 
+
+                }else{
+
+                    liff.closeWindow();
+                    $("#btnsave").hide(); 
+
+                }
+
+
+            });
+            
 
         }
        

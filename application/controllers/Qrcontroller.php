@@ -34,6 +34,12 @@ class Qrcontroller extends CI_Controller
     echo json_encode($this->Env_Model->GetDataMemberPreAuthen($_POST["ID"],$_POST["LineID"]));
 
   }
+  public function GetDataMemberPreAuthenCheck()
+  {
+
+    echo $this->Env_Model->GetDataMemberPreAuthenCheck($_POST["LineID"]);
+ 
+  }
   public function RegisterMemberByQrCode()
   {
     $ID = $_POST["MemberID"];

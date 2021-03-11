@@ -192,10 +192,16 @@ class Env_Model extends CI_Model
         return $this->envdb->query("  SELECT Remark as Name FROM `Trash` WHERE ID = '".$ID."' ")->result();
  
     }
-    public function GetDataMemberPreAuthen($ID,$LineID)
+    public function GetDataMemberPreAuthen($ID)
     {
         $this->envdb = $this->load->database("envdb",true);
-        return $this->envdb->query("  SELECT ID,Name,(case WHEN PositionID = 1 then 'ผู้ปฏิบัติงาน' ELSE 'ผู้ดูแลระบบ' end) as Position,LineID FROM `Member` WHERE ID = '".$ID."' AND LineID = '' and  LineID not in ('".$LineID."') ")->result();
+        return $this->envdb->query("  SELECT ID,Name,(case WHEN PositionID = 1 then 'ผู้ปฏิบัติงาน' ELSE 'ผู้ดูแลระบบ' end) as Position,LineID FROM `Member` WHERE ID = '".$ID."' ")->result();
+        
+    }
+    public function GetDataMemberPreAuthenCheck($LineID)
+    {
+        $this->envdb = $this->load->database("envdb",true);
+        return $this->envdb->query("  SELECT * FROM `Member` WHERE LineID = '".$LineID."' ")->num_rows();
         
     }
     public function RegisterMemberByQrCode($ID,$LineID)
