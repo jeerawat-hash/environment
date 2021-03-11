@@ -229,7 +229,7 @@ function initMap() {
   setInterval(function(){ 
      
         
-	$.get("https://environment.webclient.me/old/index.php/Qrcontroller/getlocation",function(data){
+	$.get("https://environment.webclient.me/index.php/ManageStore/GetDataTransaction",function(data){
 
       var obj = JSON.parse(data);
 
@@ -257,15 +257,13 @@ function initMap() {
 
 
         var marker = new google.maps.Marker({
-          position: {lat : parseFloat(obj[index].Lat) ,lng : parseFloat(obj[index].Lot) },
+          position: {lat : parseFloat(obj[index].Lat) ,lng : parseFloat(obj[index].Lon) },
           map: map,
           /*label : obj[index].Name,*/
-		  label: {text: obj[index].Name, color: "black"},
-          title: obj[index].Name, 
-          LineName : obj[index].FName,
-          Image : obj[index].Image,
+		  label: {text: obj[index].Remark, color: "black"},
+          title: obj[index].Remark,  
           /*icon : "https://environment.webclient.me/temp/pin-"+obj[index].Color+".svg",*/
-          ID : obj[index].TransID,
+          ID : obj[index].TransacID,
           icon: {
                   url: "https://environment.webclient.me/temp/pin-"+obj[index].Color+".svg", // url
                   scaledSize: new google.maps.Size(50, 50), // scaled size
