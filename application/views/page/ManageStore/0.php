@@ -90,10 +90,12 @@
 	<script>
 		$(function(){
 
-			$("#btnfollow1").on("click",function(){
+			$("#WorkGroupTable").on("click",".btnfollow",function(){
 
-				 $("#GetFollowData").val("1"); 
-				 alert( $("#GetFollowData").val() );
+				var dataId = $(this).attr("data-id");
+				$("#GetFollowData").val(dataId); 
+				
+				alert( $("#GetFollowData").val() );
 
 			});
 
