@@ -90,7 +90,7 @@ class Env_Model extends CI_Model
     {   
         $this->envdb = $this->load->database("envdb",true);
 
-        return $this->envdb->query(" SELECT b.LicensePlate,d.Name,d.Telephone FROM jeerawatme_env.WorkGroup a
+        return $this->envdb->query(" SELECT b.LicensePlate,b.Color,d.Name,d.Telephone FROM jeerawatme_env.WorkGroup a
         join jeerawatme_env.Vehicle b on a.VehicleID = b.ID
         join jeerawatme_env.WorkGroupDetail c on a.ID = c.WorkGroupID
         join jeerawatme_env.Member d on c.MemberID = d.ID ")->result();

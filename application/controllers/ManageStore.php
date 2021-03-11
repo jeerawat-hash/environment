@@ -54,6 +54,12 @@ class ManageStore extends CI_Controller {
 		$this->load->view('template/footer.php');
 
 	}
+	public function GetDataMemberWorkGroup()
+	{
+
+		echo json_encode($this->Env_Model->GetDataMemberWorkGroup());
+
+	}
 	
 
 
