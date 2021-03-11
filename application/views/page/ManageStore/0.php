@@ -157,27 +157,36 @@
 			</footer>
 		</div>
 
+	<style>
+	/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+	#map {
+	height: 100%;
+	}
 
+	/* Optional: Makes the sample page fill the window. */
+	html,
+	body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	}
+</style>
 
  
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3VNVg3bE8r4H1-42CdDnvoK-F1KvB8lM&callback=initMap" async defer></script> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3VNVg3bE8r4H1-42CdDnvoK-F1KvB8lM&callback=initMap" async></script> 
 
 	<script>
 
-	var map;
-	function initMap() {
+		let map;
 
-		
-		map = new google.maps.Map($("#map"), {
-
-			zoom: 20,
-			center: { lat: 13.59934, lng: 100.59675 },
-			mapTypeId: "terrain",
-
+		function initMap() {
+		map = new google.maps.Map(document.getElementById("map"), {
+			center: { lat: -34.397, lng: 150.644 },
+			zoom: 8,
 		});
-	
-	
-	}
+		}
+
 
 
     </script>
