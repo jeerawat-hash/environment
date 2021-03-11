@@ -28,6 +28,12 @@ class Qrcontroller extends CI_Controller
     echo json_encode($this->Env_Model->GetDataTrashByID($_POST["ID"]));
   
   }
+  public function GetDataMemberPreAuthen()
+  {
+    
+    echo json_encode($this->Env_Model->GetDataMemberPreAuthen($_POST["ID"]));
+
+  }
   
 /*
   public function insertlocation()

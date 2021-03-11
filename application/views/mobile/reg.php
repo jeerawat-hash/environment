@@ -54,28 +54,20 @@ function runApp() {
     
     var EmpID = $("#EmpID").val();
 
-/*
-   $.post("https://environment.webclient.me/index.php/Qrcontroller/GetDataTrashByID",
+ 
+   $.post("https://environment.webclient.me/index.php/Qrcontroller/GetDataMemberPreAuthen",
      {
-       ID : BinID
+       ID : EmpID
      },function(data){
 
        var obj = JSON.parse(data);
        //console.log(obj);
-       $("#BinName").text(obj[0].Name);
-       
-       $vara =  $("#tgetlo").val();
-       if($vara != "")
-       {
-        $("#btnsave").show(); 
-        alert($vara);
+       $("#EmpName").text(obj[0].Name);
+       $("#btnsave").show(); 
+         
+   }); 
 
-       }
-        
-   });*/
-
- 
-
+  
   $("#btnsave").hide();
   $("#btnsave").on("click",function(){   
 

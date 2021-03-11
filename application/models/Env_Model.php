@@ -192,6 +192,12 @@ class Env_Model extends CI_Model
         return $this->envdb->query("  SELECT Remark as Name FROM `Trash` WHERE ID = '".$ID."' ")->result();
  
     }
+    public function GetDataMemberPreAuthen($ID)
+    {
+        $this->envdb = $this->load->database("envdb",true);
+        return $this->envdb->query("  SELECT ID,Name,(case WHEN PositionID = 1 then 'ผู้ปฏิบัติงาน' ELSE 'ผู้ดูแลระบบ' end) as Position,LineID FROM `Member` WHERE ID = ".$ID." AND LineID = "" ")->result();
+        
+    }
 
     
 
