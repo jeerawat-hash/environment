@@ -164,7 +164,7 @@ function initMap() {
   setInterval(function(){ 
      
         
-        $.get("https://environment.webclient.me/index.php/Qrcontroller/getlocation",function(data){
+        $.get("https://environment.webclient.me/old/index.php/Qrcontroller/getlocation",function(data){
 
       var obj = JSON.parse(data);
 
@@ -218,7 +218,7 @@ function initMap() {
               //alert(obj[index].ID + " " + marker.LineName);
               var id = obj[index].TransID;
               
-              $.post("https://environment.webclient.me/index.php/Qrcontroller/GetDatabyID",{
+              $.post("https://environment.webclient.me/old/index.php/Qrcontroller/GetDatabyID",{
                 id : id
               },function(data){
                 // alert(data);
@@ -257,7 +257,7 @@ function initMap() {
 
       var html = "";
  
-      $.get("https://environment.webclient.me/index.php/Qrcontroller/GetDataSummary",function(data){
+      $.get("https://environment.webclient.me/old/index.php/Qrcontroller/GetDataSummary",function(data){
 
         var obj = JSON.parse(data);
           

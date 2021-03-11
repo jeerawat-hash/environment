@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="https://environment.webclient.me/assets_qr/css/styles.css" rel="stylesheet" />
+        <link href="https://environment.webclient.me/old/assets_qr/css/styles.css" rel="stylesheet" />
               <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js"></script>
@@ -24,8 +24,8 @@
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
         <!-- Contact form JS-->
-        <script src="https://environment.webclient.me/assets_qr/assets/mail/jqBootstrapValidation.js"></script>
-        <script src="https://environment.webclient.me/assets_qr/assets/mail/contact_me.js"></script>
+        <script src="https://environment.webclient.me/old/assets_qr/assets/mail/jqBootstrapValidation.js"></script>
+        <script src="https://environment.webclient.me/old/assets_qr/assets/mail/contact_me.js"></script>
         
     </head>
     <body id="page-top">

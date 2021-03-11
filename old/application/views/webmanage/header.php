@@ -4,14 +4,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>ระบบบริหารจัดการสิ่งแวดล้อมและการจัดเก็บ</title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-  <!--<link rel="icon" href="https://environment.webclient.me/assets_admin/img/icon.ico" type="image/x-icon"/>-->
+  <!--<link rel="icon" href="https://environment.webclient.me/old/assets_admin/img/icon.ico" type="image/x-icon"/>-->
 
   <!-- Fonts and icons -->
-  <script src="https://environment.webclient.me/assets_admin/js/plugin/webfont/webfont.min.js"></script>
+  <script src="https://environment.webclient.me/old/assets_admin/js/plugin/webfont/webfont.min.js"></script>
   <script>
     WebFont.load({
       google: {"families":["Lato:300,400,700,900"]},
-      custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['https://environment.webclient.me/assets_admin/css/fonts.min.css']},
+      custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['https://environment.webclient.me/old/assets_admin/css/fonts.min.css']},
       active: function() {
         sessionStorage.fonts = true;
       }
@@ -19,11 +19,11 @@
   </script>
 
   <!-- CSS Files -->
-  <link rel="stylesheet" href="https://environment.webclient.me/assets_admin/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://environment.webclient.me/assets_admin/css/atlantis.min.css">
+  <link rel="stylesheet" href="https://environment.webclient.me/old/assets_admin/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://environment.webclient.me/old/assets_admin/css/atlantis.min.css">
 
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link rel="stylesheet" href="https://environment.webclient.me/assets_admin/css/demo.css">
+  <link rel="stylesheet" href="https://environment.webclient.me/old/assets_admin/css/demo.css">
 </head>
 
 <body>
@@ -78,7 +78,7 @@
         <div class="sidebar-content">
           <div class="user">
             <div class="avatar-sm float-left mr-2">
-              <img src="https://environment.webclient.me/assets_admin/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+              <img src="https://environment.webclient.me/old/assets_admin/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
             </div>
             <div class="info">
               <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
@@ -108,8 +108,8 @@
           </div>
           <ul class="nav nav-primary">
             <li class="nav-item">
-              <a data-toggle="collapse" href="https://environment.webclient.me/" class="collapsed" aria-expanded="false">
-                <a href="https://environment.webclient.me/"> 
+              <a data-toggle="collapse" href="https://environment.webclient.me/old/" class="collapsed" aria-expanded="false">
+                <a href="https://environment.webclient.me/old/"> 
                 <i class="fas fa-home"></i> 
                 <p>สถิติการดำเนินงาน</p>
                 </a>   
@@ -126,7 +126,7 @@
               <div class="collapse" id="base">
                 <ul class="nav nav-collapse">
                   <li>
-                    <a href="https://environment.webclient.me/index.php/old/MController/collection">
+                    <a href="https://environment.webclient.me/old/index.php/old/MController/collection">
                       <span class="sub-item">ตรวจสอบรายการจัดเก็บ</span>
                     </a>
                   </li>  
