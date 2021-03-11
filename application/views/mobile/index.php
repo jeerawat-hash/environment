@@ -85,6 +85,9 @@ function runApp() {
        var obj = JSON.parse(data);
        //console.log(obj);
        $("#BinName").text(obj[0].Name);
+       $("#btnsave").show(); 
+       $vara =  $("#tgetlo").val();
+       alert($vara);
 
    });
 
@@ -186,7 +189,7 @@ if(locationall != ""){
    //console.log(objectLocation);
     $("#longitude").val(objectLocation.Longitude);
     $("#latitude").val(objectLocation.Latitude);
-    $("#btnsave").show(); 
+    
    var BinID = $("#BinID").val();
    
 
