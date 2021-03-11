@@ -1,4 +1,4 @@
-<?php  print_r($trash); ?>
+ 
 
 <div class="main-panel">
 			<div class="content">
