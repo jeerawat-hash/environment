@@ -319,7 +319,9 @@ function initMap() {
             html += '<img  width="10%" src="https://environment.webclient.me/temp/pin-'+obj[i].Color+'.svg"> </div></td>';
             html += '<td>'+obj[i].LicensePlate+'</td>';
             html += '<td class="text-right">';
-            html += 'จำนวนการจัดเก็บ</td>';
+            html += ''+obj[i].SumCapacity+' ลิตร</td>';
+			html += '<td class="text-right">';
+            html += ''+obj[i].CountCapacity+' ถัง</td>';
             html += '<td class="text-right">';
             html += '<button  class="btn btn-warning btnfollow" data-id="'+obj[i].VehicleID+'"> ติดตาม </button>';
             html += '</td></tr>';
