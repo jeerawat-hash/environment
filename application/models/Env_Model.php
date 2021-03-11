@@ -118,10 +118,10 @@ class Env_Model extends CI_Model
     {
         $this->envdb = $this->load->database("envdb",true);
 
-        return $this->envdb->query("SELECT  c.ID as VehicleID,c.LicensePlate,c.Color,sum(d.Capacity) as SumCapacity,COUNT(d.Capacity) as CountCapacity,a.StampDate FROM `Transaction` a
+        return $this->envdb->query("SELECT  c.ID as VehicleID,c.LicensePlate,c.Color,sum(d.Capacity) as SumCapacity,COUNT(d.Capacity) as CountCapacity,cast(a.StampDate as Date) as StampDate FROM `Transaction` a
         JOIN WorkGroup b on a.WorkGroupID = b.ID
         JOIN Vehicle c on b.VehicleID = c.ID
-        JOIN Trash d on a.TrashID = d.ID GROUP BY c.ID,c.LicensePlate,c.Color,a.StampDate")->result();
+        JOIN Trash d on a.TrashID = d.ID GROUP BY c.ID,c.LicensePlate,c.Color,cast(a.StampDate as date)")->result();
 
     }
     public function GetDataMemberWorkGroup()
