@@ -69,22 +69,39 @@ function runApp() {
   
   $("#btnsave").hide();
   $("#btnsave").on("click",function(){   
+ 
+        var MemberID = EmpID;
+        var LineID = profile.userId;
 
+        $.post("https://environment.webclient.me/index.php/Qrcontroller/RegisterMemberByQrCode",{
+            MemberID : MemberID,
+            LineID : LineID
+        },function(data){
 
+            if(data == 1){ 
+                swal({
+                    title: "สำเร็จ",
+                    text: "",
+                    icon: "success",
+                    button: "ปิด",
+                }); 
+                
+                liff.closeWindow(); 
+            }else{
 
-        
-
-
-    
+                swal({
+                    title: "ผิดพลาด",
+                    text: "กรุณาลองใหม่ภายหลัง",
+                    icon: "error",
+                    button: "ปิด",
+                }); 
+                return false;
+            }
+            
+        });
+ 
    });
-
-
-
-
-
-
-
-
+ 
 
 
  }).catch(err => console.error(err));

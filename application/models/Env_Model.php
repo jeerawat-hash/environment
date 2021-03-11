@@ -198,8 +198,15 @@ class Env_Model extends CI_Model
         return $this->envdb->query("  SELECT ID,Name,(case WHEN PositionID = 1 then 'ผู้ปฏิบัติงาน' ELSE 'ผู้ดูแลระบบ' end) as Position,LineID FROM `Member` WHERE ID = '".$ID."' AND LineID = '' ")->result();
         
     }
+    public function RegisterMemberByQrCode($ID,$LineID)
+    {
+        $this->envdb = $this->load->database("envdb",true);
+        $this->envdb->query(" UPDATE `Member` SET `LineID` = '".$LineID."' WHERE `Member`.`ID` = '".$ID."' ");
+        return 1;
+    }
 
     
+
 
 
 
