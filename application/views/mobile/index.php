@@ -55,7 +55,8 @@ function runApp() {
  liff.getProfile().then(profile => {
 
    console.log(profile);
-
+   $("#btnsave").hide();
+   
     $("#TextProfile").text(profile.displayName);
     $("#ImgProfile").attr("src",profile.pictureUrl);
    // $("#userId").attr("value",profile.userId);
