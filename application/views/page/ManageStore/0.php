@@ -155,7 +155,7 @@ function initMap() {
 
  
     map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 18,
+      zoom: 14,
       center: { lat: 13.59934, lng: 100.59675 },
       mapTypeId: "terrain",
 	  styles: [
@@ -330,10 +330,10 @@ function initMap() {
 			if(GetFollowData != 0){
 
 				clickroute(parseFloat(obj[index].Lat),parseFloat(obj[index].Lon));
-				map.setZoom(20); 
+				map.setZoom(16); 
 
 			}else{
-				map.setZoom(4); 
+				map.setZoom(16); 
 			}
 			 
 				
