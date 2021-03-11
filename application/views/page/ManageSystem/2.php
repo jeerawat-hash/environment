@@ -41,9 +41,7 @@
 												foreach($trash as $valuetash){
 
 													?>
-													
-
-
+													 
 												<tr>
 													<td><?php echo $valuetash->ID; ?></td>
 													<td><?php echo $valuetash->Capacity; ?> ลิตร</td>
@@ -52,28 +50,15 @@
 													<td><button  class="btn btn-danger BtnTrashQR" data-id="<?php echo $valuetash->ID; ?>"> เรียกดู QR Code  </button> </td>
 													 
 												</tr>
-
-
-
-
+ 
 
 												<?
 
 												}
-												
-												
-												
-												
+												 
 												?>
 
-
-
-
-
-
-
-
-
+ 
 											</tbody>
 										</table>
 									</div>
@@ -225,20 +210,19 @@
 
 
 
-			$("#TableTrashDetail").on("click",".BtnTrashQR",function(){
+			/*$("#TableTrashDetail").on("click",".BtnTrashQR",function(){
 
 			var TrashID = $("#data-id").attr();
 
 			alert();
 				//	$('#ModalQrCode').modal('show'); 
 
-			});
+			});*/
 
 
 
 		});
-
-
+ 
 	</script>
 
 
@@ -249,15 +233,12 @@
 
             $(function(){
 
- 
+				$('#basic-datatables').DataTable({ });
+				
 				$("#btncreate").click(function(){
 					$('#myModal').modal('show'); 
 				});
- 
-				//$("#btncon1").click(function(){
-				//	$('#ModalQrCode').modal('show'); 
-				//});
-				
+   
 				$("#btncreatedata").click(function(){
 					var data1 = $("#data1").val();
 					var data2 = $("#data2").val();
