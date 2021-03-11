@@ -31,7 +31,7 @@ class Qrcontroller extends CI_Controller
   public function GetDataMemberPreAuthen()
   {
     
-    echo json_encode($this->Env_Model->GetDataMemberPreAuthen($_POST["ID"],$_POST["LineID"]));
+    echo json_encode($this->Env_Model->GetDataMemberPreAuthen($_POST["ID"]));
 
   }
   public function GetDataMemberPreAuthenCheck()
