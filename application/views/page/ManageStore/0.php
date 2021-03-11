@@ -54,7 +54,7 @@
 																จำนวนการจัดเก็บ
 															</td>
 															<td class="text-right">
-																<button  id="btnfollow"  class="btn btn-warning"> ติดตาม </button>
+																<button  id="btnfollow1"  class="btn btn-warning"> ติดตาม </button>
 															</td>
 															
 														</tr>
@@ -133,6 +133,19 @@
 
     <!-- Replace the value of the key parameter with your own API key. -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3VNVg3bE8r4H1-42CdDnvoK-F1KvB8lM&callback=initMap" async defer></script> 
+	
+	<script>
+		$(function(){
+
+			$("#btnfollow1").on("click",function(){
+
+				 $("#GetFollowData").val("1"); 
+
+			});
+
+		});
+	</script>
+	
 	<script>
 
 var map;
