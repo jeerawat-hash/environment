@@ -43,7 +43,14 @@
 														<tr>
 															<td>
 																<div class="flag">
-																	<img  src="https://environment.webclient.me/assets/img/flags/br.png" class="SVGICON" alt="brazil">
+																<svg version="1.1"
+																	baseProfile="full"
+																	width="300" height="200"
+																	xmlns="http://www.w3.org/2000/svg">
+																<rect width="100%" height="100%" fill="black" />
+																<circle cx="150" cy="100" r="90" fill="blue" />
+																</svg>
+
 																</div>
 															</td>
 															<td>Brasil</td>
