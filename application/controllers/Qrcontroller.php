@@ -15,10 +15,16 @@ class Qrcontroller extends CI_Controller
     $this->load->view('mobile/index');
     $this->load->view('mobile/footer');
   }
+  public function register()
+  {
+    $this->load->view('mobile/header');
+    $this->load->view('mobile/reg');
+    $this->load->view('mobile/footer');
+  }
  
   public function GetDataTrashByID()
   { 
-    
+
     echo json_encode($this->Env_Model->GetDataTrashByID($_POST["ID"]));
   
   }
