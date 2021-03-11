@@ -141,7 +141,7 @@ function runApp() {
 
  }).catch(err => console.error(err));
 }
-liff.init({ liffId: "1655702904-dOw6XRvE" }, () => {
+liff.init({ liffId: "1655702904-El3x46Gk" }, () => {
  if (liff.isLoggedIn()) {
    runApp();
 
