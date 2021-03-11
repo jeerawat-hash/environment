@@ -182,9 +182,8 @@ class Env_Model extends CI_Model
     {
 
         $this->envdb = $this->load->database("envdb",true);
-        return $this->envdb->query("  SELECT * FROM `Member` WHERE ID = ".$MemberID." and LineID is not null ")->num_rows();
-
-
+        return $this->envdb->query("  SELECT * FROM `Member` WHERE ID = ".$MemberID." and LineID = '' ")->num_rows();
+ 
     }
 
     
