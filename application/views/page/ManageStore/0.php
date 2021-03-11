@@ -326,11 +326,11 @@ function initMap() {
             */ 
 			var GetFollowData = $("#GetFollowData").val(); 
 			
-			if(GetFollowData != 0){
+			//if(GetFollowData != 0){
 
 				clickroute(parseFloat(obj[index].Lat),parseFloat(obj[index].Lon));
 		  
-			} 
+			//} 
 			 
 				
 
