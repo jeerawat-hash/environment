@@ -43,7 +43,7 @@
 														<tr>
 															<td>
 																<div class="flag">
-																	<img  width="10%" src="https://environment.webclient.me/assets/img/flags/br.png" class="SVGICON" alt="brazil">
+																	<img  width="10%" src="https://environment.webclient.me/assets/img/flags/br.png" class="SVGICON">
 																</div>
 															</td>
 															<td>ทะเบียน</td>
@@ -53,6 +53,7 @@
 															<td class="text-right">
 																<button  id="btnfollow"  class="btn btn-warning"> ติดตาม </button>
 															</td>
+															
 														</tr>
 
 
