@@ -30,7 +30,7 @@
 												<th></th>
 												</tr>
 											</thead> 
-											<tbody> 
+											<tbody id="TableAuthenBDetail"> 
 
 											<?php  
 												
@@ -40,7 +40,7 @@
 												<tr>
 													<td><?php echo $valuemember->Name; ?></td>
 													<td><?php echo $valuemember->Telephone; ?></td> 
-													<td><button  id="btncon1"   class="btn btn-danger"> ยืนยันตัวตน  </button></td> 
+													<td><button  class="btn btn-danger AuthenB" data-MemberID = "<?php echo $valuememberwork->ID; ?>"> ยืนยันตัวตน  </button></td> 
 													 
 												</tr> 
 												<? 
@@ -82,7 +82,7 @@
 													<th></th>
 												</tr>
 											</thead> 
-											<tbody> 
+											<tbody id="TableAuthenADetail"> 
 
 											<?php  
 												
@@ -95,7 +95,7 @@
 												<tr>
 												<td><?php echo $valuememberwork->Name; ?></td>
 													<td><?php echo $valuememberwork->Telephone; ?></td> 
-													<td><button  id="btncon2"   class="btn btn-danger"> ยืนยันตัวตน  </button></td> 
+													<td><button   class="btn btn-danger AuthenA" data-MemberID = "<?php echo $valuememberwork->ID; ?>" > ยืนยันตัวตน  </button></td> 
 													 
 												</tr> 
 												<? 
@@ -235,7 +235,7 @@
 			<!-- END  Modal -->
 	
 				<!-- Modal -->
-				<div class="modal fade" id="ModalConfirm1" role="dialog">
+				<div class="modal fade" id="ModalConfirmA" role="dialog">
 					<div class="modal-dialog modal-lg">
 					
 					<!-- Modal content-->
@@ -280,14 +280,14 @@
 				<!-- END  Modal -->
 					
 				<!-- Modal -->
-				<div class="modal fade" id="ModalConfirm2" role="dialog">
+				<div class="modal fade" id="ModalConfirmB" role="dialog">
 					<div class="modal-dialog modal-lg">
 					
 					<!-- Modal content-->
 					<div class="modal-content">
 						<div class="modal-header  bg-success ">
 						
-						<h4 style="color:white"  >ยืนยันตัวตนผู้ใช้งาน</h4>
+						<h4 style="color:white"  >ยืนยันตัวตนผู้ปฏิบัติงาน</h4>
 
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
 						</div>
@@ -297,7 +297,7 @@
 										<div class="col-md-12">
 											<div class="card">
 												<div class="card-header">
-													<div class="card-title">ยืนยันตัวตนผู้ใช้งาน</div>
+													<div class="card-title">ยืนยันตัวตนผู้ปฏิบัติงาน</div>
 												</div>
 												<div class="card-body">
 													<div class="row">
@@ -340,7 +340,31 @@
 
 
 
+		<script>
+			$(function(){
 
+				$("#TableAuthenADetail").on("click",".AuthenA",function(){
+					
+					var MemberID = $(this).attr("data-MemberID");
+
+					$("#ModalConfirmA").modal();
+
+
+				});
+				$("#TableAuthenBDetail").on("click",".AuthenB",function(){
+					
+					var MemberID = $(this).attr("data-MemberID");
+
+					$("#ModalConfirmB").modal();
+
+
+				});
+				
+
+
+
+			});
+		</script>
 
 
 
@@ -487,14 +511,7 @@
 			     ///// INSERT  DATA //// 
               });	
 			  
-			  $("#btncon2").click(function(){
-				 $("#ModalConfirm2").modal("show");
-			});
-			  
-			$("#btncon1").click(function(){
-				  				  				  
-				$("#ModalConfirm1").modal("show");
-		 	});
+		 
 		 
         </script>
 
