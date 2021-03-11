@@ -49,7 +49,7 @@ class Qrcontroller extends CI_Controller
   }
   public function GetDataWorkGroupByLineID()
   {
-    echo $this->Env_Model->GetDataWorkGroupByLineID($_POST["LineID"]);
+    echo json_encode($this->Env_Model->GetDataWorkGroupByLineID($_POST["LineID"]));
   }
   
 /*
