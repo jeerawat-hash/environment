@@ -193,7 +193,7 @@ function showPosition(position) {
 </script>
 <script>
  
-	 
+	 /*
 	setInterval(function(){ 
 		var locationall = $("#tgetlo").val();
 		if(locationall != ""){
@@ -225,6 +225,6 @@ function showPosition(position) {
 			//console.log(objectLocation); 
 		} 
 		 
-	}, 1000);
+	}, 1000);*/
  
 </script>
