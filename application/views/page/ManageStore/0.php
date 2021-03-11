@@ -18,11 +18,9 @@
 									<p class="card-category">
 									แผนที่แสดงข้อมูลตำแหน่งถังขยะที่ถูกจัดเก็บแล้ว</p>
 								</div>
-								<div class="card-body" style="height: 430px;">
+								<div class="card-body" id="map" style="height: 430px;">
 									 
-
  
-									 <div  id="map"></div>
 								 	 
 
 
