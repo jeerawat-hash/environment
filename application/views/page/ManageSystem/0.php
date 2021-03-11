@@ -269,10 +269,10 @@
 												</div>
 												<div class="card-body">
 													<div class="row text-center">
+														 <center>
+															 <img id="QrAuth" src="" alt="">
+														 </center>
 														 
-														<img id="QrAuth" src="" alt="">
-														 
-														
 													</div>
 													 
 												</div>
@@ -314,9 +314,9 @@
 												</div>
 												<div class="card-body">
 													<div class="row text-center">
-														 
-													<img id="QrAuth" src="" alt="">
-														 
+														<center>
+															 <img id="QrAuth" src="" alt="">
+														 </center>
 														
 													</div>
 													 
