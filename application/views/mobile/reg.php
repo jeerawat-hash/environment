@@ -1,6 +1,6 @@
  
 
- <input type="text" id="BinID" value="<?php echo (isset($_GET["key"])) ? $_GET["key"] : 0; ?>" >
+ <input type="text" id="EmpID" value="<?php echo (isset($_GET["ID"])) ? $_GET["ID"] : 0; ?>" >
 
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
@@ -8,14 +8,13 @@
  <header class="masthead bg-primary text-white text-center">
    <div class="container d-flex align-items-center flex-column">
        <!-- Masthead Avatar Image-->  
-       <img class="masthead-avatar  " src="https://environment.webclient.me/old/assets_qr/assets/img/portfolio/bit.png"  />
+       <img class="masthead-avatar" id="AuthImg" src="https://environment.webclient.me/old/assets_qr/assets/img/portfolio/bit.png"  />
        <!-- Masthead Heading-->
        <h4 class="masthead-heading text-uppercase mb-0" id="BinName">       </h4>
        <input  type="text"   id="tgetlo" name="tgetlo"      >
        <input class="input100" type="text" readonly  id="longitude" name="longitude">
        <input class="input100" type="text"  readonly   id="latitude" name="latitude">
-       <br>
-        <!--<h4 class="text-uppercase mb-4">สถานที่ : พระประแดง </h4> -->
+       <br> 
        <!-- Icon Divider-->
        <div class="divider-custom divider-light">
            <div class="divider-custom-line"></div>
@@ -57,26 +56,10 @@ function runApp() {
 
     $("#TextProfile").text(profile.displayName);
     $("#ImgProfile").attr("src",profile.pictureUrl);
-   // $("#userId").attr("value",profile.userId);
-  // $("#LineID").attr("value",profile.userId);
-      
-  var BinID = $("#BinID").val();
- 
-   if (BinID == 0) {
+    $("#AuthImg").attr("src",profile.pictureUrl);
+    
 
-     swal({
-         title: "ผิดพลาด",
-         text: "กรุณาลองใหม่ภายหลัง",
-         icon: "error",
-         button: "ปิด",
-     }); 
-
-     $("#btnsave").hide();
-     liff.closeWindow();
-     return false;
-
-   }
-
+/*
    $.post("https://environment.webclient.me/index.php/Qrcontroller/GetDataTrashByID",
      {
        ID : BinID
@@ -95,48 +78,16 @@ function runApp() {
        }
        
 
-   });
+   });*/
 
  
 
   $("#btnsave").hide();
-  $("#btnsave").on("click",function(){  
-       var userId = profile.userId;
-       var BinID =   $("#BinID").val();
-       var long =   $("#longitude").val();
-              var lat =   $("#latitude").val(); 
-       var img =  $("#ImgProfile").attr("src");
-       var textpf =  $("#TextProfile").text();
-       var textbtndata   = lat+long+img+textpf; 
-     
-     /*swal({
-         title: "สำเร็จ",
-         text: textbtndata,
-         icon: "success",
-         button: "ปิด",
-     }); */
+  $("#btnsave").on("click",function(){   
 
-     $.post("https://environment.webclient.me/index.php/Qrcontroller/insertlocation",{
-         UserID : userId,
-         BinID : BinID,
-         Latitude : lat,
-         Longitude : long,
-         Img : img,
-         Textpf : textpf
-     },function(data){
-          if(data == 1 ){
-             swal({
-         title: "สำเร็จ",
-         text: "บันทึกผลสำเร็จกำลังปิดแอพพลิเคชั่น....",
-         icon: "success",
-         button: false,
-              }); 
-             
+ 
 
-              setTimeout(function(){ liff.closeWindow(); }, 2000);
-             
-          }
-     });  
+    
    });
 
 
@@ -150,7 +101,7 @@ function runApp() {
 
  }).catch(err => console.error(err));
 }
-liff.init({ liffId: "1655702904-El3x46Gk" }, () => {
+liff.init({ liffId: "1655702904-W07xGjnA" }, () => {
  if (liff.isLoggedIn()) {
    runApp();
 
@@ -168,11 +119,7 @@ liff.init({ liffId: "1655702904-El3x46Gk" }, () => {
 
  
 setInterval(function(){ 
-
-
-
-
-
+ 
   var x = document.getElementById("tgetlo");
 
 getLocation();
@@ -191,9 +138,7 @@ function showPosition(position) {
 //x.value = "{'Latitude': '" + position.coords.latitude + "','Longitude': " + position.coords.longitude+"}";
 x.value = '{ "Latitude":"'+ position.coords.latitude +'", "Longitude":"'+position.coords.longitude+'"}';
 
-}
-
- 
+} 
 var locationall = $("#tgetlo").val();
 
   
@@ -203,33 +148,13 @@ var locationall = $("#tgetlo").val();
       //console.log(objectLocation);
         $("#longitude").val(objectLocation.Longitude);
         $("#latitude").val(objectLocation.Latitude);
-        
-      var BinID = $("#BinID").val();
-      
-
-      if (BinID == 0) {
-
-        swal({
-            title: "ผิดพลาด",
-            text: "กรุณาลองใหม่ภายหลัง",
-            icon: "error",
-            button: "ปิด",
-        }); 
-
-        $("#btnsave").hide();
-        liff.closeWindow();
-      }else{
-
+         
         $("#btnsave").show(); 
-        
-      }
-
+   
       //console.log(objectLocation); 
     } 
-    
+     
 
-
-
-}, 500); 
+}, 1000); 
 
 </script>
