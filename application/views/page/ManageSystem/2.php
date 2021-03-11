@@ -219,8 +219,27 @@
 
 
 
+	<script>
+
+		$(function(){
 
 
+
+			$("#TableTrashDetail").on("click",".BtnTrashQR",function(){
+
+			var TrashID = $("#data-id").attr();
+
+			alert();
+				//	$('#ModalQrCode').modal('show'); 
+
+			});
+
+
+
+		});
+
+
+	</script>
 
 
 
