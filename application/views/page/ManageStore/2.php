@@ -125,7 +125,7 @@
 														<div class="row">
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
-																	<label for="email2">รายละเอียด</label>
+																	<label for="Remark">รายละเอียด</label>
 																	<input type="email" class="form-control" id="Remark" placeholder="กรุณากรอกรายละเอียด">
 																	
 																</div>
