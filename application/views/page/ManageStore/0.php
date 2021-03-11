@@ -14,6 +14,9 @@
         padding: 0;
       }
     </style>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3VNVg3bE8r4H1-42CdDnvoK-F1KvB8lM&callback=initMap&libraries=&v=weekly"
+								async
+								></script>
     <script>
       let map;
 
@@ -55,10 +58,7 @@
 
  	 
 								<div id="map"></div>
-								<script
-								src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3VNVg3bE8r4H1-42CdDnvoK-F1KvB8lM&callback=initMap&libraries=&v=weekly"
-								async
-								></script>
+								
 
 								 	 
 
