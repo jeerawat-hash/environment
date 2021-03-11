@@ -98,9 +98,17 @@
 
 															<div class="col-md-6 col-lg-6">
 																<div class="form-group">
-																	<label for="email2">สี</label>
-																	<input type="email" class="form-control" id="data2" placeholder="กรุณากรอกสี">
+																	<label for="smallSelect">สี</label>
 																	
+																	<select class="form-control form-control-sm" id="data2">
+																		<option value="0" selected>กรุณาเลือก</option> 
+																		<option value="yello" >เหลือง</option> 
+																		<option value="white" >ขาว</option> 
+																		<option value="red" >แดง</option> 
+																		<option value="purple" >ม่วง</option> 
+																		<option value="green" >เขียว</option> 
+																		<option value="blue" >ฟ้า</option>  
+																	</select>
 																</div>
 															</div>
 														 
@@ -173,19 +181,17 @@
 								className : 'btn btn-danger'
 							}
 						},
-					});		 
-					  $( "#data1" ).focus();
+					});		  
 					  return false;
 				  }
 				  if( data2 == ""){
-					swal("กรุณากรอกสี", {
+					swal("กรุณาเลือกสี", {
 						buttons: {        			
 							confirm: {
 								className : 'btn btn-danger'
 							}
 						},
-					});		 
-					  $( "#data2" ).focus();
+					});		  
 					  return false;
 				  } 
 
