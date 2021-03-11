@@ -93,10 +93,38 @@
 			$("#WorkGroupTable").on("click",".btnfollow",function(){
 
 				var dataId = $(this).attr("data-id");
-				$("#GetFollowData").val(dataId); 
-				
-				alert( $("#GetFollowData").val() );
+				var name = $(this).attr("data-name");
+				  
+				//alert( $("#GetFollowData").val() );
+				var data = $("#GetFollowData").val();
+ 
+					if(data == 0){
 
+						$("#GetFollowData").val(dataId);
+						swal({
+							title: "กำลังติดตาม "+name,
+							text: " ",
+							icon: "success",
+							buttons: {
+								confirm: {
+									text: "ตกลง",
+									value: true,
+									visible: true,
+									className: "btn btn-success",
+									closeModal: true
+								}
+							}
+						});
+
+						$(this).text("ยกเลิกการติดตาม");
+	
+					}else{
+
+						$("#GetFollowData").val(0);
+						location.reload();
+						 
+					} 
+					
 			});
 
 		});
@@ -325,8 +353,9 @@ function initMap() {
 			html += '<td class="text-right">';
             html += ''+obj[i].CountCapacity+' ถัง</td>';
             html += '<td class="text-right">';
-            html += '<button  class="btn btn-warning btnfollow" data-id="'+obj[i].VehicleID+'"> ติดตาม </button>';
-            html += '</td></tr>';
+            html += '<button  class="btn btn-warning btnfollow" data-id="'+obj[i].VehicleID+'" data-name="'+obj[i].LicensePlate+'" > ติดตาม </button>';
+         	html += '</td></tr>';
+			
            
 				 
           }
