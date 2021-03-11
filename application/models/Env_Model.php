@@ -185,6 +185,13 @@ class Env_Model extends CI_Model
         return $this->envdb->query("  SELECT * FROM `Member` WHERE ID = ".$MemberID." and LineID = '' ")->num_rows();
  
     }
+    public function GetDataTrashByID($ID)
+    {
+
+        $this->envdb = $this->load->database("envdb",true);
+        return $this->envdb->query("  SELECT Remark as Name FROM `Trash` WHERE ID = '".$ID."' ")->result();
+ 
+    }
 
     
 

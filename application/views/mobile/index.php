@@ -77,7 +77,7 @@ function runApp() {
 
    }
 
-   $.post("https://environment.webclient.me/old/index.php/Qrcontroller/GetDataBinByID",
+   $.post("https://environment.webclient.me/index.php/Qrcontroller/GetDataTrashByID",
      {
        ID : BinID
      },function(data){
@@ -88,23 +88,7 @@ function runApp() {
 
    });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
   $("#btnsave").hide();
   $("#btnsave").on("click",function(){  
@@ -193,7 +177,7 @@ x.value = '{ "Latitude":"'+ position.coords.latitude +'", "Longitude":"'+positio
 </script>
 <script>
 
-/*
+ 
 setInterval(function(){ 
 var locationall = $("#tgetlo").val();
 if(locationall != ""){
@@ -225,6 +209,6 @@ if(locationall != ""){
    //console.log(objectLocation); 
 } 
 
-}, 1000);*/
+}, 1000); 
 
 </script>

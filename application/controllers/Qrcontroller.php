@@ -6,6 +6,7 @@ class Qrcontroller extends CI_Controller
   function __construct()
   {
     parent::__construct();
+    $this->load->model("Env_Model");
   }
 
   public function index()
@@ -15,7 +16,12 @@ class Qrcontroller extends CI_Controller
     $this->load->view('mobile/footer');
   }
  
+  public function GetDataTrashByID()
+  { 
+    echo $this->QRModel->GetDataTrashByID($_POST["ID"]);
 
+  }
+  
 /*
   public function insertlocation()
   {
