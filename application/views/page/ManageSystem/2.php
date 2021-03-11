@@ -233,13 +233,17 @@
 				$("#TableTrashDetail").on("click",".BtnTrashQR",function(){
 
 					var TrashID = $("#data-id").attr();
-
-
+ 
 					alert();
  
 				});
 
 
+
+
+
+   
+			});
 
 
 
@@ -334,8 +338,7 @@
 					///// INSERT  DATA ////	   
 					
 				});
-			   
-			});
+			
 			
 			   
         </script>
