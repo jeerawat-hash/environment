@@ -41,56 +41,9 @@
 										<div class="col-md-12">
 											<div class="table-responsive table-hover table-sales">
 												<table class="table">
-													<tbody>
+													<tbody id="WorkGroupTable">
 														  
-														<tr>
-															<td>
-																<div class="flag">
-																	<img  width="10%" src="https://environment.webclient.me/temp/pin-green.svg" class="SVGICON">
-																</div>
-															</td>
-															<td>ทะเบียน</td>
-															<td class="text-right">
-																จำนวนการจัดเก็บ
-															</td>
-															<td class="text-right">
-																<button  id="btnfollow1"  class="btn btn-warning"> ติดตาม </button>
-															</td>
-															
-														</tr>
-
-														<tr>
-															<td>
-																<div class="flag">
-																	<img  width="10%" src="https://environment.webclient.me/temp/pin-yello.svg" class="SVGICON">
-																</div>
-															</td>
-															<td>ทะเบียน</td>
-															<td class="text-right">
-																จำนวนการจัดเก็บ
-															</td>
-															<td class="text-right">
-																<button  id="btnfollow"  class="btn btn-warning"> ติดตาม </button>
-															</td>
-															
-														</tr>
-
-														<tr>
-															<td>
-																<div class="flag">
-																	<img  width="10%" src="https://environment.webclient.me/temp/pin-red.svg" class="SVGICON">
-																</div>
-															</td>
-															<td>ทะเบียน</td>
-															<td class="text-right">
-																จำนวนการจัดเก็บ
-															</td>
-															<td class="text-right">
-																<button  id="btnfollow"  class="btn btn-warning"> ติดตาม </button>
-															</td>
-															
-														</tr>
-
+														 
 
 
 
@@ -353,7 +306,7 @@ function initMap() {
 
       var html = "";
  
-      $.get("https://environment.webclient.me/old/index.php/Qrcontroller/GetDataSummary",function(data){
+      $.get("https://environment.webclient.me/index.php/ManageStore/GetDataTransactionSummary",function(data){
 
         var obj = JSON.parse(data);
           
@@ -361,15 +314,20 @@ function initMap() {
 
           for (var i = 0; i < obj.length; i++) {
 
-            html += "<tr>"+
-              "<td>"+obj[i].FName+"</td>"+
-              "<td>"+obj[i].StampDate+"</td>"+
-              "<td>"+obj[i].CountWei+" ถัง</td>"+
-              "<td>"+obj[i].SumWei+" กิโลกรัม</td></tr>";
-
+            html += '<tr>';
+            html += '<td> <div class="flag">';
+            html += '<img  width="10%" src="https://environment.webclient.me/temp/pin-'+obj[i].Color+'.svg"> </div></td>';
+            html += '<td>'+obj[i].LicensePlate+'</td>';
+            html += '<td class="text-right">';
+            html += 'จำนวนการจัดเก็บ</td>';
+            html += '<td class="text-right">';
+            html += '<button  class="btn btn-warning btnfollow" data-id="'+obj[i].VehicleID+'"> ติดตาม </button>';
+            html += '</td></tr>';
+           
+				 
           }
           
-           $("#pickup-detail").html(html);
+           $("#WorkGroupTable").html(html);
 
       });
 
