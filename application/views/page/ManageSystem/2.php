@@ -226,40 +226,18 @@
 
 
         <script>
+
+
             $(function(){
 
-
-
-				$("#TableTrashDetail").on("click",".BtnTrashQR",function(){
-
-					var TrashID = $("#data-id").attr();
  
-					alert();
- 
-				});
-
-
-
-
-
-   
-			});
-
-
-
-                $('#basic-datatables').DataTable({ });
- 
-				
 				$("#btncreate").click(function(){
 					$('#myModal').modal('show'); 
 				});
-
-				$("#btncreatesystem").click(function(){
-					$('#myModal').modal('show'); 
-				});
-				$("#btncon1").click(function(){
-					$('#ModalQrCode').modal('show'); 
-				});
+ 
+				//$("#btncon1").click(function(){
+				//	$('#ModalQrCode').modal('show'); 
+				//});
 				
 				$("#btncreatedata").click(function(){
 					var data1 = $("#data1").val();
@@ -340,5 +318,6 @@
 				});
 			
 			
+			}); 
 			   
         </script>
