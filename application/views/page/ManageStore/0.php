@@ -260,7 +260,7 @@ function initMap() {
           position: {lat : parseFloat(obj[index].Lat) ,lng : parseFloat(obj[index].Lot) },
           map: map,
           /*label : obj[index].Name,*/
-		  label: {text: obj[index].Name, color: "white"},
+		  label: {text: obj[index].Name, color: "black"},
           title: obj[index].Name, 
           LineName : obj[index].FName,
           Image : obj[index].Image,
@@ -277,6 +277,11 @@ function initMap() {
 
         markersArray.push(marker);
 
+			google.maps.event.addListener(marker, "mouseover", function(evt) {
+				var label = this.getLabel();
+				label.color="white";
+				this.setLabel(label);
+			}); 
 
             marker.addListener('click', function() {
  
