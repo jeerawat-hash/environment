@@ -183,14 +183,14 @@ function initMap() {
           title: obj[index].Name, 
           LineName : obj[index].FName,
           Image : obj[index].Image,
-          icon : "https://environment.webclient.me/temp/pin-"+obj[index].Color+".svg",
-          ID : obj[index].TransID/*,
+          /*icon : "https://environment.webclient.me/temp/pin-"+obj[index].Color+".svg",*/
+          ID : obj[index].TransID,
           icon: {
-                  url: obj[index].Image, // url
+                  url: "https://environment.webclient.me/temp/pin-"+obj[index].Color+".svg", // url
                   scaledSize: new google.maps.Size(50, 50), // scaled size
                   origin: new google.maps.Point(0,0), // origin
                   anchor: new google.maps.Point(0, 0) // anchor
-              } */
+              } 
         }); 
 
 
