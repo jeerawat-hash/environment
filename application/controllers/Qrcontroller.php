@@ -18,8 +18,9 @@ class Qrcontroller extends CI_Controller
  
   public function GetDataTrashByID()
   { 
-    echo json_encode($this->QRModel->GetDataTrashByID($_POST["ID"]));
-
+    
+    echo json_encode($this->Env_Model->GetDataTrashByID($_POST["ID"]));
+  
   }
   
 /*
