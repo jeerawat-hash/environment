@@ -26,14 +26,14 @@
 										<table id="basic-datatables" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
-												   <th>หมายเลขถัง</th>
-													<th>สี</th>
+												   <th>หมายเลขถัง</th> 
 													<th>ความจุ</th>
+													<th>สี</th>
 													<th>ตำเเหน่ง</th>
 													<th>QR Code</th>
 												</tr>
 											</thead> 
-											<tbody> 
+											<tbody id="TableTrashDetail"> 
 
 
 												<?php  
@@ -46,10 +46,10 @@
 
 												<tr>
 													<td><?php echo $valuetash->ID; ?></td>
-													<td><?php echo $valuetash->Capacity; ?></td>
+													<td><?php echo $valuetash->Capacity; ?> ลิตร</td>
 													<td><?php echo $valuetash->Color; ?></td>
 													<td><?php echo $valuetash->Remark; ?></td>
-													<td><button  id="btncon1"  class="btn btn-danger"> เรียกดู QR Code  </button> </td>
+													<td><button  class="btn btn-danger BtnTrashQR" data-id="<?php echo $valuetash->ID; ?>"> เรียกดู QR Code  </button> </td>
 													 
 												</tr>
 
@@ -120,7 +120,7 @@
 														</div>
 														<div class="col-md-6 col-lg-6">
 															<div class="form-group">
-																<label for="email2">ความจุ</label>
+																<label for="email2">ความจุ(ลิตร)</label>
 																<input type="email" class="form-control" id="data2" placeholder="กรุณากรอกความจุ">
 																
 															</div>
@@ -131,7 +131,7 @@
 														 
 														<div class="col-md-6 col-lg-6">
 															<div class="form-group">
-																<label for="email2">ตำเเหน่ง</label>
+																<label for="email2">ตำเเหน่งที่ตั้ง</label>
 																<input type="email" class="form-control" id="data3" placeholder="กรุณากรอกตำเเหน่ง">
 																
 															</div>
@@ -228,98 +228,114 @@
         <script>
             $(function(){
 
+
+
+				$("#TableTrashDetail").on("click",".BtnTrashQR",function(){
+
+					var TrashID = $("#data-id").attr();
+
+
+					alert();
+ 
+				});
+
+
+
+
+
                 $('#basic-datatables').DataTable({ });
+ 
+				
+				$("#btncreate").click(function(){
+					$('#myModal').modal('show'); 
+				});
+
+				$("#btncreatesystem").click(function(){
+					$('#myModal').modal('show'); 
+				});
+				$("#btncon1").click(function(){
+					$('#ModalQrCode').modal('show'); 
+				});
+				
+				$("#btncreatedata").click(function(){
+					var data1 = $("#data1").val();
+					var data2 = $("#data2").val();
+					var data3 = $("#data3").val();
+					if( data1 == ""){ 
+						swal("กรุณากรอกสี", {
+							buttons: {        			
+								confirm: {
+									className : 'btn btn-danger'
+								}
+							},
+						});						  
+						$( "#data1" ).focus();
+						return false;
+					}
+					if( data2 == ""){
+						swal("กรุณากรอกความจุ", {
+							buttons: {        			
+								confirm: {
+									className : 'btn btn-danger'
+								}
+							},
+						});		 
+						$( "#data2" ).focus();
+						return false;
+					}
+					if( data3 == ""){
+						swal("กรุณากรอกตำเเหน่ง", {
+							buttons: {        			
+								confirm: {
+									className : 'btn btn-danger'
+								}
+							},
+						});		 
+						$( "#data3" ).focus();
+						return false;
+					}
 
 
-            });
-			$("#btncreate").click(function(){
-				$('#myModal').modal('show'); 
-              });
+					///// INSERT  DATA ////
+					$.post("https://environment.webclient.me/index.php/ManageSystem/InsertDataTrash"
+									,
+									{
+										Capacity :  data2, 
+										Color    :  data1,
+										Remark    :  data3 
+										
+										}
+									,
+										function(data,status,response){  
+										console.log(data);
+									if (status == "success") 
+										{ 
+												
+												swal({
+												title: "บันทึกเรียบร้อย",
+												text: " ",
+												icon: "success",
+												buttons: {
+													confirm: {
+														text: "ตกลง",
+														value: true,
+														visible: true,
+														className: "btn btn-success",
+														closeModal: true
+													}
+												}
+											});
 
-			  $("#btncreatesystem").click(function(){
-				$('#myModal').modal('show'); 
-              });
-			  $("#btncon1").click(function(){
-				$('#ModalQrCode').modal('show'); 
-              });
+											location.reload();
+											//$("#myModal").modal("hide");
+										}
+										});
+					
+					///// INSERT  DATA ////	   
+					
+				});
 			   
-			  $("#btncreatedata").click(function(){
-				  var data1 = $("#data1").val();
-				  var data2 = $("#data2").val();
-				  var data3 = $("#data3").val();
-				  if( data1 == ""){ 
-					  swal("กรุณากรอกสี", {
-						buttons: {        			
-							confirm: {
-								className : 'btn btn-danger'
-							}
-						},
-					});						  
-					  $( "#data1" ).focus();
-					  return false;
-				  }
-				  if( data2 == ""){
-					swal("กรุณากรอกความจุ", {
-						buttons: {        			
-							confirm: {
-								className : 'btn btn-danger'
-							}
-						},
-					});		 
-					  $( "#data2" ).focus();
-					  return false;
-				  }
-				  if( data3 == ""){
-					swal("กรุณากรอกตำเเหน่ง", {
-						buttons: {        			
-							confirm: {
-								className : 'btn btn-danger'
-							}
-						},
-					});		 
-					  $( "#data3" ).focus();
-					  return false;
-				  }
-
-
-                 ///// INSERT  DATA ////
-				  $.post("https://environment.webclient.me/index.php/ManageSystem/InsertDataTrash"
-                                  ,
-                                   {
-									Capacity :  data2, 
-									Color    :  data1,
-									Remark    :  data3 
-                                     
-                                     }
-                                  ,
-                                    function(data,status,response){  
-                                      console.log(data);
-                                   if (status == "success") 
-                                      { 
-											
-					                    	swal({
-					                       	title: "บันทึกเรียบร้อย",
-					                       	text: " ",
-					                       	icon: "success",
-					                       	buttons: {
-					                       		confirm: {
-					                       			text: "ตกลง",
-					                       			value: true,
-					                       			visible: true,
-					                       			className: "btn btn-success",
-					                       			closeModal: true
-					                       		}
-					                       	}
-					                       });
-
-										   location.reload();
-										   //$("#myModal").modal("hide");
-                                      }
-                                     });
-				  
-			     ///// INSERT  DATA ////	   
-				 
-              });
-			   
+			});
+			
 			   
         </script>
