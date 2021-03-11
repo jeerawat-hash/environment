@@ -43,7 +43,39 @@
 														<tr>
 															<td>
 																<div class="flag">
-																	<img  width="10%" src="https://environment.webclient.me/assets/img/flags/br.png" class="SVGICON">
+																	<img  width="10%" src="https://environment.webclient.me/temp/pin-green.svg" class="SVGICON">
+																</div>
+															</td>
+															<td>ทะเบียน</td>
+															<td class="text-right">
+																จำนวนการจัดเก็บ
+															</td>
+															<td class="text-right">
+																<button  id="btnfollow"  class="btn btn-warning"> ติดตาม </button>
+															</td>
+															
+														</tr>
+
+														<tr>
+															<td>
+																<div class="flag">
+																	<img  width="10%" src="https://environment.webclient.me/temp/pin-yello.svg" class="SVGICON">
+																</div>
+															</td>
+															<td>ทะเบียน</td>
+															<td class="text-right">
+																จำนวนการจัดเก็บ
+															</td>
+															<td class="text-right">
+																<button  id="btnfollow"  class="btn btn-warning"> ติดตาม </button>
+															</td>
+															
+														</tr>
+
+														<tr>
+															<td>
+																<div class="flag">
+																	<img  width="10%" src="https://environment.webclient.me/temp/pin-red.svg" class="SVGICON">
 																</div>
 															</td>
 															<td>ทะเบียน</td>
@@ -279,7 +311,7 @@ function clickroute(lati,long) {
 
                 ///$('#basic-datatables').DataTable({ });
 				  
-				$(".SVGICON").attr("src","https://environment.webclient.me/temp/pin-green.svg");
+				//$(".SVGICON").attr("src","https://environment.webclient.me/temp/pin-green.svg");
 
             });
         </script>
