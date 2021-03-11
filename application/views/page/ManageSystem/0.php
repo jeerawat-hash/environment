@@ -40,7 +40,7 @@
 												<tr>
 													<td><?php echo $valuemember->Name; ?></td>
 													<td><?php echo $valuemember->Telephone; ?></td> 
-													<td><button  class="btn btn-danger AuthenB" data-MemberID = "<?php echo $valuememberwork->ID; ?>"> ยืนยันตัวตน  </button></td> 
+													<td><button  class="btn btn-danger AuthenB" data-MemberID = "<?php echo $valuemember->ID; ?>"> ยืนยันตัวตน  </button></td> 
 													 
 												</tr> 
 												<? 
