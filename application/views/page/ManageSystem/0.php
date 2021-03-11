@@ -313,7 +313,7 @@
 													<div class="card-title">ยืนยันตัวตนผู้ปฏิบัติงาน</div>
 												</div>
 												<div class="card-body">
-													<div class="row">
+													<div class="row text-center">
 														 
 													<img id="QrAuth" src="" alt="">
 														 
@@ -394,7 +394,7 @@
 
 					$("#ModalConfirmB").find("#QrAuth").attr("src","https://api.qrserver.com/v1/create-qr-code/?size=250x250&data="+MemberID);
 					$("#MemberIDAuthTemp").val(MemberID);
-					
+
 					$("#ModalConfirmB").modal();
  
 				});
