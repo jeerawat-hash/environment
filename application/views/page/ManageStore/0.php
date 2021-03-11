@@ -1,3 +1,6 @@
+
+<input type="text" id="GetFollowData" readonly value="0" hidden>
+
 <div class="main-panel">
 			<div class="content">
 				<div class="page-inner">
@@ -227,9 +230,10 @@ function initMap() {
 
   
   setInterval(function(){ 
-     
+    
+	var GetFollowData = $("#GetFollowData").val(); 
         
-	$.get("https://environment.webclient.me/index.php/ManageStore/GetDataTransaction",function(data){
+	$.post("https://environment.webclient.me/index.php/ManageStore/GetDataTransaction",{GroupID : GetFollowData},function(data){
 
       var obj = JSON.parse(data);
 
@@ -303,11 +307,10 @@ function initMap() {
             });
             */
 
-
-        	//clickroute(parseFloat(obj[index].Lat),parseFloat(obj[index].Lot));
-
-
-
+			if(GetFollowData != 0){
+				clickroute(parseFloat(obj[index].Lat),parseFloat(obj[index].Lot));
+			} 
+ 
 
       }
 
