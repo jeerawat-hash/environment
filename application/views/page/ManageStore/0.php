@@ -333,7 +333,7 @@ function initMap() {
 				map.setZoom(16); 
 
 			}else{
-				map.setZoom(16); 
+				//map.setZoom(16); 
 			}
 			 
 				
