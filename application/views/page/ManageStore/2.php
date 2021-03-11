@@ -177,7 +177,7 @@
 															<div class="form-group">
 																<label for="smallSelect">ป้ายทะเบียน</label>
 															
-																<select class="form-control form-control-sm" id="LicensePlate">
+																<select class="form-control form-control-sm" id="WorkGroupID">
 																<option value="0" selected disabled>กรุณาเลือก</option> 
  																	<?php
 															  
@@ -266,6 +266,21 @@
 					var MemberID = $(this).attr("data-MemberID");
 
 					alert(WorkGroupID+" "+MemberID);
+					
+					swal({
+							title: "ลบรายการเรียบร้อย",
+							text: " ",
+							icon: "success",
+							buttons: {
+								confirm: {
+									text: "ตกลง",
+									value: true,
+									visible: true,
+									className: "btn btn-success",
+									closeModal: true
+								}
+							}
+						});
 
 				});
 
@@ -372,73 +387,83 @@
  
 				});
 
-				$("#btncreatedata1").click(function(){
-					var smallSelect = $("#smallSelect").val();
-					var data2 = $("#data2").val(); 
-					var Remark = $("#Remark").val(); 
-					if( smallSelect == ""){
-						swal("กรุณากรอกป้ายทะเบียน", {
+				$("#GroupMember").find("#btncreatedata1").click(function(){
+					var WorkGroupID = $("#WorkGroupID").val();
+					var MemberID = $("#MemberID").val();  
+					if( WorkGroupID == "0"){
+						swal("กรุณาเลือกทะเบียน", {
 							buttons: {        			
 								confirm: {
 									className : 'btn btn-danger'
 								}
 							},
-						});		 
-						$( "#data1" ).focus();
+						});		  
 						return false;
 					}
-					if( data2 == ""){
-						swal("กรุณากรอกผู้ดูแล", {
+					if( MemberID == "0"){
+						swal("กรุณาระบุผู้ปฏิบัติงาน", {
 							buttons: {        			
 								confirm: {
 									className : 'btn btn-danger'
 								}
 							},
-						});		 
-						$( "#data2" ).focus();
+						});		  
 						return false;
 					} 
-													
-					swal({
-							title: "บันทึกเรียบร้อย",
-							text: " ",
-							icon: "success",
-							buttons: {
-								confirm: {
-									text: "ตกลง",
-									value: true,
-									visible: true,
-									className: "btn btn-success",
-									closeModal: true
+
+
+
+					$.post("https://environment.webclient.me/index.php/ManageStore/InsertGroupDetail",
+					{
+						WorkGroupID : WorkGroupID,
+						MemberID : MemberID
+					},
+					function(data){
+
+						if(data == 1){
+		
+							swal({
+								title: "บันทึกเรียบร้อย",
+								text: " ",
+								icon: "success",
+								buttons: {
+									confirm: {
+										text: "ตกลง",
+										value: true,
+										visible: true,
+										className: "btn btn-success",
+										closeModal: true
+									}
 								}
-							}
-						});
-				});
+							});
 
+							location.reload();
+ 
+						}else{
 
-				
-				
-				$("#btndelete").click(function(){
-													
-					swal({
-							title: "ลบรายการเรียบร้อย",
-							text: " ",
-							icon: "success",
-							buttons: {
-								confirm: {
-									text: "ตกลง",
-									value: true,
-									visible: true,
-									className: "btn btn-success",
-									closeModal: true
+							swal({
+								title: "ผิดพลาด",
+								text: " ",
+								icon: "error",
+								buttons: {
+									confirm: {
+										text: "ตกลง",
+										value: true,
+										visible: true,
+										className: "btn btn-success",
+										closeModal: true
+									}
 								}
-							}
-						});
-				});
-				
-				
+							});
+							return false;
 
-				
+						}
+ 
+					});
+ 
+				});
+ 
+				 
             });
 			
         </script>
