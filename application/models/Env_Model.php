@@ -217,9 +217,15 @@ class Env_Model extends CI_Model
         return $this->envdb->query(" SELECT b.WorkGroupID,a.LineID FROM `Member` a 
         join WorkGroupDetail b on a.ID = b.MemberID
         WHERE a.LineID = '".$LineID."' ")->result();
+ 
+    }
+    public function CreateDataTransaction($WorkGroupID,$TrashID,$Lat,$Lon)
+    {
 
-        
-
+        $this->envdb = $this->load->database("envdb",true);
+        $this->envdb->query(" INSERT INTO `Transaction` (`ID`, `WorkGroupID`, `TrashID`, `Lat`, `Lon`, `StampDate`) VALUES (NULL, '".$WorkGroupID."', '".$TrashID."', '".$Lat."', '".$Lon."', CURRENT_TIMESTAMP) ");
+        return 1;
+ 
     }
 
     

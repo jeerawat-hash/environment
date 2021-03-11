@@ -115,28 +115,20 @@ function runApp() {
 
   $("#btnsave").hide();
   $("#btnsave").on("click",function(){  
-       var userId = profile.userId;
+       var userId = profile.userId; 
        var BinID =   $("#BinID").val();
        var long =   $("#longitude").val();
-              var lat =   $("#latitude").val(); 
-       var img =  $("#ImgProfile").attr("src");
-       var textpf =  $("#TextProfile").text();
-       var textbtndata   = lat+long+img+textpf; 
-     
-     /*swal({
-         title: "สำเร็จ",
-         text: textbtndata,
-         icon: "success",
-         button: "ปิด",
-     }); */
-/*
-     $.post("https://environment.webclient.me/index.php/Qrcontroller/insertlocation",{
-         UserID : userId,
-         BinID : BinID,
-         Latitude : lat,
-         Longitude : long,
-         Img : img,
-         Textpf : textpf
+       var lat =   $("#latitude").val(); 
+ 
+       var WorkGroup = $("#WorkGroupID").val();
+
+ 
+ 
+     $.post("https://environment.webclient.me/index.php/Qrcontroller/CreateDataTransaction",{
+      WorkGroupID : WorkGroup,
+      TrashID : BinID,
+      Lat : lat,
+      Lon : long
      },function(data){
           if(data == 1 ){
              swal({
@@ -145,12 +137,11 @@ function runApp() {
          icon: "success",
          button: false,
               }); 
-             
-
+              
               setTimeout(function(){ liff.closeWindow(); }, 2000);
              
           }
-     }); */ 
+     }); 
    });
 
 

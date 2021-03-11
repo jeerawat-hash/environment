@@ -51,6 +51,12 @@ class Qrcontroller extends CI_Controller
   {
     echo json_encode($this->Env_Model->GetDataWorkGroupByLineID($_POST["LineID"]));
   }
+  public function CreateDataTransaction()
+  {
+ 
+    echo $this->Env_Model->CreateDataTransaction($_POST["WorkGroupID"],$_POST["TrashID"],$_POST["Lat"],$_POST["Lon"]);
+ 
+  }
   
 /*
   public function insertlocation()
