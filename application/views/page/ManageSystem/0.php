@@ -393,7 +393,8 @@
 					var MemberID = $(this).attr("data-MemberID");
 
 					$("#ModalConfirmB").find("#QrAuth").attr("src","https://api.qrserver.com/v1/create-qr-code/?size=250x250&data="+MemberID);
-
+					$("#MemberIDAuthTemp").val(MemberID);
+					
 					$("#ModalConfirmB").modal();
  
 				});
