@@ -47,6 +47,10 @@ class Qrcontroller extends CI_Controller
     echo $this->Env_Model->RegisterMemberByQrCode($ID,$LineID);
  
   }
+  public function GetDataWorkGroupByLineID()
+  {
+    echo $this->Env_Model->GetDataWorkGroupByLineID($_POST["LineID"]);
+  }
   
 /*
   public function insertlocation()

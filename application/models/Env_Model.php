@@ -210,6 +210,17 @@ class Env_Model extends CI_Model
         $this->envdb->query(" UPDATE `Member` SET `LineID` = '".$LineID."' WHERE `Member`.`ID` = '".$ID."' ");
         return 1;
     }
+    public function GetDataWorkGroupByLineID($LineID)
+    {
+
+        $this->envdb = $this->load->database("envdb",true);
+        return $this->envdb->query(" SELECT b.WorkGroupID,a.LineID FROM `Member` a 
+        join WorkGroupDetail b on a.ID = b.MemberID
+        WHERE a.LineID = '".$LineID."' ")->result();
+
+        
+
+    }
 
     
 

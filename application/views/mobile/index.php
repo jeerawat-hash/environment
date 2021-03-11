@@ -85,14 +85,15 @@ function runApp() {
        var obj = JSON.parse(data);
        //console.log(obj);
        $("#BinName").text(obj[0].Name);
-       
-       $vara =  $("#tgetlo").val();
-       if($vara != "")
+       $.post("https://environment.webclient.me/index.php/Qrcontroller/GetDataWorkGroupByLineID",
        {
-        $("#btnsave").show(); 
-        alert($vara);
+          LineID : profile.userId
+       },function(data2){
 
-       }
+          var obj2 = JSON.parse(data2);
+          console.log(obj2);
+
+       });
        
 
    });
@@ -115,7 +116,7 @@ function runApp() {
          icon: "success",
          button: "ปิด",
      }); */
-
+/*
      $.post("https://environment.webclient.me/index.php/Qrcontroller/insertlocation",{
          UserID : userId,
          BinID : BinID,
@@ -136,7 +137,7 @@ function runApp() {
               setTimeout(function(){ liff.closeWindow(); }, 2000);
              
           }
-     });  
+     }); */ 
    });
 
 
