@@ -36,11 +36,18 @@
 												
 												foreach($member as $valuemember){
 
+													$btn = "ลงทะเบียนแล้ว";
+													if($valuemember->LineID == ""){
+
+														$btn = '<button  class="btn btn-danger AuthenB" data-MemberID = "'.$valuemember->ID.'"> ยืนยันตัวตน  </button>';
+
+													}
+ 
 													?> 
 												<tr>
 													<td><?php echo $valuemember->Name; ?></td>
 													<td><?php echo $valuemember->Telephone; ?></td> 
-													<td><button  class="btn btn-danger AuthenB" data-MemberID = "<?php echo $valuemember->ID; ?>"> ยืนยันตัวตน  </button></td> 
+													<td><?php echo $btn; ?></td> 
 													 
 												</tr> 
 												<? 
@@ -88,6 +95,13 @@
 												
 												foreach($memberwork as $valuememberwork){
 
+													$btn = "ลงทะเบียนแล้ว";
+													if($valuemember->LineID == ""){
+
+														$btn = '<button  class="btn btn-danger AuthenA" data-MemberID = "'.$valuememberwork->ID.'"> ยืนยันตัวตน  </button>';
+
+													}
+
 													?>
 													
 
@@ -95,8 +109,7 @@
 												<tr>
 												<td><?php echo $valuememberwork->Name; ?></td>
 													<td><?php echo $valuememberwork->Telephone; ?></td> 
-													<td><button   class="btn btn-danger AuthenA" data-MemberID = "<?php echo $valuememberwork->ID; ?>" > ยืนยันตัวตน  </button></td> 
-													 
+													<td><?php echo $btn; ?></td>  
 												</tr> 
 												<? 
 												} 
@@ -255,9 +268,9 @@
 													<div class="card-title">ยืนยันตัวตนผู้ใช้งาน</div>
 												</div>
 												<div class="card-body">
-													<div class="row">
+													<div class="row text-center">
 														 
-													 
+														<img id="QrAuth" src="" alt="">
 														 
 														
 													</div>
@@ -302,7 +315,7 @@
 												<div class="card-body">
 													<div class="row">
 														 
-													 
+													<img id="QrAuth" src="" alt="">
 														 
 														
 													</div>
@@ -346,14 +359,17 @@
 				$("#TableAuthenADetail").on("click",".AuthenA",function(){
 					
 					var MemberID = $(this).attr("data-MemberID");
+					
+					$("#ModalConfirmA").find("#QrAuth").attr("src","https://api.qrserver.com/v1/create-qr-code/?size=250x250&data="+MemberID);
 
 					$("#ModalConfirmA").modal();
-
-
+ 
 				});
 				$("#TableAuthenBDetail").on("click",".AuthenB",function(){
 					
 					var MemberID = $(this).attr("data-MemberID");
+
+					$("#ModalConfirmB").find("#QrAuth").attr("src","https://api.qrserver.com/v1/create-qr-code/?size=250x250&data="+MemberID);
 
 					$("#ModalConfirmB").modal();
 
