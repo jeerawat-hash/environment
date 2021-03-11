@@ -11,7 +11,7 @@
        <img class="masthead-avatar" id="AuthImg" src="https://environment.webclient.me/old/assets_qr/assets/img/portfolio/bit.png"  />
        <!-- Masthead Heading-->
        <h4 class="masthead-heading text-uppercase mb-0" id="EmpName">       </h4>
-       <input  type="text"   id="tgetlo" name="tgetlo"      >
+       <input  type="text" hidden  id="tgetlo" name="tgetlo"      >
        <input class="input100" type="text" readonly hidden id="longitude" name="longitude">
        <input class="input100" type="text"  readonly hidden  id="latitude" name="latitude">
        <br> 
