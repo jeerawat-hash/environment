@@ -1,5 +1,5 @@
 
-<input type="text" id="GetFollowData" readonly value="0" hidden>
+<input type="text" id="GetFollowData" readonly value="0" >
 
 <div class="main-panel">
 			<div class="content">
@@ -249,7 +249,7 @@ function initMap() {
   
   setInterval(function(){ 
     
-	var GetFollowData = $("#GetFollowData").val(); 
+	
         
 	$.post("https://environment.webclient.me/index.php/ManageStore/GetDataTransaction",{GroupID : GetFollowData},function(data){
 
@@ -324,7 +324,8 @@ function initMap() {
               });
             });
             */ 
-
+			var GetFollowData = $("#GetFollowData").val(); 
+			
 			if(GetFollowData != 0){
 
 				clickroute(parseFloat(obj[index].Lat),parseFloat(obj[index].Lot));
