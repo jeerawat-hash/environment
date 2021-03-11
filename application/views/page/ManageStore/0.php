@@ -240,6 +240,10 @@ function initMap() {
           ]
     });
 
+
+	
+	
+
     var markersArray = [];
 
   
@@ -320,12 +324,12 @@ function initMap() {
               });
             });
             */
-
+			var bounds = new google.maps.LatLngBounds();
 			if(GetFollowData != 0){
 				clickroute(parseFloat(obj[index].Lat),parseFloat(obj[index].Lot));
-				if (map.getZoom() < 20){
-					map.setZoom(20);
-				}  
+				map.fitBounds(bounds);
+ 				map.setZoom(20);
+	
 			} 
 			 
 				
