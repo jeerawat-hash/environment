@@ -61,7 +61,7 @@ function runApp() {
      },function(data){
 
        var obj = JSON.parse(data);
-       //console.log(obj);
+       console.log(obj);
        $("#EmpName").text(obj[0].Name);
        $("#btnsave").show(); 
          
