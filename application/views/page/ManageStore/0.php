@@ -309,9 +309,9 @@ function initMap() {
 
 			if(GetFollowData != 0){
 				clickroute(parseFloat(obj[index].Lat),parseFloat(obj[index].Lot));
-				//if (map.getZoom() > 16){
-				//	map.setZoom(16);
-				//}  
+				if (map.getZoom() < 20){
+					map.setZoom(20);
+				}  
 			} 
 			 
 				
