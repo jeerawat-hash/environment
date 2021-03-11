@@ -103,7 +103,7 @@
 																	<label for="smallSelect">ป้ายทะเบียน</label>
 																
 																	<select class="form-control form-control-sm" id="LicensePlate">
-																		<option value="0" selected disabled>กรุณาเลือก</option> 
+																		<option value="0" selected>กรุณาเลือก</option> 
 																		<?php 
 																		foreach($VehicleNotCreate as $Vehicle){
 																		?>
@@ -178,7 +178,7 @@
 																<label for="smallSelect">ป้ายทะเบียน</label>
 															
 																<select class="form-control form-control-sm" id="WorkGroupID">
-																<option value="0" selected disabled>กรุณาเลือก</option> 
+																<option value="0" selected>กรุณาเลือก</option> 
  																	<?php
 															  
 																	 foreach($GroupData as $Group){
@@ -199,7 +199,7 @@
 																<div class="form-group">
 																	<label for="data2">ผู้ปฏิบัติงาน</label>
 																	<select class="form-control form-control-sm" id="MemberID">
-																	<option value="0" selected disabled>กรุณาเลือก</option> 
+																	<option value="0" selected >กรุณาเลือก</option> 
  																	<?php
 															  
 																	 foreach($MemberNotGroup as $Member){
@@ -266,7 +266,7 @@
 					var MemberID = $(this).attr("data-MemberID");
 
 					alert(WorkGroupID+" "+MemberID);
-					
+
 					swal({
 							title: "ลบรายการเรียบร้อย",
 							text: " ",
