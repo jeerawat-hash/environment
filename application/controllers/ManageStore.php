@@ -75,7 +75,7 @@ class ManageStore extends CI_Controller {
 
 		$WorkGroupID = $_POST["WorkGroupID"];
 		$MemberID = $_POST["MemberID"];
-		echo $this->Env_Model->InsertGroupDetail($WorkGroupID,$MemberID)
+		echo $this->Env_Model->InsertGroupDetail($WorkGroupID,$MemberID);
  
 	}
 	public function GetDataTransaction()
