@@ -9,7 +9,7 @@
 
 
 
-                    <div class="col-md-12">
+                    	<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
 									<div class="card-head-row card-tools-still-right">
@@ -23,7 +23,7 @@
 
 
  	 
-										       <div id="map"></div>
+									 <div id="map"></div>
 								 	 
 
 
