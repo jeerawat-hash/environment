@@ -43,7 +43,7 @@
 														<tr>
 															<td>
 																<div class="flag">
-																	<img  src="https://environment.webclient.me/assets/img/flags/br.png" class="SVGICON" alt="brazil">
+																	<img  width="20%" src="https://environment.webclient.me/assets/img/flags/br.png" class="SVGICON" alt="brazil">
 																</div>
 															</td>
 															<td>Brasil</td>
