@@ -264,23 +264,54 @@
 				$("#MemberGroupDetail").on("click",'.btnUngroup',function(){
 					var WorkGroupID = $(this).attr("data-WorkGroupID");
 					var MemberID = $(this).attr("data-MemberID");
+ 
+					$.post("https://environment.webclient.me/index.php/ManageStore/DeleteMemberInGroup",
+					{
+						WorkGroupID : WorkGroupID,
+						MemberID : MemberID
+					},
+					function(data){
 
-					alert(WorkGroupID+" "+MemberID);
-
-					swal({
-							title: "ลบรายการเรียบร้อย",
-							text: " ",
-							icon: "success",
-							buttons: {
-								confirm: {
-									text: "ตกลง",
-									value: true,
-									visible: true,
-									className: "btn btn-success",
-									closeModal: true
+						if(data == 1){
+		
+							swal({
+								title: "ลบรายการสำเร็จ",
+								text: " ",
+								icon: "success",
+								buttons: {
+									confirm: {
+										text: "ตกลง",
+										value: true,
+										visible: true,
+										className: "btn btn-success",
+										closeModal: true
+									}
 								}
-							}
-						});
+							});
+
+							location.reload();
+ 
+						}else{
+
+							swal({
+								title: "ผิดพลาด",
+								text: " ",
+								icon: "error",
+								buttons: {
+									confirm: {
+										text: "ตกลง",
+										value: true,
+										visible: true,
+										className: "btn btn-success",
+										closeModal: true
+									}
+								}
+							});
+							return false;
+
+						}
+ 
+					});
 
 				});
 

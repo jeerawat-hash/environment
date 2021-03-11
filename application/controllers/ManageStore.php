@@ -62,6 +62,14 @@ class ManageStore extends CI_Controller {
 		$this->load->view('template/footer.php');
 
 	}
+	public function DeleteMemberInGroup()
+	{
+		
+		$WorkGroupID = $_POST["WorkGroupID"];
+		$MemberID = $_POST["MemberID"];
+		echo $this->Env_Model->DeleteMemberInGroup($WorkGroupID,$MemberID)
+
+	}
 	public function CreateGroup()
 	{
 		$VehicleID = $_POST["VehicleID"];
