@@ -50,7 +50,10 @@ class ManageStore extends CI_Controller {
         $header['page_focus'] = 'ManageStore';
         $header['page_menu'] = 2;
 		$data["page_name"] = $header['page_name'];
-
+		$data["VehicleNotCreate"] = $this->Env_Model->GetDataVehicleNotCreateGroup();
+		$data["MemberNotGroup"] = $this->Env_Model->GetDataMemberNonGroup();
+		$data["MemberGroup"] = $this->Env_Model->GetDataMemberWorkGroup();
+		
 		$this->load->view('template/header.php',$header);
 		$this->load->view('page/ManageStore/2.php',$data);
 		$this->load->view('template/footer.php');

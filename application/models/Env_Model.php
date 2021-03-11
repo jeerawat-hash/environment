@@ -128,19 +128,12 @@ class Env_Model extends CI_Model
     {   
         $this->envdb = $this->load->database("envdb",true);
 
-        return $this->envdb->query(" SELECT b.LicensePlate,b.Color,d.Name,d.Telephone FROM jeerawatme_env.WorkGroup a
+        return $this->envdb->query(" SELECT c.WorkGroupID,c.MemberID,b.LicensePlate,b.Color,d.Name,d.Telephone,a.Remark FROM jeerawatme_env.WorkGroup a
         join jeerawatme_env.Vehicle b on a.VehicleID = b.ID
         join jeerawatme_env.WorkGroupDetail c on a.ID = c.WorkGroupID
         join jeerawatme_env.Member d on c.MemberID = d.ID ")->result();
 
-    }
-    public function GetDataMemberNonGroup()
-    {
-
-        $this->envdb = $this->load->database("envdb",true);
-        return $this->envdb->query(" SELECT * FROM jeerawatme_env.Member WHERE ID not in ( select MemberID from jeerawatme_env.WorkGroupDetail ) and PositionID = 0 ")->result();
- 
-    }
+    } 
     public function CreateGroup($VehicleID,$MemberID,$Remark)
     {   
         $this->envdb = $this->load->database("envdb",true);
@@ -163,6 +156,20 @@ class Env_Model extends CI_Model
         $this->envdb = $this->load->database("envdb",true);
         return $this->envdb->query(" DELETE FROM jeerawatme_env.`WorkGroupDetail` WHERE WorkGroupID = ".$WorkGroupID." and MemberID = ".$MemberID." ");
   
+    }
+    public function GetDataVehicleNotCreateGroup()
+    {
+
+        $this->envdb = $this->load->database("envdb",true);
+        return $this->envdb->query(" SELECT * FROM `Vehicle` WHERE ID not IN( select VehicleID from WorkGroup ) ");
+         
+    }
+    public function GetDataMemberNonGroup()
+    {
+
+        $this->envdb = $this->load->database("envdb",true);
+        return $this->envdb->query(" SELECT * FROM jeerawatme_env.Member WHERE ID not in ( select MemberID from jeerawatme_env.WorkGroupDetail ) and PositionID = 0 ")->result();
+ 
     }
 
 

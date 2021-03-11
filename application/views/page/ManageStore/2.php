@@ -32,19 +32,34 @@
 											<thead>
 												<tr>
 													<th>ป้ายทะเบียน</th>
-													<th>ผู้ดูเเล</th>
+													<th>สัญญลักษณ์</th>
+													<th>สมาชิก</th>
 													<th>รายละเอียด</th>
 													<th></th>
 													 
 												</tr>
 											</thead> 
-											<tbody> 
+											<tbody id="MemberGroupDetail"> 
+
+ 												<?php 
+
+												foreach($MemberGroup as $Member){
+													?>
+
 												<tr>
-													<td>Donna Snider</td>
-													<td>Customer Support</td>
-													<td>New York</td>
-													<td><button  id="btndelete"  class="btn btn-danger">  ลบออกจากกลุ่ม </button></td> 
+													<td><?php echo $Member->LicensePlate; ?></td>
+													<td><img width="20%" src="https://environment.webclient.me/temp/pin-<?php echo $Member->Color;  ?>.svg" alt=""></td>
+													<td><?php echo $Member->Name; ?></td>
+													<td><?php echo $Member->Remark; ?></td>
+													<td><button class="btn btn-danger btnUngroup" data-WorkGroupID="<?php echo $Member->WorkGroupID; ?>" data-MemberID="<?php echo $Member->MemberID; ?>">  ลบออกจากกลุ่ม </button></td> 
 												</tr>
+
+
+
+												<?php
+												} 
+ 												?>
+												 
 											</tbody>
 										</table>
 									</div>
@@ -88,11 +103,20 @@
 																<label for="smallSelect">ป้ายทะเบียน</label>
 															
 																<select class="form-control form-control-sm" id="smallSelect">
-																	<option>1</option>
-																	<option>2</option>
-																	<option>3</option>
-																	<option>4</option>
-																	<option>5</option>
+																	<option value="0" selected disabled>กรุณาเลือก</option> 
+ 																	<?php
+															  
+																	 foreach($VehicleNotCreate as $Vehicle){
+																	 ?>
+
+																			<option value="<?php echo $Vehicle->ID; ?>"><?php echo $Vehicle->LicensePlate; ?></option> 
+
+																	<?php 	
+																	 }
+																	 
+																	 
+																	 ?>
+
 																</select>
 														
 																
@@ -102,11 +126,20 @@
 																<div class="form-group">
 																	<label for="data2">ผู้ดูเเล</label>
 																	<select class="form-control form-control-sm" id="data2">
-																	<option>1</option>
-																	<option>2</option>
-																	<option>3</option>
-																	<option>4</option>
-																	<option>5</option>
+																	<option value="0" selected disabled>กรุณาเลือก</option> 
+ 																	<?php
+															  
+																	 foreach($MemberNotGroup as $Member){
+																	 ?>
+
+																			<option value="<?php echo $Member->ID; ?>"><?php echo $Vehicle->Name; ?></option> 
+
+																	<?php 	
+																	 }
+																	  
+																	 ?>
+
+																</select>
 																</select>
 																
 																</div>
@@ -236,135 +269,151 @@
 
         <script>
             $(function(){
-
                 $('#basic-datatables').DataTable({ });
+				  
+				$("#MemberGroupDetail").on("click",'.btnUngroup',function(){
+					var WorkGroupID = $(this).attr("data-WorkGroupID");
+					var MemberID = $(this).attr("data-MemberID");
+
+					alert();
+
+				});
 
 
+
+
+
+
+
+
+				$("#btncreate").click(function(){
+					$('#myModal').modal('show'); 
+				});
+	
+				$("#btncreate1").click(function(){
+					$('#myModal1').modal('show'); 
+				});
+
+				$("#btncreatedata").click(function(){
+					var smallSelect = $("#smallSelect").val();
+					var data2 = $("#data2").val(); 
+					var data3 = $("#data3").val(); 
+					if( smallSelect == ""){
+						swal("กรุณากรอกป้ายทะเบียน", {
+							buttons: {        			
+								confirm: {
+									className : 'btn btn-danger'
+								}
+							},
+						});		 
+						$( "#data1" ).focus();
+						return false;
+					}
+					if( data2 == ""){
+						swal("กรุณากรอกผู้ดูแล", {
+							buttons: {        			
+								confirm: {
+									className : 'btn btn-danger'
+								}
+							},
+						});		 
+						$( "#data2" ).focus();
+						return false;
+					} 
+					if( data3 == ""){
+						swal("กรุณากรอกรายละเอียด", {
+							buttons: {        			
+								confirm: {
+									className : 'btn btn-danger'
+								}
+							},
+						});		 
+						$( "#data3" ).focus();
+						return false;
+					} 				  				  
+					swal({
+							title: "บันทึกเรียบร้อย",
+							text: " ",
+							icon: "success",
+							buttons: {
+								confirm: {
+									text: "ตกลง",
+									value: true,
+									visible: true,
+									className: "btn btn-success",
+									closeModal: true
+								}
+							}
+						});
+				});
+
+				$("#btncreatedata1").click(function(){
+					var smallSelect = $("#smallSelect").val();
+					var data2 = $("#data2").val(); 
+					var data3 = $("#data3").val(); 
+					if( smallSelect == ""){
+						swal("กรุณากรอกป้ายทะเบียน", {
+							buttons: {        			
+								confirm: {
+									className : 'btn btn-danger'
+								}
+							},
+						});		 
+						$( "#data1" ).focus();
+						return false;
+					}
+					if( data2 == ""){
+						swal("กรุณากรอกผู้ดูแล", {
+							buttons: {        			
+								confirm: {
+									className : 'btn btn-danger'
+								}
+							},
+						});		 
+						$( "#data2" ).focus();
+						return false;
+					} 
+													
+					swal({
+							title: "บันทึกเรียบร้อย",
+							text: " ",
+							icon: "success",
+							buttons: {
+								confirm: {
+									text: "ตกลง",
+									value: true,
+									visible: true,
+									className: "btn btn-success",
+									closeModal: true
+								}
+							}
+						});
+				});
+
+
+				
+				
+				$("#btndelete").click(function(){
+													
+					swal({
+							title: "ลบรายการเรียบร้อย",
+							text: " ",
+							icon: "success",
+							buttons: {
+								confirm: {
+									text: "ตกลง",
+									value: true,
+									visible: true,
+									className: "btn btn-success",
+									closeModal: true
+								}
+							}
+						});
+				});
+				
+				
+
+				
             });
-			$("#btncreate").click(function(){
-				$('#myModal').modal('show'); 
-              });
- 
-			  $("#btncreate1").click(function(){
-				$('#myModal1').modal('show'); 
-              });
-
-			  $("#btncreatedata").click(function(){
-				  var smallSelect = $("#smallSelect").val();
-				  var data2 = $("#data2").val(); 
-				  var data3 = $("#data3").val(); 
-				  if( smallSelect == ""){
-					swal("กรุณากรอกป้ายทะเบียน", {
-						buttons: {        			
-							confirm: {
-								className : 'btn btn-danger'
-							}
-						},
-					});		 
-					  $( "#data1" ).focus();
-					  return false;
-				  }
-				  if( data2 == ""){
-					swal("กรุณากรอกผู้ดูแล", {
-						buttons: {        			
-							confirm: {
-								className : 'btn btn-danger'
-							}
-						},
-					});		 
-					  $( "#data2" ).focus();
-					  return false;
-				  } 
-				  if( data3 == ""){
-					swal("กรุณากรอกรายละเอียด", {
-						buttons: {        			
-							confirm: {
-								className : 'btn btn-danger'
-							}
-						},
-					});		 
-					  $( "#data3" ).focus();
-					  return false;
-				  } 				  				  
-				swal({
-						title: "บันทึกเรียบร้อย",
-						text: " ",
-						icon: "success",
-						buttons: {
-							confirm: {
-								text: "ตกลง",
-								value: true,
-								visible: true,
-								className: "btn btn-success",
-								closeModal: true
-							}
-						}
-					});
-              });
-
-			  $("#btncreatedata1").click(function(){
-				  var smallSelect = $("#smallSelect").val();
-				  var data2 = $("#data2").val(); 
-				  var data3 = $("#data3").val(); 
-				  if( smallSelect == ""){
-					swal("กรุณากรอกป้ายทะเบียน", {
-						buttons: {        			
-							confirm: {
-								className : 'btn btn-danger'
-							}
-						},
-					});		 
-					  $( "#data1" ).focus();
-					  return false;
-				  }
-				  if( data2 == ""){
-					swal("กรุณากรอกผู้ดูแล", {
-						buttons: {        			
-							confirm: {
-								className : 'btn btn-danger'
-							}
-						},
-					});		 
-					  $( "#data2" ).focus();
-					  return false;
-				  } 
-				  				  				  
-				swal({
-						title: "บันทึกเรียบร้อย",
-						text: " ",
-						icon: "success",
-						buttons: {
-							confirm: {
-								text: "ตกลง",
-								value: true,
-								visible: true,
-								className: "btn btn-success",
-								closeModal: true
-							}
-						}
-					});
-              });
-
-
-			   
-			   
-			  $("#btndelete").click(function(){
-				  				  				  
-				swal({
-						title: "ลบรายการเรียบร้อย",
-						text: " ",
-						icon: "success",
-						buttons: {
-							confirm: {
-								text: "ตกลง",
-								value: true,
-								visible: true,
-								className: "btn btn-success",
-								closeModal: true
-							}
-						}
-					});
-              });
-			   
-
+			
         </script>
