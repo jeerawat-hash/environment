@@ -113,7 +113,7 @@ class ManageSystem extends CI_Controller {
 	public function AuthenCheck()
 	{
 
-		echo $this->Env_Model->AuthenCheck();
+		echo $this->Env_Model->AuthenCheck($_POST["MemberID"]);
 
 	}
 	 

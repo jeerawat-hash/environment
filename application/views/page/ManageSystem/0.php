@@ -362,7 +362,15 @@
 
 					if(MemberAuthId != 0){
 
-						
+						$.post("https://environment.webclient.me/index.php/ManageSystem/AuthenCheck",{
+							MemberID : MemberAuthId
+						},function(data){
+
+							if(data == 0){
+								location.reload();
+							}
+ 
+						});
 
 					}
 				

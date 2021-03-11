@@ -178,11 +178,11 @@ class Env_Model extends CI_Model
         return $this->envdb->query(" SELECT a.ID,b.LicensePlate,a.Remark FROM `WorkGroup` a JOIN Vehicle b on a.VehicleID = b.ID ")->result();
  
     }
-    public function AuthenCheck()
+    public function AuthenCheck($MemberID)
     {
 
         $this->envdb = $this->load->database("envdb",true);
-        return $this->envdb->query("  SELECT * FROM `Member` WHERE ID = 1 and LineID is not null ")->num_rows();
+        return $this->envdb->query("  SELECT * FROM `Member` WHERE ID = ".$MemberID." and LineID is not null ")->num_rows();
 
 
     }
