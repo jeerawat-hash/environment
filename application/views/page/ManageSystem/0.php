@@ -409,8 +409,9 @@
 					                       		}
 					                       	}
 					                       });
-
-										   $("#Modalone").modal("hide");
+										   
+										   location.reload();
+										   //$("#Modalone").modal("hide");
                                       }
                                      });
 				  
@@ -472,8 +473,8 @@
 					                       		}
 					                       	}
 					                       });
-
-										   $("#Modaltwo").modal("hide");
+										   location.reload();
+										   //$("#Modaltwo").modal("hide");
                                       }
                                      });
 				  

@@ -312,7 +312,8 @@
 					                       	}
 					                       });
 
-										   $("#myModal").modal("hide");
+										   location.reload();
+										   //$("#myModal").modal("hide");
                                       }
                                      });
 				  
