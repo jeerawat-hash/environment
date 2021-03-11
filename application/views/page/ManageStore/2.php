@@ -288,7 +288,7 @@
 					var WorkGroupID = $(this).attr("data-WorkGroupID");
 					var MemberID = $(this).attr("data-MemberID");
 
-					alert();
+					alert(WorkGroupID+" "+MemberID);
 
 				});
 
