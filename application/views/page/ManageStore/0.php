@@ -155,7 +155,7 @@ function initMap() {
 
  
     map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 7,
+      zoom: 16,
       center: { lat: 13.59934, lng: 100.59675 },
       mapTypeId: "terrain",
 	  styles: [
@@ -323,13 +323,12 @@ function initMap() {
 
               });
             });
-            */
-			var bounds = new google.maps.LatLngBounds();
+            */ 
+
 			if(GetFollowData != 0){
+
 				clickroute(parseFloat(obj[index].Lat),parseFloat(obj[index].Lot));
-				map.fitBounds(bounds);
- 				map.setZoom(20);
-	
+		  
 			} 
 			 
 				
