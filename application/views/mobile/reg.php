@@ -53,7 +53,6 @@ function runApp() {
     $("#AuthImg").attr("src",profile.pictureUrl);
     
     var EmpID = $("#EmpID").val();
-
  
    $.post("https://environment.webclient.me/index.php/Qrcontroller/GetDataMemberPreAuthen",
      {
@@ -71,6 +70,9 @@ function runApp() {
   $("#btnsave").hide();
   $("#btnsave").on("click",function(){   
 
+
+
+        
 
 
     
@@ -135,7 +137,7 @@ var locationall = $("#tgetlo").val();
         $("#longitude").val(objectLocation.Longitude);
         $("#latitude").val(objectLocation.Latitude);
          
-        $("#btnsave").show(); 
+       //$("#btnsave").show(); 
    
       //console.log(objectLocation); 
     } 
