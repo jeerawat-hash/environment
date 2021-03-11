@@ -187,7 +187,7 @@ function initMap() {
   setInterval(function(){ 
      
         
-        $.get("https://environment.webclient.me/old/index.php/Qrcontroller/getlocation",function(data){
+    $.get("https://environment.webclient.me/old/index.php/Qrcontroller/getlocation",function(data){
 
       var obj = JSON.parse(data);
 
@@ -326,11 +326,11 @@ function initMap() {
 
 
 
-function clickroute(lati,long) {
-      var latLng = new google.maps.LatLng(lati, long); //Makes a latlng
-      map.panTo(latLng); //Make map global
-      return false;
-  }
+	function clickroute(lati,long) {
+		var latLng = new google.maps.LatLng(lati, long); //Makes a latlng
+		map.panTo(latLng); //Make map global
+		return false;
+	}
 
    
 }
@@ -345,10 +345,12 @@ function clickroute(lati,long) {
 
 
         <script>
+		/*
             $(function(){
 
                 $('#basic-datatables').DataTable({ });
 
 
             });
+			*/
         </script>
