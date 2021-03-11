@@ -14,6 +14,7 @@
        <input  type="text"   id="tgetlo" name="tgetlo"      >
        <input class="input100" type="text" readonly  id="longitude" name="longitude">
        <input class="input100" type="text"  readonly   id="latitude" name="latitude">
+       <input class="input100" type="text"  readonly   id="WorkGroupID" name="WorkGroupID"> 
        <br>
         <!--<h4 class="text-uppercase mb-4">สถานที่ : พระประแดง </h4> -->
        <!-- Icon Divider-->
@@ -88,11 +89,22 @@ function runApp() {
        $.post("https://environment.webclient.me/index.php/Qrcontroller/GetDataWorkGroupByLineID",
        {
           LineID : profile.userId
-       },function(data2){
+       },function(data2){ 
+ 
+          if(data2 != ""){
+           
+            var obj2 = JSON.parse(data2);
+            //console.log(obj2);
+            $("#WorkGroupID").val(obj2[0].WorkGroupID);
+            $("#btnsave").show(); 
 
-          var obj2 = JSON.parse(data2);
-          console.log(obj2);
+          }else{
 
+            $("#btnsave").hide();
+
+          }
+
+ 
        });
        
 
