@@ -64,8 +64,8 @@
 		<!--   Core JS Files   -->
 	
 
-	 <script src="https://environment.webclient.me/assets/js/core/jquery.3.2.1.min.js"></script> 
-	<!-- <script src="https://environment.webclient.me/assets/js/core/jquery.3.5.1.min.js"> </script>-->
+	 <!--<script src="https://environment.webclient.me/assets/js/core/jquery.3.2.1.min.js"></script> -->
+	 <script src="https://environment.webclient.me/assets/js/core/jquery.3.5.1.min.js"> </script>
 
 
 
@@ -99,8 +99,9 @@
 	<script src="https://environment.webclient.me/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
 	<!-- jQuery Vector Maps -->
+	<!--
 	<script src="https://environment.webclient.me/assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
-	<script src="https://environment.webclient.me/assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+	<script src="https://environment.webclient.me/assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script> -->
 
 	<!-- Sweet Alert -->
 	<script src="https://environment.webclient.me/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
