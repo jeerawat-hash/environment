@@ -95,6 +95,16 @@ class Env_Model extends CI_Model
         JOIN Trash d on a.TrashID = d.ID")->result();
 
     }
+    public function GetDataTransactionSummary()
+    {
+        $this->envdb = $this->load->database("envdb",true);
+
+        return $this->envdb->query("SELECT a.ID as TransacID,a.Lat,a.Lon,c.ID as VehicleID,c.LicensePlate,c.Color,d.Remark FROM `Transaction` a
+        JOIN WorkGroup b on a.WorkGroupID = b.ID
+        JOIN Vehicle c on b.VehicleID = c.ID
+        JOIN Trash d on a.TrashID = d.ID")->result();
+
+    }
     public function GetDataMemberWorkGroup()
     {   
         $this->envdb = $this->load->database("envdb",true);

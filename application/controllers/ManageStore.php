@@ -60,6 +60,13 @@ class ManageStore extends CI_Controller {
 		echo json_encode($this->Env_Model->GetDataTransaction());
 
 	}
+	public function GetDataTransactionSummary()
+	{
+
+		echo json_encode($this->Env_Model->GetDataTransactionSummary());
+
+
+	}
 	
 
 
