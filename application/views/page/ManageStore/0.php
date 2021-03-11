@@ -7,7 +7,7 @@
 					<div class="row">
 
 
-
+					<div id="mapA"></div>
 
                     	<div class="col-md-12">
 							<div class="card">
@@ -23,7 +23,7 @@
 
 
  	 
-									 <div id="map"></div>
+									 
 								 	 
 
 
@@ -175,7 +175,7 @@
 	function initMap() {
 
 	
-		map = new google.maps.Map(document.getElementById("map"), {
+		map = new google.maps.Map(document.getElementById("mapA"), {
 			zoom: 20,
 			center: { lat: 13.59934, lng: 100.59675 },
 			mapTypeId: "terrain",
