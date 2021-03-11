@@ -310,7 +310,8 @@ function initMap() {
 			if(GetFollowData != 0){
 				clickroute(parseFloat(obj[index].Lat),parseFloat(obj[index].Lot));
 			} 
- 
+			map.setZoom(4); 
+
 
       }
 
