@@ -110,6 +110,12 @@ class ManageSystem extends CI_Controller {
 		  $result =   $this->Env_Model->InsertDataMemberWork($Name,$Telephone); 
 		  return 1; 
 	}
+	public function AuthenCheck()
+	{
+
+		echo $this->Env_Model->AuthenCheck();
+
+	}
 	 
 
 

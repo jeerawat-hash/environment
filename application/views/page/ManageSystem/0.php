@@ -350,17 +350,32 @@
 		</div>
 
 
-
+	<input type="text" id="MemberIDAuthTemp" value="0" readonly hidden >
 
 
 		<script>
 			$(function(){
+
+				setInterval(function(){ 
+					
+					var MemberAuthId = $("#MemberIDAuthTemp").val();
+
+					if(MemberAuthId != 0){
+
+						
+
+					}
+				
+				}, 2000);
+
 
 				$("#TableAuthenADetail").on("click",".AuthenA",function(){
 					
 					var MemberID = $(this).attr("data-MemberID");
 					
 					$("#ModalConfirmA").find("#QrAuth").attr("src","https://api.qrserver.com/v1/create-qr-code/?size=250x250&data="+MemberID);
+					
+					$("#MemberIDAuthTemp").val(MemberID);
 
 					$("#ModalConfirmA").modal();
  
@@ -372,13 +387,9 @@
 					$("#ModalConfirmB").find("#QrAuth").attr("src","https://api.qrserver.com/v1/create-qr-code/?size=250x250&data="+MemberID);
 
 					$("#ModalConfirmB").modal();
-
-
+ 
 				});
-				
-
-
-
+				  
 			});
 		</script>
 
