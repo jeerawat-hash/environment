@@ -215,7 +215,7 @@ setInterval(function(){
     }else{
  
         $("#btnsave").hide();
-        getLocation();
+      
   
     }
     
