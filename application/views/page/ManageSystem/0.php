@@ -40,7 +40,7 @@
 													if($valuemember->LineID == ""){
 
 														#$btn = '<button  class="btn btn-danger AuthenB" data-MemberID = "'.$valuemember->ID.'"> ยืนยันตัวตน  </button>';
-														$btn = "";
+														$btn = "ยังไม่ถูกเปิดใช้งาน";
 
 													}
  
