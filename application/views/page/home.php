@@ -17,7 +17,7 @@
 				<!-- Header -->
 					<header id="header">
 						<h1>Environment Management System Beta</h1>
-						<p>PreImplementation and Testing</p>
+						<p>PreImplementation and Testing By SC Software&Network</p>
 						<nav>
 							<ul> 
 								<li><a href="https://environment.webclient.me/index.php/ManageStore/maps" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li> 
