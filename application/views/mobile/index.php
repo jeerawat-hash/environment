@@ -29,8 +29,8 @@
        <p class="masthead-subheading font-weight-light mb-0"><button  id="btnsave" class="btn btn-warning"> บันทึกการทำรายการ </button></p>
 
        <div id="ReportOption">
-        <h4 class="text-uppercase mb-4"> แจ้งปัญหาถังขยะ </h4> 
-        <input class="input100" type="text"  id="ReportComment" name="ReportComment"> 
+        <h4 class="text-uppercase mb-4"> แจ้งปัญหาถังขยะ </h4>  
+        <textarea class="input100" id="ReportComment" name="ReportComment" ></textarea>
         <button  id="btnsavereport" class="btn btn-danger"> แจ้งปัญหา </button>
        </div>
 
