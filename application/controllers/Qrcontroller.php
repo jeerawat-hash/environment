@@ -21,6 +21,10 @@ class Qrcontroller extends CI_Controller
     $this->load->view('mobile/reg');
     $this->load->view('mobile/footer');
   }
+  public function gps()
+  { 
+    $this->load->view('mobile/gps'); 
+  }
  
   public function GetDataTrashByID()
   { 
