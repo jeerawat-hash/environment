@@ -66,6 +66,36 @@
 function runApp() {
  liff.getProfile().then(profile => {
 
+
+
+
+
+
+getLocation();
+  
+//console.log(location);
+  var x = document.getElementById("tgetlo");
+
+function getLocation() {
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(showPosition);
+} else { 
+alert("Geolocation is not supported by this browser.");
+}
+}
+
+function showPosition(position) {
+//x.value = "{'Latitude': '" + position.coords.latitude + "','Longitude': " + position.coords.longitude+"}";
+x.value = '{ "Latitude":"'+ position.coords.latitude +'", "Longitude":"'+position.coords.longitude+'"}';
+
+}
+
+
+
+
+
+
+
    console.log(profile);
    $("#btnsave").hide();
    
@@ -178,9 +208,6 @@ liff.init({ liffId: "1655702904-El3x46Gk" }, () => {
 
  
 setInterval(function(){ 
-
-  
-
  
  
   var locationall = $("#tgetlo").val();
@@ -219,29 +246,10 @@ setInterval(function(){
   
     }
     
-
-
+ 
 
 }, 1000); 
 
-getLocation();
-  
-//console.log(location);
-  var x = document.getElementById("tgetlo");
-
-function getLocation() {
-if (navigator.geolocation) {
-navigator.geolocation.getCurrentPosition(showPosition);
-} else { 
-alert("Geolocation is not supported by this browser.");
-}
-}
-
-function showPosition(position) {
-//x.value = "{'Latitude': '" + position.coords.latitude + "','Longitude': " + position.coords.longitude+"}";
-x.value = '{ "Latitude":"'+ position.coords.latitude +'", "Longitude":"'+position.coords.longitude+'"}';
-
-}
 
 
 </script>
