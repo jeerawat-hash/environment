@@ -11,9 +11,9 @@
        <img class="masthead-avatar  " src="https://environment.webclient.me/old/assets_qr/assets/img/portfolio/bit.png"  />
        <!-- Masthead Heading-->
        <h4 class="masthead-heading text-uppercase mb-0" id="BinName">       </h4> 
-       <input class="input100" type="text" readonly   id="longitude" name="longitude">
-       <input class="input100" type="text"  readonly    id="latitude" name="latitude">
-       <input class="input100" type="text"  readonly   id="WorkGroupID" name="WorkGroupID"> 
+       <input class="input100" type="text" readonly  hidden id="longitude" name="longitude">
+       <input class="input100" type="text"  readonly  hidden  id="latitude" name="latitude">
+       <input class="input100" type="text"  readonly  hidden  id="WorkGroupID" name="WorkGroupID"> 
        <br>
         <!--<h4 class="text-uppercase mb-4">สถานที่ : พระประแดง </h4> -->
        <!-- Icon Divider-->
@@ -128,6 +128,20 @@ function runApp() {
    });
 
  
+
+  $("#btnsavereport").on("click",function(){  
+        
+              swal({
+                   title: "ส่งข้อความ",
+                   text: "แจ้งปัญหาสำเร็จ..",
+                   icon: "success",
+                   button: false,
+              }); 
+        
+              setTimeout(function(){ liff.closeWindow(); }, 2000);
+
+
+   });
 
   $("#btnsave").hide();
   $("#btnsave").on("click",function(){  
