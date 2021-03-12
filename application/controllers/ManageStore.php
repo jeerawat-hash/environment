@@ -100,6 +100,13 @@ class ManageStore extends CI_Controller {
 		}
 		 
 		
+	} 
+	public function GetDataTransactionSummaryDay()
+	{
+
+		echo json_encode($this->Env_Model->GetDataTransactionSummaryDay());
+
+
 	}
 	public function GetDataTransactionSummary()
 	{
