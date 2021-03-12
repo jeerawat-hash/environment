@@ -131,14 +131,36 @@ function runApp() {
 
   $("#btnsavereport").on("click",function(){  
         
-              swal({
-                   title: "ส่งข้อความ",
-                   text: "แจ้งปัญหาสำเร็จ..",
-                   icon: "success",
-                   button: false,
-              }); 
-        
-              setTimeout(function(){ liff.closeWindow(); }, 2000);
+              var Report = $("#ReportComment").val();
+              var BinName = $("#BinName").text();
+
+              $.post("https://environment.webclient.me/index.php/Qrcontroller/SendDataReport",{
+                ReportComment : Report,
+                BinName : BinName,
+                Name : profile.displayName
+               },function(data){
+                    if(data == 1 ){
+                       swal({
+                             title: "ส่งข้อความ",
+                             text: "แจ้งปัญหาสำเร็จ..",
+                             icon: "success",
+                             button: false,
+                        }); 
+                        
+                        setTimeout(function(){ liff.closeWindow(); }, 2000); 
+                    }else{
+
+                      swal({
+                             title: "ผิดพลาด",
+                             text: "กรุณาลองใหม่ภายหลัง..",
+                             icon: "error",
+                             button: false,
+                        }); 
+                        setTimeout(function(){ liff.closeWindow(); }, 2000); 
+
+
+                    }
+               });  
 
 
    });

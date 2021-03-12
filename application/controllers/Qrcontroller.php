@@ -61,6 +61,15 @@ class Qrcontroller extends CI_Controller
     echo $this->Env_Model->CreateDataTransaction($_POST["WorkGroupID"],$_POST["TrashID"],$_POST["Lat"],$_POST["Lon"]);
  
   }
+  public function SendDataReport()
+  {
+ 
+
+      $message = "จากคุณ ".$_POST["Name"]."\n".$_POST["BinName"]."\n".$_POST["ReportComment"];
+      notify($message,"DQ1Egmzk6gXlt6rGxtezxPVpqRMsyBEPPU8uLTOxx2C");
+      echo 1;
+
+  }
   
 /*
   public function insertlocation()
@@ -77,6 +86,28 @@ class Qrcontroller extends CI_Controller
   */
 
 
+
+}
+
+
+
+function notify($message,$token){
+
+          $lineapi = $token; 
+        $mms =  trim($message); 
+        date_default_timezone_set("Asia/Bangkok");
+        $con = curl_init();
+        curl_setopt( $con, CURLOPT_URL, "https://notify-api.line.me/api/notify"); 
+        // SSL USE 
+        curl_setopt( $con, CURLOPT_SSL_VERIFYHOST, 0); 
+        curl_setopt( $con, CURLOPT_SSL_VERIFYPEER, 0); 
+        //POST 
+        curl_setopt( $con, CURLOPT_POST, 1); 
+        curl_setopt( $con, CURLOPT_POSTFIELDS, "message=$mms"); 
+        $headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer '.$lineapi.'', );
+          curl_setopt($con, CURLOPT_HTTPHEADER, $headers); 
+        curl_setopt( $con, CURLOPT_RETURNTRANSFER, 1); 
+        $result = curl_exec( $con ); 
 
 }
 ?>
