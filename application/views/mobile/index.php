@@ -23,9 +23,21 @@
            <div class="divider-custom-icon"><i class="fas fa-archive"></i></div>
            <div class="divider-custom-line"></div>
        </div>
+      
+
        <!-- Masthead Subheading-->
       
        <p class="masthead-subheading font-weight-light mb-0"><button  id="btnsave" class="btn btn-warning"> บันทึกการทำรายการ </button></p>
+
+       <div>
+        <h4 class="text-uppercase mb-4"> แจ้งปัญหาถังขยะ </h4> 
+        <input class="input100" type="text"  id="ReportComment" name="ReportComment"> 
+       </div>
+
+
+
+
+
    </div>
 </header>
 
@@ -216,7 +228,7 @@ getLocation();
   
 //console.log(location);
   var x = document.getElementById("tgetlo");
-  
+
 function getLocation() {
 if (navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(showPosition);
