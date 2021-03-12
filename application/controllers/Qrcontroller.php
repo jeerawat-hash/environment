@@ -70,21 +70,15 @@ class Qrcontroller extends CI_Controller
       echo 1;
 
   }
-  
-/*
-  public function insertlocation()
+  public function GetDataTrashIsPickup()
   {
-    $Latitude = $_POST["Latitude"];
-    $Longitude = $_POST["Longitude"];
-    $Img = $_POST["Img"];
-    $Textpf = $_POST["Textpf"];
-    $BinID = $_POST["BinID"];
-    $UserID = $_POST["UserID"];
-    echo $this->QRModel->insertlocation( $UserID,$BinID,$Latitude,$Longitude,$Img,$Textpf);
+
+    
+    echo $this->Env_Model->GetDataTrashIsPickup($_POST["TrashID"]);
+
 
   }
-  */
-
+   
 
 
 }

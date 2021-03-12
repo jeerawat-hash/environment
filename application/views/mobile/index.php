@@ -26,7 +26,7 @@
 
        <!-- Masthead Subheading-->
       
-       <p class="masthead-subheading font-weight-light mb-0"><button  id="btnsave" class="btn btn-warning"> บันทึกการทำรายการ </button></p>
+       <p class="masthead-subheading font-weight-light mb-0"><button  id="btnsave" class="btn btn-warning"> บันทึกการทำรายการ </button> <label id="statusTrash"></label></p>
 
        <div id="ReportOption">
         <h4 class="text-uppercase mb-4"> แจ้งปัญหาถังขยะ </h4>  
@@ -109,8 +109,27 @@ function runApp() {
             var obj2 = JSON.parse(data2);
             //console.log(obj2);
             $("#WorkGroupID").val(obj2[0].WorkGroupID);
-            $("#btnsave").show();  
             $("#ReportOption").hide();
+
+            $.post("https://environment.webclient.me/index.php/Qrcontroller/GetDataTrashIsPickup",{
+              TrashID : BinID
+            },function(data){
+
+                if (data != 1) {
+
+                  $("#btnsave").show();  
+             
+                }else{
+
+                  $("#statusTrash").text("ถูกดำเนินการจัดเก็บแล้ว");
+
+                }
+
+
+            });
+
+
+
 
           }else{
 

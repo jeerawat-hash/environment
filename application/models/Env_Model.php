@@ -237,6 +237,15 @@ class Env_Model extends CI_Model
         return 1;
  
     }
+    public function GetDataTrashIsPickup($TrashID)
+    {
+        $this->envdb = $this->load->database("envdb",true);
+        return $this->envdb->query(" SELECT * FROM `Transaction` WHERE TrashID = '".$TrashID."' and cast(StampDate as Date) = CURRENT_DATE() ")->num_rows();
+        
+    }
+
+
+    
 
     
 
