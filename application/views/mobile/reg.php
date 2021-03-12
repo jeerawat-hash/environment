@@ -8,7 +8,7 @@
  <header class="masthead bg-primary text-white text-center">
    <div class="container d-flex align-items-center flex-column">
        <!-- Masthead Avatar Image-->  
-       <img class="masthead-avatar" id="AuthImg" src="https://environment.webclient.me/old/assets_qr/assets/img/portfolio/bit.png"  />
+       <img class="masthead-avatar" id="AuthImg" src=" "  />
        <!-- Masthead Heading-->
        <h4 class="masthead-heading text-uppercase mb-0" id="EmpName">       </h4>
        <input  type="text" hidden  id="tgetlo" name="tgetlo"      >
@@ -149,50 +149,4 @@ liff.init({ liffId: "1655702904-W07xGjnA" }, () => {
 }, err => console.error(err.code, error.message));
 </script>
 
-
-<script>
  
-</script>
-<script>
-
- 
-setInterval(function(){ 
- 
-  var x = document.getElementById("tgetlo");
-
-getLocation();
-
-//console.log(location);
-
-function getLocation() {
-if (navigator.geolocation) {
-navigator.geolocation.getCurrentPosition(showPosition);
-} else { 
-alert("Geolocation is not supported by this browser.");
-}
-}
-
-function showPosition(position) {
-//x.value = "{'Latitude': '" + position.coords.latitude + "','Longitude': " + position.coords.longitude+"}";
-x.value = '{ "Latitude":"'+ position.coords.latitude +'", "Longitude":"'+position.coords.longitude+'"}';
-
-} 
-var locationall = $("#tgetlo").val();
-
-  
-
-    if(locationall != ""){
-      var objectLocation = JSON.parse(locationall);
-      //console.log(objectLocation);
-        $("#longitude").val(objectLocation.Longitude);
-        $("#latitude").val(objectLocation.Latitude);
-         
-       //$("#btnsave").show(); 
-   
-      //console.log(objectLocation); 
-    } 
-     
-
-}, 1000); 
-
-</script>
