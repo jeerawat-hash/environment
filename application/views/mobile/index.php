@@ -168,7 +168,7 @@ liff.init({ liffId: "1655702904-El3x46Gk" }, () => {
 setInterval(function(){ 
 
   
-  var x = document.getElementById("tgetlo");
+
  
  
   var locationall = $("#tgetlo").val();
@@ -215,7 +215,8 @@ setInterval(function(){
 getLocation();
   
 //console.log(location);
-
+  var x = document.getElementById("tgetlo");
+  
 function getLocation() {
 if (navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(showPosition);
