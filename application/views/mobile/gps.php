@@ -3,7 +3,7 @@
 var options = {
   enableHighAccuracy: false,
   timeout: 60000,
-  maximumAge: 0
+  maximumAge: Infinity
 };
 
 function success(pos) {
