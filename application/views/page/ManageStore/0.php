@@ -349,7 +349,7 @@ function initMap() {
 
       var html = "";
  
-      $.get("https://environment.webclient.me/index.php/ManageStore/GetDataTransactionSummary",function(data){
+      $.get("https://environment.webclient.me/index.php/ManageStore/GetDataTransactionSummaryDay",function(data){
 
         var obj = JSON.parse(data);
           
