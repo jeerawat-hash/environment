@@ -94,7 +94,7 @@
 											<div class="col-md-12">
 												<div class="card">
 													<div class="card-header">
-														<div class="card-title">สร้างกลุ่มการปฏิบัติงาน</div>
+														<div class="card-title">ระบุรายละเอียดการปฏิบัติงานของรถเก็บขยะ</div>
 													</div>
 													<div class="card-body">
 														<div class="row">
@@ -226,7 +226,7 @@
 							
 							</div>
 							<div class="modal-footer">
-							<button type="button" id="btncreatedata1" class="btn btn-warning"  >สร้าง</button>
+							<button type="button" id="btncreatedata1" class="btn btn-warning"  >บันทึก</button>
 							<button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
 							</div>
 						</div>
