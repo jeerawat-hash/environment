@@ -11,7 +11,7 @@
        <img class="masthead-avatar  " src="https://environment.webclient.me/old/assets_qr/assets/img/portfolio/bit.png"  />
        <!-- Masthead Heading-->
        <h4 class="masthead-heading text-uppercase mb-0" id="BinName">       </h4>
-       <input  type="text" hidden  id="tgetlo" name="tgetlo"      >
+       <input  type="text"   id="tgetlo" name="tgetlo"      >
        <input class="input100" type="text" readonly hidden  id="longitude" name="longitude">
        <input class="input100" type="text"  readonly  hidden  id="latitude" name="latitude">
        <input class="input100" type="text"  readonly hidden  id="WorkGroupID" name="WorkGroupID"> 
