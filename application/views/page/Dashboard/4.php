@@ -98,8 +98,8 @@
  	$(function(){
 
  						swal({
-								title: "อยู่ระหว่างการปรับปรุง",
-								text: " ",
+								title: "<?php echo $page_name; ?>",
+								text: "อยู่ระหว่างการปรับปรุง",
 								icon: "info",
 								buttons: {
 									confirm: {
