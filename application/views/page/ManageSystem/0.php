@@ -39,7 +39,8 @@
 													$btn = "ลงทะเบียนแล้ว";
 													if($valuemember->LineID == ""){
 
-														$btn = '<button  class="btn btn-danger AuthenB" data-MemberID = "'.$valuemember->ID.'"> ยืนยันตัวตน  </button>';
+														#$btn = '<button  class="btn btn-danger AuthenB" data-MemberID = "'.$valuemember->ID.'"> ยืนยันตัวตน  </button>';
+														$btn = "";
 
 													}
  
@@ -98,8 +99,7 @@
 													$btn = "ลงทะเบียนแล้ว";
 													if($valuememberwork->LineID == ""){
 
-														#$btn = '<button  class="btn btn-danger AuthenA" data-MemberID = "'.$valuememberwork->ID.'"> ยืนยันตัวตน  </button>';
-														$btn = "";
+														$btn = '<button  class="btn btn-danger AuthenA" data-MemberID = "'.$valuememberwork->ID.'"> ยืนยันตัวตน  </button>';
 
 													}
 
