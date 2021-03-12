@@ -30,7 +30,7 @@
 
        <div id="ReportOption">
         <h4 class="text-uppercase mb-4"> แจ้งปัญหาถังขยะ </h4>  
-        <textarea class="input100" id="ReportComment" name="ReportComment" ></textarea>
+        <textarea class="input100" id="ReportComment" name="ReportComment" ></textarea><br>
         <button  id="btnsavereport" class="btn btn-danger"> แจ้งปัญหา </button>
        </div>
 
