@@ -98,7 +98,8 @@
 													$btn = "ลงทะเบียนแล้ว";
 													if($valuememberwork->LineID == ""){
 
-														$btn = '<button  class="btn btn-danger AuthenA" data-MemberID = "'.$valuememberwork->ID.'"> ยืนยันตัวตน  </button>';
+														#$btn = '<button  class="btn btn-danger AuthenA" data-MemberID = "'.$valuememberwork->ID.'"> ยืนยันตัวตน  </button>';
+														$btn = "";
 
 													}
 
