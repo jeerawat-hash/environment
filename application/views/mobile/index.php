@@ -29,9 +29,10 @@
       
        <p class="masthead-subheading font-weight-light mb-0"><button  id="btnsave" class="btn btn-warning"> บันทึกการทำรายการ </button></p>
 
-       <div>
+       <div hidden id="ReportOption">
         <h4 class="text-uppercase mb-4"> แจ้งปัญหาถังขยะ </h4> 
         <input class="input100" type="text"  id="ReportComment" name="ReportComment"> 
+        <button  id="btnsavereport" class="btn btn-danger"> แจ้งปัญหา </button>
        </div>
 
 
@@ -65,36 +66,6 @@
 
 function runApp() {
  liff.getProfile().then(profile => {
-
-
-
-
-
-
-getLocation();
-  
-//console.log(location);
-  var x = document.getElementById("tgetlo");
-
-function getLocation() {
-if (navigator.geolocation) {
-navigator.geolocation.getCurrentPosition(showPosition);
-} else { 
-alert("Geolocation is not supported by this browser.");
-}
-}
-
-function showPosition(position) {
-//x.value = "{'Latitude': '" + position.coords.latitude + "','Longitude': " + position.coords.longitude+"}";
-x.value = '{ "Latitude":"'+ position.coords.latitude +'", "Longitude":"'+position.coords.longitude+'"}';
-
-}
-
-
-
-
-
-
 
    console.log(profile);
    $("#btnsave").hide();
@@ -139,11 +110,15 @@ x.value = '{ "Latitude":"'+ position.coords.latitude +'", "Longitude":"'+positio
             var obj2 = JSON.parse(data2);
             //console.log(obj2);
             $("#WorkGroupID").val(obj2[0].WorkGroupID);
-            $("#btnsave").show(); 
+            $("#btnsave").show();  
+            $("#ReportOption").hide();
 
           }else{
 
             $("#btnsave").hide();
+            //////////// show Report Option /////////
+            $("#ReportOption").show();
+            //////////// show Report Option /////////
 
           }
 
@@ -206,50 +181,83 @@ liff.init({ liffId: "1655702904-El3x46Gk" }, () => {
 </script>
 <script>
 
+
+
+
+var options = {
+  enableHighAccuracy: false,
+  timeout: 60000,
+  maximumAge: Infinity
+};
+
+function success(pos) {
+  var crd = pos.coords;
+
+  //console.log('Your current position is:');
+  //console.log(`Latitude : ${crd.latitude}`);
+  //console.log(`Longitude: ${crd.longitude}`);
+  //console.log(`More or less ${crd.accuracy} meters.`);
+
+  $("#longitude").val(crd.longitude);
+  $("#latitude").val(crd.latitude);
+ 
+}
+
+function error(err) {
+
+  //console.warn(`ERROR(${err.code}): ${err.message}`);
+  //alert(`ERROR(${err.code}): ${err.message}`);
+  $("#btnsave").hide();
+
+}
+
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+
+
  
 setInterval(function(){ 
  
  
-  var locationall = $("#tgetlo").val();
- 
-    if(locationall != ""){
-      var objectLocation = JSON.parse(locationall);
-      //console.log(objectLocation);
-        $("#longitude").val(objectLocation.Longitude);
-        $("#latitude").val(objectLocation.Latitude);
+      if ($("#longitude").val() != "") {
+
+
+
+          var BinID = $("#BinID").val();
         
-      var BinID = $("#BinID").val();
-      
+          if (BinID == 0) {
 
-      if (BinID == 0) {
+            swal({
+                title: "ผิดพลาด",
+                text: "กรุณาลองใหม่ภายหลัง",
+                icon: "error",
+                button: "ปิด",
+            }); 
 
-        swal({
-            title: "ผิดพลาด",
-            text: "กรุณาลองใหม่ภายหลัง",
-            icon: "error",
-            button: "ปิด",
-        }); 
+            $("#btnsave").hide();
+            liff.closeWindow();
 
-        $("#btnsave").hide();
-        liff.closeWindow();
+          }else{
+
+            //$("#btnsave").show(); 
+            
+          }
+
+
+
       }else{
 
-        $("#btnsave").show(); 
-        
+        navigator.geolocation.getCurrentPosition(success, error, options);
+ 
       }
 
-      //console.log(objectLocation); 
-    }else{
- 
-        $("#btnsave").hide();
+
       
-  
-    }
-    
  
+
 
 }, 1000); 
-
-
-
+ 
+ 
 </script>
+ 
