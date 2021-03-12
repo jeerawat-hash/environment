@@ -139,6 +139,7 @@ function runApp() {
                 BinName : BinName,
                 Name : profile.displayName
                },function(data){
+                console.log(data);
                     if(data == 1 ){
                        swal({
                              title: "ส่งข้อความ",
@@ -147,7 +148,7 @@ function runApp() {
                              button: false,
                         }); 
                         
-                        setTimeout(function(){ liff.closeWindow(); }, 2000); 
+                        //setTimeout(function(){ liff.closeWindow(); }, 2000); 
                     }else{
 
                       swal({
@@ -156,7 +157,7 @@ function runApp() {
                              icon: "error",
                              button: false,
                         }); 
-                        setTimeout(function(){ liff.closeWindow(); }, 2000); 
+                        //setTimeout(function(){ liff.closeWindow(); }, 2000); 
 
 
                     }
