@@ -198,7 +198,7 @@ liff.init({ liffId: "1655702904-El3x46Gk" }, () => {
 
 
 var options = {
-  enableHighAccuracy: false,
+  enableHighAccuracy: true,
   timeout: 60000,
   maximumAge: Infinity
 };
