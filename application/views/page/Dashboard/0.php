@@ -95,4 +95,23 @@
 			</footer>
 		</div>
 		 
- 
+ <script type="text/javascript">
+ 	$(function(){
+
+ 						swal({
+								title: "อยู่ระหว่างการปรับปรุง",
+								text: " ",
+								icon: "info",
+								buttons: {
+									confirm: {
+										text: "ตกลง",
+										value: true,
+										visible: true,
+										className: "btn btn-success",
+										closeModal: true
+									}
+								}
+							});
+
+ 	});
+ </script>
