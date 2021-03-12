@@ -65,7 +65,7 @@ class Qrcontroller extends CI_Controller
   {
  
 
-      $message = "จากคุณ ".$_POST["Name"]."\n".$_POST["BinName"]."\n".$_POST["ReportComment"];
+      $message = "จากคุณ ".$_POST["Name"]."\n".trim($_POST["BinName"])."\n".$_POST["ReportComment"];
       notify($message,"DQ1Egmzk6gXlt6rGxtezxPVpqRMsyBEPPU8uLTOxx2C");
       echo 1;
 
