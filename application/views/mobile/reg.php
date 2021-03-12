@@ -116,10 +116,11 @@ function runApp() {
                     text: "",
                     icon: "success",
                     button: "ปิด",
-                }); 
-                
-                liff.closeWindow(); 
-            }else{
+                });  
+              
+              setTimeout(function(){ liff.closeWindow(); }, 2000);
+ 
+             }else{
 
                 swal({
                     title: "ผิดพลาด",
