@@ -162,7 +162,7 @@
 				<div class="container-fluid">
 					 
 					<div class="copyright ml-auto">
-						2021, Create by <i class="fa fa-heart heart text-danger"></i> by <a href="#">p.jeerawat</a>
+						2021, Create by <i class="fa fa-heart heart text-danger"></i> by <a href="#">DEV.</a>
 					</div>				
 				</div>
 			</footer>
