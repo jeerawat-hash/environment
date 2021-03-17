@@ -261,8 +261,15 @@ class Env_Model extends CI_Model
         
 
     }
+    public function GetDataTrashReport()
+    {
+        $this->envdb = $this->load->database("envdb",true);
+        return $this->envdb->query(" SELECT a.ID,b.Remark,b.Capacity,a.LineIMG,a.LineName FROM `TrashReport` a
+        JOIN Trash b on a.TrashID = b.ID ORDER by a.ID desc ")->result();
+        
+    }
 
-
+    
     
 
     
