@@ -251,6 +251,11 @@
 											<span class="sub-item">จัดการกลุ่มผู้ปฏิบัติงาน</span>
 										</a>
 									</li>
+									<li class="<?php echo $ManageStore[1][3]; ?>">
+										<a href="https://environment.webclient.me/index.php/ManageStore/report">
+											<span class="sub-item">รายการแจ้งปัญหา</span>
+										</a>
+									</li>
 								</ul>
 							</div>
 						</li>

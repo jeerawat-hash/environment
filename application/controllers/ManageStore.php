@@ -62,6 +62,19 @@ class ManageStore extends CI_Controller {
 		$this->load->view('template/footer.php');
 
 	}
+	public function report()
+	{ 
+        $header['page_name'] = 'รายการแจ้งปัญหา';
+        $header['page_focus'] = 'ManageStore';
+        $header['page_menu'] = 3;
+		$data["page_name"] = $header['page_name'];
+ 
+		
+		$this->load->view('template/header.php',$header);
+		#$this->load->view('page/ManageStore/2.php',$data);
+		$this->load->view('template/footer.php');
+
+	}
 	public function DeleteMemberInGroup()
 	{
 
