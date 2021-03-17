@@ -26,7 +26,7 @@
 										<table id="basic-datatables" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
-												   <th>หมายเลขถัง</th> 
+												   <th>ลำดับ</th> 
 													<th>ความจุ</th>
 													<th>สี</th>
 													<th>ตำเเหน่ง</th>
