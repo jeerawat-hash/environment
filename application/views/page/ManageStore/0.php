@@ -419,14 +419,14 @@ function initMap() {
 
           for (var i = 0; i < obj.length; i++) {
 
-            html += '<tr>';
-            html += '<td> <div class="flag">';
-            html += '<img  width="10%" src="https://environment.webclient.me/temp/pin-'+obj[i].Color+'.svg"> </div></td>';
-            html += '<td>'+obj[i].LicensePlate+'</td>';
-            html += '<td class="text-right">';
-            html += ''+obj[i].Remark+'</td>';
+            html2 += '<tr>';
+            html2 += '<td> <div class="flag">';
+            html2 += '<img  width="10%" src="https://environment.webclient.me/temp/pin-'+obj[i].Color+'.svg"> </div></td>';
+            html2 += '<td>'+obj[i].LicensePlate+'</td>';
             html2 += '<td class="text-right">';
-            html += ''+obj[i].Trash+' ลิตร</td></tr>';
+            html2 += ''+obj[i].Remark+'</td>';
+            html2 += '<td class="text-right">';
+            html2 += ''+obj[i].Trash+' ลิตร</td></tr>';
        
           
           }
