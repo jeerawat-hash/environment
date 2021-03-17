@@ -58,6 +58,36 @@
 							</div>
 						</div>
 
+
+            <div class="col-md-12">
+							<div class="card">
+								<div class="card-header">
+									<h4 class="card-title">รายละเอียดการจัดเก็บประจำวัน</h4> 
+									
+								</div>
+								<div class="card-body">
+								<div class="row">
+										<div class="col-md-12">
+											<div class="table-responsive table-hover table-sales">
+												<table class="table">
+													<tbody id="TransactionTableDetail">
+														  
+
+
+                              
+														 
+
+
+
+													</tbody>
+												</table>
+											</div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+
 						
 
 
