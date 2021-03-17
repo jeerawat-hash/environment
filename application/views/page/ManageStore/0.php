@@ -420,6 +420,7 @@ function initMap() {
           for (var i = 0; i < obj.length; i++) {
 
             html2 += '<tr>';
+            html2 += '<td>'+obj[i].StampDate +'</td>'; 
             html2 += '<td> <div class="flag">';
             html2 += '<img  width="10%" src="https://environment.webclient.me/temp/pin-'+obj[i].Color+'.svg"> </div></td>';
             html2 += '<td>'+obj[i].LicensePlate+'</td>';
