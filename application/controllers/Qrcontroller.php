@@ -66,8 +66,10 @@ class Qrcontroller extends CI_Controller
  
 
       $message = "จากคุณ ".$_POST["Name"]."\n".trim($_POST["BinName"])."\n".$_POST["ReportComment"];
+  
       notify($message,"DQ1Egmzk6gXlt6rGxtezxPVpqRMsyBEPPU8uLTOxx2C");
-      echo 1;
+      
+      echo $this->Env_Model->CreateDataTransaction->InsertDataReportTrash($_POST["TrashID"],$_POST["ReportComment"],$_POST["ImgUrl"],$_POST["Name"]);
 
   }
   public function GetDataTrashIsPickup()

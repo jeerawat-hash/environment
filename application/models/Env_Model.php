@@ -252,6 +252,15 @@ class Env_Model extends CI_Model
         JOIN Trash d on a.TrashID = d.ID WHERE CAST(a.StampDate as date) = CURRENT_DATE() ORDER BY a.ID desc ")->result();
         
     }
+    public function InsertDataReportTrash($TrashID,$Remark,$LineIMG,$LineName)
+    {
+
+        $this->envdb = $this->load->database("envdb",true);
+        $this->envdb->query(" INSERT INTO `TrashReport` (`ID`, `TrashID`, `Remark`, `LineIMG`, `LineName`) VALUES (NULL, '".$TrashID."', '".$Remark."', '".$LineIMG."', '".$LineName."') ");
+        return 1;
+        
+
+    }
 
 
     

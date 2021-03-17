@@ -151,12 +151,14 @@ function runApp() {
   $("#btnsavereport").on("click",function(){  
         
               var Report = $("#ReportComment").val();
-              var BinName = $("#BinName").text();
-
+              var BinName = $("#BinName").text(); 
+              
               $.post("https://environment.webclient.me/index.php/Qrcontroller/SendDataReport",{
                 ReportComment : Report,
                 BinName : BinName,
-                Name : profile.displayName
+                Name : profile.displayName,
+                ImgUrl : profile.pictureUrl,
+                TrashID : BinID
                },function(data){
                     if(data == 1 ){
                        swal({
