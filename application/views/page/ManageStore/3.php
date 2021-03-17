@@ -25,10 +25,10 @@
 										<table id="basic-datatables" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
+                                                    <th>ผู้แจ้ง</th>
 													<th>ตำแหน่ง</th>
 													<th>ความจุ</th>
 													<th>ปัญหา</th> 
-													<th>ผู้แจ้ง</th>
 													 
 												</tr>
 											</thead> 
@@ -100,10 +100,10 @@
                 for (var i = 0; i < obj.length; i++) {
  
                                          html += "<tr>"+
+                                                    "<td>คุณ "+obj[i].LineName+" <br> <img  width='10%' src='"+obj[i].LineIMG+"'></td> "+
 													"<td>"+obj[i].Remark+"</td>"+
 													"<td>"+obj[i].Capacity+"</td>"+
-													"<td>"+obj[i].Comment+"</td> "+
-													"<td>คุณ "+obj[i].LineName+" <br> <img  width='30%' src='"+obj[i].LineIMG+"'></td> "+
+													"<td>"+obj[i].Comment+"</td> "+ 
 												"</tr>";
                  
                         
