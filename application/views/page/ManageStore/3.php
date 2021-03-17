@@ -28,12 +28,18 @@
 													<th>ตำแหน่ง</th>
 													<th>ความจุ</th>
 													<th>ปัญหา</th> 
-													<th></th>
+													<th>ผู้แจ้ง</th>
 													 
 												</tr>
 											</thead> 
 											<tbody id="TrashBrokenDetail"> 
 
+                                                <tr>
+													<td>ตำแหน่ง</td>
+													<td>ความจุ</td>
+													<td>ปัญหา</td> 
+													<td>ผู้แจ้ง</td> 
+												</tr>
  												 
 												 
 											</tbody>
