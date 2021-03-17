@@ -74,7 +74,7 @@
 														  
 
 
-                              
+
 														 
 
 
@@ -404,6 +404,34 @@ function initMap() {
           }
           
            $("#WorkGroupTable").html(html);
+
+      });
+
+
+
+      var html2 = "";
+      
+      $.get("https://environment.webclient.me/index.php/ManageStore/GetDataTransactionPickupAll",function(data){
+
+        var obj = JSON.parse(data);
+          
+          console.log(obj);
+
+          for (var i = 0; i < obj.length; i++) {
+
+            html += '<tr>';
+            html += '<td> <div class="flag">';
+            html += '<img  width="10%" src="https://environment.webclient.me/temp/pin-'+obj[i].Color+'.svg"> </div></td>';
+            html += '<td>'+obj[i].LicensePlate+'</td>';
+            html += '<td class="text-right">';
+            html += ''+obj[i].Remark+'</td>';
+            html2 += '<td class="text-right">';
+            html += ''+obj[i].Trash+' ลิตร</td></tr>';
+       
+          
+          }
+          
+            $("#TransactionTableDetail").html(html2);
 
       });
 
