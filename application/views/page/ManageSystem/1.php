@@ -31,15 +31,17 @@
 											<tbody> 
 											 
 											<?php  
-												
+												$i = 0;
 												foreach($vehicled as $valuevehicled){
-
+												$i+=1;
+													
 													?>
 													
 
 
 												<tr>
-													<td><?php echo $valuevehicled->ID; ?></td>
+													<!--<td><?php echo $valuevehicled->ID; ?></td>-->
+													<td><?php echo $i; ?></td>
 													<td><?php echo $valuevehicled->LicensePlate; ?></td>
 													<td><img width="20%" src="https://environment.webclient.me/temp/pin-<?php echo $valuevehicled->Color; ?>.svg" alt=""></td>  
 													 

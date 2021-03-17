@@ -37,13 +37,14 @@
 
 
 												<?php  
-												
+												$i = 0;
 												foreach($trash as $valuetash){
-
+													$i+= 1;
 													?>
 													 
 												<tr>
-													<td><?php echo $valuetash->ID; ?></td>
+													<!--<td><?php echo $valuetash->ID; ?></td> -->
+													<td><?php echo $i; ?></td>
 													<td><?php echo $valuetash->Capacity; ?> ลิตร</td>
 													<td><?php echo $valuetash->Color; ?></td>
 													<td><?php echo $valuetash->Remark; ?></td>

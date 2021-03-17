@@ -243,6 +243,15 @@ class Env_Model extends CI_Model
         return $this->envdb->query(" SELECT * FROM `Transaction` WHERE TrashID = '".$TrashID."' and cast(StampDate as Date) = CURRENT_DATE() ")->num_rows();
         
     }
+    public function GetDataTransactionPickupAll()
+    {
+        $this->envdb = $this->load->database("envdb",true);
+        return $this->envdb->query(" SELECT a.ID,c.Color,c.LicensePlate,d.Remark,d.Capacity as Trash FROM `Transaction` a
+        JOIN WorkGroup b on a.WorkGroupID = b.ID
+        JOIN Vehicle c on b.VehicleID = c.ID
+        JOIN Trash d on a.TrashID = d.ID WHERE CAST(a.StampDate as date) = CURRENT_DATE() ORDER BY a.ID desc ")->num_rows();
+        
+    }
 
 
     

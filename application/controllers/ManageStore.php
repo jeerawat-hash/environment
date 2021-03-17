@@ -122,6 +122,12 @@ class ManageStore extends CI_Controller {
 
 
 	}
+	public function GetDataTransactionPickupAll()
+	{
+
+		echo json_encode($this->Env_Model->GetDataTransactionPickupAll());
+
+	}
 	
 
 
