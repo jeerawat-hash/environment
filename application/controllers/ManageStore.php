@@ -141,6 +141,14 @@ class ManageStore extends CI_Controller {
 		echo json_encode($this->Env_Model->GetDataTransactionPickupAll());
 
 	}
+	public function GetDataTrashReport()
+	{
+  
+	  
+	  echo json_encode($this->Env_Model->GetDataTrashReport());
+  
+  
+	}
 	
 
 
