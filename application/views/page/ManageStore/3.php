@@ -34,12 +34,7 @@
 											</thead> 
 											<tbody id="TrashBrokenDetail"> 
 
-                                                <tr>
-													<td>ตำแหน่ง</td>
-													<td>ความจุ</td>
-													<td>ปัญหา</td> 
-													<td>ผู้แจ้ง</td> 
-												</tr>
+                                                
  												 
 												 
 											</tbody>
@@ -88,7 +83,40 @@
 
         <script> 
 
+        $(function(){
 
+
+
+
+
+            var html = "";
+            
+            $.get("https://environment.webclient.me/index.php/ManageStore/GetDataTrashReport",function(data){
+
+            var obj = JSON.parse(data);
+                
+                console.log(obj);
+
+                for (var i = 0; i < obj.length; i++) {
+ 
+                                         html += "<tr>"+
+													"<td>"+obj[i].Remark+"</td>"+
+													"<td>"+obj[i].Capacity+"</td>"+
+													"<td>"+obj[i].Comment+"</td> "+
+													"<td>คุณ "+obj[i].LineName+" <br> <img  width='30%' src='"+obj[i].LineIMG+"'></td> "+
+												"</tr>";
+                 
+                        
+                }
+                
+                $("#TrashBrokenDetail").html(html);
+
+            });
+
+            
+
+
+        });
 
 
         
