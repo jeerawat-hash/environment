@@ -25,7 +25,7 @@
 										<table id="basic-datatables" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
-                                                    <th>ผู้แจ้ง</th>
+                                                    <th style="width: 50px;">ผู้แจ้ง</th>
 													<th>ตำแหน่ง</th>
 													<th>ความจุ</th>
 													<th>ปัญหา</th> 
